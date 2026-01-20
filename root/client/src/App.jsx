@@ -1,18 +1,12 @@
-import { useEffect, useState } from "react";
-import { getHealth } from "./api/api";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
-  const [status, setStatus] = useState("");
-
-  useEffect(() => {
-    getHealth().then(d => setStatus(d.status));
-  }, []);
-
   return (
-    <div style={{ padding: 40 }}>
-      <h1>Backend status</h1>
-      <p>{status}</p>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/prova" element={<h1>prova</h1>} />
+    </Routes>
   );
 }
 
