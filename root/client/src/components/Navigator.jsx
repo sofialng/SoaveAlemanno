@@ -1,13 +1,45 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../img/logo.png";
 
-
-function Navigator() {
+function Navigator({homeRef}) {
     const [open, setOpen] = useState(false);
+    const [isSticky, setIsSticky] = useState(false);
+
+    /*useEffect(() => {
+    const handleScroll = () => {
+        const triggerPt = 64;
+        setIsSticky(window.scrollY > triggerPt);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+        window.removeEventListener("scroll", handleScroll);
+    };
+    }, []);*/
+    useEffect(() => {
+        if (!homeRef?.current) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+            setIsSticky(!entry.isIntersecting);
+            },
+            {
+            threshold: 0,
+            }
+        );
+
+        observer.observe(homeRef.current);
+
+        return () => observer.disconnect();
+        }, [homeRef]);
+
 
   return (
     <>
-        <nav className="fixed top-0 left-0 w-full z-50 ">
+        <nav className={`fixed top-0 left-0 w-full z-50 
+            ${isSticky ? "bg-white/30 backdrop-blur-xl shadow-md" : "bg-transparent"}
+        `}>
         <div className="h-20 flex items-center justify-between px-10">
             
             {/* Logo */}
