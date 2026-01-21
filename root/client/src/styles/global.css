@@ -1,8 +1,23 @@
+@font-face {
+  font-family: Quetine;
+  src: url("../assets/fonts/Quetine.ttf");
+}
+
+@import "tailwindcss";
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+@theme {
+  --color-primary-dark: #0d1f22;
+  --color-secondary-dark: #264027;
+  --color-primary-light: #d7a6b3;
+
+  --font-quetine: Quetine, "serif";
 }
