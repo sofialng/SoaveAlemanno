@@ -1,27 +1,42 @@
 import sfondoHome from "../img/sfondo-home.jpg";
+import logo from "../img/logo.png";
 
-function HomeScreen() {
+function HomeScreen({ homeRef }) {
   return (
     <>
         <section className="relative h-screen">
-            {/* Background image */}
-            <img
+          {/* Background image */}
+          <img 
+            ref={homeRef}
             src={sfondoHome}
-            alt=""
             className="absolute inset-0 w-full h-full object-cover"
-            />
+            alt=""
+          />
 
-            {/* Overlay opzionale */}
-            <div className="absolute inset-0 bg-black/30" />
+          {/* Overlay opzionale */}
+          <div className="absolute inset-0 bg-white/20" />
 
-            {/* Contenuto */}
-            <div className="relative z-10 flex items-center h-full px-6">
-            <h1 className="text-white text-5xl font-bold">
-                Il tuo giorno perfetto
-            </h1>
+          {/* Contenuto */}
+          <div className="relative w-full h-3/4">
+            {/* Logo */}
+            <div className="absolute left-1/8 top-1/2 -translate-y-1/2 w-3/4 max-w-xl px-8 flex flex-col items-center gap-4">  
+              <img 
+                src={logo}
+                className="w-full max-w-md h-auto"
+                alt="Soave Alemanno Wedding & Event Planner"
+              />  
+              <p className="text-xl font-serif">
+                Il vostro amore merita un giorno <span className="font-serif-italic">indimenticabile</span>.
+              </p>
+
+              {/* Bottone */}
+              <button className="button">
+                Esplora
+              </button>
             </div>
-        </section>
-        
+            <div className="flex-1"> </div>
+          </div>
+        </section>        
     </>
   );
 }

@@ -1,9 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
 @font-face {
   font-family: Quetine;
   src: url("../assets/fonts/Quetine.ttf");
 }
 
-@import "tailwindcss";
+@font-face {
+  font-family: Lucette;
+  src: url("../assets/fonts/Lucette-Regular.ttf");
+}
+
+@font-face {
+  font-family: Lucette Italic;
+  src: url("../assets/fonts/Lucette-Regularitalic.ttf");
+}
 
 html {
   scroll-behavior: smooth;
@@ -19,5 +30,14 @@ body {
   --color-secondary-dark: #264027;
   --color-primary-light: #d7a6b3;
 
-  --font-quetine: Quetine, "serif";
+  --font-calligraphy: Quetine, "serif";
+  --font-serif: Lucette, "serif";
+  --font-serif-italic: Lucette Italic, "serif";
+  --font-inter: Inter, "sans-serif";
+}
+
+@layer components {
+  .button {
+    @apply px-4 py-2 bg-primary-dark text-white rounded-full whitespace-nowrap hover:bg-secondary-dark transition;
+  }
 }
