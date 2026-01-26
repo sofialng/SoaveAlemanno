@@ -29,15 +29,23 @@ body {
   --color-primary-dark: #0d1f22;
   --color-secondary-dark: #264027;
   --color-primary-light: #d7a6b3;
+  --color-secondary-light: #E3D1D3;
 
   --font-calligraphy: Quetine, "serif";
   --font-serif: Lucette, "serif";
   --font-serif-italic: Lucette Italic, "serif";
   --font-inter: Inter, "sans-serif";
+
+  --radius-2xl: 1.5rem; 
 }
 
 @layer components {
   .button {
     @apply px-4 py-2 bg-primary-dark text-white rounded-full whitespace-nowrap hover:bg-secondary-dark transition;
   }
+
+  .clickable-image {
+    @apply max-w-full max-h-full h-auto object-contain rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105;
+  }
+  
 }

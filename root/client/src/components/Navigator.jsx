@@ -34,7 +34,7 @@ function Navigator({homeRef}) {
             ${open 
                 ? "" 
                 : isSticky 
-                    ? "bg-white/10 backdrop-blur-sm shadow-md" 
+                    ? "bg-white/10 backdrop-blur-sm" 
                     : "bg-transparent"}
         `}>
         <div className="h-20 flex items-center justify-between px-15">
@@ -45,6 +45,7 @@ function Navigator({homeRef}) {
                 alt="Soave"
                 className="h-full w-auto p-2"
                 />
+            {/*<h1 className="font-serif text-3xl">Soave <span className="font-serif-italic">Alemanno</span></h1>*/}
 
 
             {/* Menu desktop */}
