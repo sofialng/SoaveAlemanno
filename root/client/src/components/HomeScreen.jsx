@@ -25,7 +25,7 @@ function HomeScreen({ homeRef }) {
                 className="w-full max-w-md h-auto"
                 alt="Soave Alemanno Wedding & Event Planner"
               />  
-              <p className="text-xl font-serif">
+              <p className="text-xl font-serif text-center">
                 Il vostro amore merita un giorno <span className="font-serif-italic">indimenticabile</span>.
               </p>
 
