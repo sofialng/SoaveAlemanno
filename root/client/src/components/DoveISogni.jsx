@@ -1,4 +1,4 @@
-function DoveISogni({ picture, title, children }) {
+function DoveISogni({ picture, title, subtitle, children }) {
   return (
     <section className="relative min-h-screen overflow-hidden bg-secondary-light">
       {/* Container */}
@@ -8,7 +8,7 @@ function DoveISogni({ picture, title, children }) {
         mx-auto
         px-6
         lg:px-16
-        py-16
+        py-8
         flex
         items-center
         min-h-screen
@@ -20,15 +20,18 @@ function DoveISogni({ picture, title, children }) {
           items-center
           gap-8
           w-full
+          px-8
+          md:px-16
         ">
 
           {/* Testo */}
           <div className="
             w-full
-            lg:w-2/3
+            lg:w-1/2
             flex
             flex-col
             gap-6
+            lg:pr-16
             text-center
             lg:text-left
           ">
@@ -42,12 +45,20 @@ function DoveISogni({ picture, title, children }) {
               {title}
             </h1>
 
+            <h3 className="
+              font-sans
+              font-bold
+            ">
+              {subtitle}
+            </h3>
+
             <p className="
               font-sans
               text-sm
               sm:text-base
               leading-relaxed
               max-w-2xl
+              text-justify
             ">
               {children}
             </p>
@@ -56,7 +67,7 @@ function DoveISogni({ picture, title, children }) {
           {/* Immagine */}
           <div className="
             w-full
-            lg:w-1/3
+            lg:w-1/2
             flex
             justify-center
           ">
@@ -67,7 +78,7 @@ function DoveISogni({ picture, title, children }) {
                 w-full
                 max-w-sm
                 lg:max-w-none
-                rounded-2xl
+                rounded-xl
                 object-cover
               "
             />

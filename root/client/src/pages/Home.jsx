@@ -3,13 +3,12 @@ import { useRef } from "react";
 import Navigator from "../components/Navigator";
 import Footer from "../components/Footer";
 import HomeScreen from "../components/HomeScreen"
-import ChiSono from "../components/ChiSono"
-import SeDovessiDescrivermi from "../components/SeDovessiDescrivermi"
-import Collaboratrice from "../components/Collaboratrice";
 import DoveISogni from "../components/DoveISogni";
 import Quote from "../components/Quote";
+import Emozioni from "../components/Emozioni";
+import Arches from "../components/Arches";
+import OgniEvento from "../components/OgniEvento";
 
-import soave from "../img/soave.jpg";
 import board from "../img/board.jpg"
 
 function Home() {  
@@ -19,34 +18,26 @@ function Home() {
       <Navigator homeRef={homeRef} />
       <main>
         <HomeScreen homeRef={homeRef} />
-
-        {/* Inserire qui i servizi con elenco di chi siamo, DOVE operiamo e cosa facciamo, quali sono i pacchetti disponibili */}
-
-        <ChiSono
-          picture={soave} 
-          title="Chi sono"
-          subtitle="Ciao, sono Soave"
-          content="Ho sempre creduto che tutte le esperienze che viviamo nell'arco della nostra vita ci portino verso una strada che era destinata a noi.
-                  È così che il mio vissuto, intenso e appassionato mi ha condotta in questo meraviglioso mondo che è poi diventato il mio lavoro."
-                  />
-
-        <SeDovessiDescrivermi />
-
-        <Collaboratrice 
-          picture={soave} 
-          title="La mia collaboratrice"
-          subtitle="Ciao, sono Mariella"
-          content="Ho sempre creduto che tutte le esperienze che viviamo nell'arco della nostra vita ci portino verso una strada che era destinata a noi.
-                  È così che il mio vissuto, intenso e appassionato mi ha condotta in questo meraviglioso mondo che è poi diventato il mio lavoro."
-          />
        
         <DoveISogni 
           picture={board} 
-          title={<>Dove i   <span className="font-calligraphy">sogni</span> prendono forma</>}
+          title={<>Dove i <span className="font-calligraphy">sogni</span><br/>prendono forma</>}
+          subtitle="Siamo un team di professioniste specializzate in matrimoni ed eventi, pronte a dare forma ai tuoi sogni."
           >
-            <p>Siamo un team di professioniste specializzate in matrimoni ed eventi, pronte a dare forma ai tuoi sogni.</p>
-            <p>Con creatività, esperienza e una cura impeccabile per ogni dettaglio, trasformiamo le tue idee in un matrimonio o un evento unico, pensato su misura per te.</p>
+            <p>Con creatività, esperienza e una cura impeccabile per ogni dettaglio, trasformiamo le tue idee in un matrimonio o un evento unico, pensato su misura per te.<br />
+                Crediamo che ogni storia d'amore meriti di essere raccontata con autenticità, eleganza e armonia, attraverso un progetto che parli davvero di voi.<br />
+                Ogni evento che realizziamo nasce dall'<span className="font-serif-italic">ascolto</span>, cresce attraverso la <span className="font-serif-italic">condivisione</span> e prende vita grazie a una visione chiara e personalizzata.</p>
           </DoveISogni>
+
+        <Emozioni
+          title={<>Emozioni che restano, istanti che diventano <span className="font-calligraphy">ricordi</span><br/></>}>
+            <p>Ogni allestimento, ogni scelta stilistica, ogni dettaglio è pensato per creare un'atmosfera che emozioni, coinvolga e lasci il segno.<br />
+            Le immagini raccontano ciò che le parole non possono spiegare: sorrisi autentici, sguardi complici, scenari senza tempo e momenti che restano impressi nel cuore.</p>
+        </Emozioni>
+
+        <OgniEvento quote={<>Ogni evento deve essere un vero e proprio <span className="font-bold">percorso esperienziale</span> in grado di <span className="font-bold">raccontare</span> ed <span className="font-bold">esprimere</span> sé stessi, un <span className="font-bold">viaggio</span> unico ed inimitabile che sappia valorizzare pienamente ciò che si vuole <span className="font-bold">trasmettere</span>.</>}/>
+
+        {/*<Arches quote="Non esistono due matrimoni uguali, perché non esistono due storie uguali."/>*/}
 
         <Quote 
           quote={<>Quando non riesco a dirtelo, cerco chi lo dice per me.<br />E lo trovo in un bouquet di fiori.</>}
@@ -58,6 +49,8 @@ function Home() {
           quote="La verità della storia è nei dettagli."
           attribution="Paul Auster"
           />
+
+        
 
       </main>
 

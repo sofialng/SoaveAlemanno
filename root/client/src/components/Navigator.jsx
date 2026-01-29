@@ -52,7 +52,7 @@ function Navigator({homeRef}) {
             <div className="hidden lg:flex items-center">
                 <a className="px-4 whitespace-nowrap">Home</a>
                 <a className="px-4 whitespace-nowrap">Chi sono</a>
-                <a className="px-4 whitespace-nowrap">Servizi</a>
+                {/*<a className="px-4 whitespace-nowrap">Servizi</a>*/}
                 <a className="px-4 whitespace-nowrap">Portfolio</a>
                 <a className="px-4 whitespace-nowrap">Recensioni</a>
                 <a className="ml-4 button">
