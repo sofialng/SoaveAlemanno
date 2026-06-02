@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import logo from "../img/logo.png";
 
 function Navigator() {
@@ -34,24 +35,34 @@ function Navigator() {
         <div className="h-20 flex items-center justify-between px-15">
             
             {/* Logo */}
-            <img
-                src={logo}
-                alt="Soave"
-                className="h-full w-auto p-2"
+            <NavLink to="/" className="h-full flex items-center">
+                <img
+                    src={logo}
+                    alt="Soave"
+                    className="h-full w-auto p-2 cursor-pointer"
                 />
+            </NavLink>
             {/*<h1 className="font-serif text-3xl">Soave <span className="font-serif-italic">Alemanno</span></h1>*/}
 
 
             {/* Menu desktop */}
             <div className="hidden lg:flex items-center">
-                <a className="px-4 whitespace-nowrap">Home</a>
-                <a className="px-4 whitespace-nowrap">Chi sono</a>
+                <NavLink to="/" className={({ isActive }) => isActive ? "text-black font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-gray-700"}>
+                    Home
+                </NavLink>
+                <NavLink to="/chisono" className={({ isActive }) => isActive ? "text-black font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-gray-700"}>
+                    Chi sono
+                </NavLink>
                 {/*<a className="px-4 whitespace-nowrap">Servizi</a>*/}
-                <a className="px-4 whitespace-nowrap">Portfolio</a>
-                <a className="px-4 whitespace-nowrap">Recensioni</a>
-                <a className="ml-4 button">
+                <NavLink to="/portfolio" className={({ isActive }) => isActive ? "text-black font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-gray-700"}>
+                    Portfolio
+                </NavLink>
+                <NavLink to="/recensioni" className={({ isActive }) => isActive ? "font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-gray-700"}>
+                    Recensioni
+                </NavLink>
+                <NavLink to="/prenota" className={({ isActive }) => isActive ? "font-bold ml-4 button transition-all duration-300" : "ml-4 button transition-all duration-300 hover:-translate-y-0.5 hover:text-gray-700"}>
                     Prenota una consulenza
-                </a>
+                </NavLink>
             </div>
 
             {/* Hamburger */}
@@ -68,18 +79,24 @@ function Navigator() {
         {open && (
             <div className="lg:hidden absolute top-20 left-0 w-full">
                 <div className="flex flex-col items-center py-6 space-y-4 text-lg  ">
-                    <a href="">Home</a>
-                    <a href="">Chi sono</a>
-                    <a href="">Servizi</a>
-                    <a href="">Portfolio</a>
-                    <a href="">Recensioni</a>
-
-                    <a
-                        href=""
-                        className="px-4 py-2 bg-purple-900 text-white rounded-full font-semibold"
-                        >
+                    <NavLink to="/" className={({ isActive }) => isActive ? "font-bold px-4 whitespace-nowrap" : "px-4 whitespace-nowrap"}  onClick={() => setOpen(false)}>
+                        Home
+                    </NavLink>
+                    <NavLink to="/chisono" className={({ isActive }) => isActive ? "font-bold px-4 whitespace-nowrap" : "px-4 whitespace-nowrap"}  onClick={() => setOpen(false)}>
+                        Chi sono
+                    </NavLink>
+                    <NavLink to="/servizi" className={({ isActive }) => isActive ? "font-bold px-4 whitespace-nowrap" : "px-4 whitespace-nowrap"}  onClick={() => setOpen(false)}>
+                        Servizi
+                    </NavLink>
+                    <NavLink to="/portfolio" className={({ isActive }) => isActive ? "font-bold px-4 whitespace-nowrap" : "px-4 whitespace-nowrap"}  onClick={() => setOpen(false)}>
+                        Portfolio
+                    </NavLink>
+                    <NavLink to="/recensioni" className={({ isActive }) => isActive ? "font-bold px-4 whitespace-nowrap" : "px-4 whitespace-nowrap"}  onClick={() => setOpen(false)}>
+                        Recensioni
+                    </NavLink>
+                    <NavLink to="/prenota" className={({ isActive }) => isActive ? "font-bold px-4 py-2 bg-purple-900 text-white rounded-full" : "px-4 py-2 bg-purple-900 text-white rounded-full"}  onClick={() => setOpen(false)}>
                         Prenota una consulenza
-                    </a>
+                    </NavLink>
                 </div>
             </div>
         )}
