@@ -1,26 +1,20 @@
 import { useState, useEffect } from "react";
 import logo from "../img/logo.png";
 
-function Navigator({homeRef}) {
+function Navigator() {
     const [open, setOpen] = useState(false);
     const [isSticky, setIsSticky] = useState(false);
 
     useEffect(() => {
-        if (!homeRef?.current) return;
+        const onScroll = () => {
+            setIsSticky(window.scrollY > 10);
+        };
 
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-            setIsSticky(!entry.isIntersecting);
-            },
-            {
-            threshold: 0,
-            }
-        );
+        window.addEventListener("scroll", onScroll);
+        onScroll(); // trigger iniziale
 
-        observer.observe(homeRef.current);
-
-        return () => observer.disconnect();
-        }, [homeRef]);
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
 
 
   return (

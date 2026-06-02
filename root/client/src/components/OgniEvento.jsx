@@ -11,7 +11,8 @@ function OgniEvento({quote}) {
         {/* Immagine di sfondo */}
         <div className="
             absolute inset-0
-            w-full h-[60vh]
+            w-full
+            h-[60vh]
             flex
             items-center
             p-8 md:p-16 lg:px-32 lg:py-8
@@ -20,7 +21,7 @@ function OgniEvento({quote}) {
                 src={soaveBg}
                 alt="Soave Alemanno Wedding & Event Planner"
                 className="
-                w-full h-auto
+                w-full h-auto overflow-hidden
             "/>
         </div>
 
@@ -51,13 +52,13 @@ function OgniEvento({quote}) {
                     alt="Finish line"
                 />
             </a>
-            {/*<a href="https://storyset.com/people">
+            <a href="https://storyset.com/people">
                 <img 
                     src={wedding3}
                     className="w-full h-auto clickable-image"
                     alt="Finish line"
                 />
-            </a>*/}
+            </a>
             <a href="https://storyset.com/people">
                 <img 
                     src={wedding2}

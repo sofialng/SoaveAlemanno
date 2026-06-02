@@ -4,7 +4,7 @@ import About from "./pages/ChiSono";
 
 function App() {
   return (
-    <Routes>
+    <Routes basename="/SoaveAlemanno">
       <Route path="/" element={<Home />} />
       <Route path="/chisono" element={<About />} />
       <Route path="*" element={<Home />} />

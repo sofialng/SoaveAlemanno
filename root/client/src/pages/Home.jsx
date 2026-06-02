@@ -11,13 +11,12 @@ import OgniEvento from "../components/OgniEvento";
 
 import board from "../img/board.jpg"
 
-function Home() {  
-  const homeRef = useRef(null);
+function Home() {
   return (
     <>
-      <Navigator homeRef={homeRef} />
+      <Navigator />
       <main>
-        <HomeScreen homeRef={homeRef} />
+        <HomeScreen />
        
         <DoveISogni 
           picture={board} 
@@ -49,8 +48,6 @@ function Home() {
           quote="La verità della storia è nei dettagli."
           attribution="Paul Auster"
           />
-
-        
 
       </main>
 

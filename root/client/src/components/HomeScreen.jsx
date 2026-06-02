@@ -1,20 +1,19 @@
-import sfondoHome from "../img/sfondo-home.jpg";
+import sfondoHome from "../img/sfondo-home2.jpg";
 import logo from "../img/logo.png";
 
-function HomeScreen({ homeRef }) {
+function HomeScreen() {
   return (
     <>
         <section className="relative h-screen">
           {/* Background image */}
-          <img 
-            ref={homeRef}
+          <img
             src={sfondoHome}
             className="absolute inset-0 w-full h-full object-cover"
             alt=""
           />
 
           {/* Overlay opzionale */}
-          <div className="absolute inset-0 bg-white/20" />
+          <div className="absolute inset-0 bg-white/10" />
 
           {/* Contenuto */}
           <div className="relative w-full h-3/4">
