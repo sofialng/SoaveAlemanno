@@ -54,8 +54,8 @@ function Navigator() {
                     Chi sono
                 </NavLink>
                 {/*<a className="px-4 whitespace-nowrap">Servizi</a>*/}
-                <NavLink to="/portfolio" className={({ isActive }) => isActive ? "text-black font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-secondary-dark hover:font-bold"}>
-                    Portfolio
+                <NavLink to="/gallery" className={({ isActive }) => isActive ? "text-black font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-secondary-dark hover:font-bold"}>
+                    Gallery
                 </NavLink>
                 {/* <NavLink to="/recensioni" className={({ isActive }) => isActive ? "font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-secondary-dark hover:font-bold"}>
                     Recensioni
