@@ -25,11 +25,11 @@ function Navigator() {
             <div className="fixed inset-0 z-40 bg-white/30 backdrop-blur-md lg:hidden" />
             )}
 
-        <nav className={`fixed top-0 left-0 w-full z-50 isolation-isolate
+        <nav id="navbar" className={`fixed top-0 left-0 w-full z-50 isolation-isolate
             ${open 
                 ? "" 
                 : isSticky 
-                    ? "bg-white/10 backdrop-blur-sm" 
+                    ? "bg-secondary-light backdrop-blur-md shadow-md transition duration-300 " 
                     : "bg-transparent"}
         `}>
         <div className="h-20 flex items-center justify-between px-15">
@@ -47,20 +47,20 @@ function Navigator() {
 
             {/* Menu desktop */}
             <div className="hidden lg:flex items-center">
-                <NavLink to="/" className={({ isActive }) => isActive ? "text-black font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-gray-700"}>
+                <NavLink to="/" className={({ isActive }) => isActive ? "text-black font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-secondary-dark hover:font-bold"}>
                     Home
                 </NavLink>
-                <NavLink to="/chisono" className={({ isActive }) => isActive ? "text-black font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-gray-700"}>
+                <NavLink to="/chisono" className={({ isActive }) => isActive ? "text-black font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-secondary-dark hover:font-bold"}>
                     Chi sono
                 </NavLink>
                 {/*<a className="px-4 whitespace-nowrap">Servizi</a>*/}
-                <NavLink to="/portfolio" className={({ isActive }) => isActive ? "text-black font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-gray-700"}>
+                <NavLink to="/portfolio" className={({ isActive }) => isActive ? "text-black font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-secondary-dark hover:font-bold"}>
                     Portfolio
                 </NavLink>
-                <NavLink to="/recensioni" className={({ isActive }) => isActive ? "font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-gray-700"}>
+                {/* <NavLink to="/recensioni" className={({ isActive }) => isActive ? "font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-secondary-dark hover:font-bold"}>
                     Recensioni
-                </NavLink>
-                <NavLink to="/prenota" className={({ isActive }) => isActive ? "font-bold ml-4 button transition-all duration-300" : "ml-4 button transition-all duration-300 hover:-translate-y-0.5 hover:text-gray-700"}>
+                </NavLink> */}
+                <NavLink to="/prenota" className={({ isActive }) => isActive ? "font-bold ml-4 button transition-all duration-300" : "ml-4 button transition-all duration-300 hover:-translate-y-0.5"}>
                     Prenota una consulenza
                 </NavLink>
             </div>

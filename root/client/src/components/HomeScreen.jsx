@@ -13,7 +13,7 @@ function HomeScreen() {
           />
 
           {/* Overlay opzionale */}
-          <div className="absolute inset-0 bg-white/10" />
+          <div className="absolute inset-0 bg-white/20" />
 
           {/* Contenuto */}
           <div className="relative w-full h-3/4">
@@ -29,7 +29,27 @@ function HomeScreen() {
               </p>
 
               {/* Bottone */}
-              <button className="button">
+              <button 
+                className="button transition-all duration-300 hover:-translate-y-0.5"
+                onClick={() => {
+                  const element = document.getElementById("DoveISogni");
+                  const navbar = document.getElementById("navbar");
+
+                  if (!element) return;
+
+                  const navbarHeight = navbar?.offsetHeight || 0;
+
+                  const top =
+                    element.getBoundingClientRect().top +
+                    window.scrollY -
+                    navbarHeight + 1;
+
+                  window.scrollTo({
+                    top,
+                    behavior: "smooth",
+                  });
+                }}
+                >
                 Esplora
               </button>
             </div>

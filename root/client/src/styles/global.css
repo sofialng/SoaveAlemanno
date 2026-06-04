@@ -41,7 +41,7 @@ body {
 
 @layer components {
   .button {
-    @apply px-4 py-2 bg-primary-dark text-white rounded-full whitespace-nowrap hover:bg-secondary-dark transition;
+    @apply px-4 py-2 bg-primary-dark text-white rounded-full whitespace-nowrap hover:bg-secondary-dark transition hover:font-bold;
   }
 
   .clickable-image {
