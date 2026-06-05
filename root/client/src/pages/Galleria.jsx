@@ -1,13 +1,8 @@
-import Navigator from "../components/Navigator";
-import Footer from "../components/Footer";
 import ImgGrid from "../components/ImgGrid";
-
 
 function Gallery() {  
   return (
     <>
-      <Navigator />
-
       <main>
         <div className="container mx-auto px-4 sm:px-8 lg:px-16 py-40">
           <h1 className="text-4xl font-bold text-center mb-8">Galleria</h1>
@@ -15,8 +10,6 @@ function Gallery() {
           <ImgGrid />
         </div>
       </main>
-
-      <Footer />
     </>
   );
 }

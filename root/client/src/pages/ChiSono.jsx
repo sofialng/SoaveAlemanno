@@ -1,5 +1,3 @@
-import Navigator from "../components/Navigator";
-import Footer from "../components/Footer";
 import ChiSono from "../components/ChiSono"
 import SeDovessiDescrivermi from "../components/SeDovessiDescrivermi"
 import Collaboratrice from "../components/Collaboratrice";
@@ -12,7 +10,6 @@ import daniela from "../img/daniela.jpg";
 function About() {  
   return (
     <>
-      <Navigator />
       <main>
 
         {/* Inserire qui i servizi con elenco di chi siamo, DOVE operiamo e cosa facciamo, quali sono i pacchetti disponibili */}
@@ -68,8 +65,6 @@ function About() {
           />
 
       </main>
-
-      <Footer />
     </>
   );
 }

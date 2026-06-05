@@ -27,7 +27,7 @@ body {
 
 @theme {
   --color-primary-dark: #0d1f22;
-  --color-secondary-dark: #264027;
+  --color-secondary-dark: #172618;
   --color-primary-light: #d7a6b3;
   --color-secondary-light: #E3D1D3;
 
@@ -42,6 +42,25 @@ body {
 @layer components {
   .button {
     @apply px-4 py-2 bg-primary-dark text-white rounded-full whitespace-nowrap hover:bg-secondary-dark transition hover:font-bold;
+  }
+
+  .button-highlight {
+    @apply
+      px-8
+      py-3
+      bg-black
+      text-white
+      rounded-full
+      transition-all
+      duration-300
+      hover:scale-105
+      hover:shadow-lg
+      hover:bg-secondary-dark
+      active:scale-95;
+  }
+
+  .input {
+    @apply w-full border border-gray-200 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-black;
   }
 
   .clickable-image {

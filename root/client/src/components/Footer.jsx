@@ -1,34 +1,67 @@
+import soave from '../img/soave.jpg';
+import mariella from '../img/vaso.jpg';
+
 function Footer() {
   return (
     <footer className="bg-secondary-dark text-white/80 pt-10 pb-6 px-6 gap-8 flex flex-col">
       
-      {/* TOP SECTION */}
-      <div className="max-w-6xl mx-auto flex flex-row md:gap-16 sm:gap-4 justify-between items-start h-40 ">
-        
-        {/* LEFT */}
-        <div>
-          <p className="font-semibold text-white">
-            Soave Alemanno Wedding & Event Planner
-          </p>
-          <p className="mt-2 text-sm">
-            P.IVA 05299610757
-          </p>
-        </div>
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row">
 
-        {/* CENTER */}
-        <div>
-          <p className="font-semibold text-white">Soave Alemanno</p>
-          <p className="mt-2 text-sm">info@soavealemanno.it</p>
-          <p className="text-sm">+39 347 00 00 000</p>
-        </div>
+  {/* LEFT */}
+  <div className="md:w-1/2 pr-8 flex flex-col justify-center">
+    <h2 className="text-xl font-semibold text-white">
+      Soave Alemanno Wedding & Event Planner
+    </h2>
 
-        {/* RIGHT */}
-        <div>
-          <p className="font-semibold text-white">Mariella Longo</p>
-          <p className="mt-2 text-sm">mariella@soavealemanno.it</p>
-          <p className="text-sm">+39 347 00 00 000</p>
-        </div>
+    <p className="mt-4 text-sm text-white/70 leading-relaxed">
+      Creiamo matrimoni ed eventi su misura, curando ogni dettaglio con eleganza
+      e un approccio completamente personalizzato.
+    </p>
+
+    <div className="mt-6 space-y-1 text-sm text-white/70">
+      <p>P.IVA 05299610757</p>
+      <p>Based in Italy</p>
+      <p>info@soavealemanno.it</p>
+      <p>+39 347 00 00 000</p>
+    </div>
+  </div>
+
+  {/* VERTICAL LINE */}
+  <div className="hidden md:block w-px bg-white/10 mx-6"></div>
+
+  {/* RIGHT */}
+  <div className="md:w-1/2 pl-8 flex flex-col justify-center gap-12">
+
+    {/* SOAVE */}
+    <div className="flex items-center gap-6">
+      <img
+        src={soave}
+        alt="Soave Alemanno"
+        className="w-16 h-16 object-cover rounded-full"
+      />
+      <div>
+        <p className="text-white font-semibold">Soave Alemanno</p>
+        <p className="text-sm text-white/70">Founder & Wedding Planner</p>
+        <p className="text-sm text-white/70">info@soavealemanno.it</p>
       </div>
+    </div>
+
+    {/* MARIELLA */}
+    <div className="flex items-center gap-6">
+      <img
+        src={mariella}
+        alt="Mariella Longo"
+        className="w-16 h-16 object-cover rounded-full"
+      />
+      <div>
+        <p className="text-white font-semibold">Mariella Longo</p>
+        <p className="text-sm text-white/70">Event Coordinator</p>
+        <p className="text-sm text-white/70">mariella@soavealemanno.it</p>
+      </div>
+    </div>
+
+  </div>
+</div>
 
       {/* DIVIDER */}
       <div className="border-t border-white/20 "></div>

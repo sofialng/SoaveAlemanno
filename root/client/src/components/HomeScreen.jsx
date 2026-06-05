@@ -30,7 +30,7 @@ function HomeScreen() {
 
               {/* Bottone */}
               <button 
-                className="button transition-all duration-300 hover:-translate-y-0.5"
+                className="button-highlight"
                 onClick={() => {
                   const element = document.getElementById("DoveISogni");
                   const navbar = document.getElementById("navbar");
