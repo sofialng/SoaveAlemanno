@@ -52,13 +52,13 @@ function OgniEvento({quote}) {
                     alt="Finish line"
                 />
             </a>
-            <a href="https://storyset.com/people">
+            {/* <a href="https://storyset.com/people">
                 <img 
                     src={wedding3}
                     className="w-full h-auto clickable-image"
                     alt="Finish line"
                 />
-            </a>
+            </a> */}
             <a href="https://storyset.com/people">
                 <img 
                     src={wedding2}

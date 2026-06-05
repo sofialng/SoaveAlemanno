@@ -54,11 +54,11 @@ function Navigator() {
                     Chi sono
                 </NavLink>
                 {/*<a className="px-4 whitespace-nowrap">Servizi</a>*/}
-                <NavLink to="/gallery" className={({ isActive }) => isActive ? "text-black font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-secondary-dark hover:font-bold"}>
-                    Gallery
+                <NavLink to="/galleria" className={({ isActive }) => isActive ? "text-black font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-secondary-dark hover:font-bold"}>
+                    Galleria
                 </NavLink>
-                {/* <NavLink to="/recensioni" className={({ isActive }) => isActive ? "font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-secondary-dark hover:font-bold"}>
-                    Recensioni
+                {/* <NavLink to="/contatti" className={({ isActive }) => isActive ? "font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-secondary-dark hover:font-bold"}>
+                    Contatti
                 </NavLink> */}
                 <NavLink to="/prenota" className={({ isActive }) => isActive ? "font-bold ml-4 button transition-all duration-300" : "ml-4 button transition-all duration-300 hover:-translate-y-0.5"}>
                     Prenota una consulenza

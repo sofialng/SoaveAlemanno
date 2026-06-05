@@ -22,7 +22,7 @@ const images = [
 
 function ImgGrid() {
   return (
-    <div className="columns-1 sm:colums-2 lg:columns-3 py-10 md:py-20 gap-4 px-4 sm:px-8 lg:px-16">
+    <div className="columns-1 sm:columns-2 lg:columns-3 py-10 md:py-20 gap-4 px-4 sm:px-8 lg:px-16">
       {images.map((image, index) => (
         <div className="mb-4 break-inside-avoid">
             <img

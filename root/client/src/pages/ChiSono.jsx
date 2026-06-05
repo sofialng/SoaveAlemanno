@@ -6,6 +6,7 @@ import Collaboratrice from "../components/Collaboratrice";
 import DoveISogni from "../components/DoveISogni";
 
 import soave from "../img/soave.jpg";
+import certificazione from "../img/certificazione.jpeg";
 import daniela from "../img/daniela.jpg";
 
 function About() {  
@@ -54,6 +55,17 @@ function About() {
               Il nostro obiettivo è uno solo: <span className="font-serif-italic">farvi godere ogni momento</span>, sapendo che tutto è sotto controllo.
             </p>
           </DoveISogni>
+
+          <ChiSono
+          picture={certificazione} 
+          title="Enzo Miccio Academy certified"
+          subtitle="La mia formazione"
+          content={
+            <>
+              Penso che la formazione e i corsi di aggiornamento siano importantissimi per rafforzare le competenze e implementare nuovi strumenti di lavoro.
+              Bisogna cogliere ogni opportunità per ampliare le proprie conoscenze, favorendo lo sviluppo professionale e personale che si riflette poi sulla soddisfazione dei clienti.
+            </>}
+          />
 
       </main>
 

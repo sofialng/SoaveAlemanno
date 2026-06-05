@@ -8,6 +8,7 @@ import Quote from "../components/Quote";
 import Emozioni from "../components/Emozioni";
 import Arches from "../components/Arches";
 import OgniEvento from "../components/OgniEvento";
+import Box from "../components/Box";
 
 import board from "../img/board.jpg"
 
@@ -36,20 +37,21 @@ function Home() {
             Le immagini raccontano ciò che le parole non possono spiegare: sorrisi autentici, sguardi complici, scenari senza tempo e momenti che restano impressi nel cuore.</p>
         </Emozioni>
 
-        <OgniEvento quote={<>Ogni evento deve essere un vero e proprio <span className="font-bold">percorso esperienziale</span> in grado di <span className="font-bold">raccontare</span> ed <span className="font-bold">esprimere</span> sé stessi, un <span className="font-bold">viaggio</span> unico ed inimitabile che sappia valorizzare pienamente ciò che si vuole <span className="font-bold">trasmettere</span>.</>}/>
-
-        {/*<Arches quote="Non esistono due matrimoni uguali, perché non esistono due storie uguali."/>*/}
-
         <Quote 
           quote={<>Quando non riesco a dirtelo, cerco chi lo dice per me.<br />E lo trovo in un bouquet di fiori.</>}
           attribution="Fabrizio Caramagna"
           />
 
+        <OgniEvento quote={<>Ogni evento deve essere un vero e proprio <span className="font-bold">percorso esperienziale</span> in grado di <span className="font-bold">raccontare</span> ed <span className="font-bold">esprimere</span> sé stessi, un <span className="font-bold">viaggio</span> unico ed inimitabile che sappia valorizzare pienamente ciò che si vuole <span className="font-bold">trasmettere</span>.</>}/>
+
+        {/*<Arches quote="Non esistono due matrimoni uguali, perché non esistono due storie uguali."/>*/}
 
         <Quote 
           quote="La verità della storia è nei dettagli."
           attribution="Paul Auster"
           />
+
+        <Box />
 
       </main>
 

@@ -8,7 +8,7 @@ function App() {
     <Routes basename="/SoaveAlemanno">
       <Route path="/" element={<Home />} />
       <Route path="/chisono" element={<About />} />
-      <Route path="/gallery" element={<Gallery />} />
+      <Route path="/galleria" element={<Gallery />} />
       <Route path="*" element={<Home />} />
     </Routes>
   );
