@@ -72,26 +72,20 @@ function Navbar() {
             {/* CTA */}
             <NavLink
               to="/prenota"
-              className={({ isActive }) =>
-                `
-                  ml-4 px-7 py-2.5
-                  text-[0.65rem]
-                  uppercase
-                  tracking-[0.28em]
-                  font-light
-                  border
-                  transition-all
-                  duration-300
-                  hover:bg-primary-dark
-                  hover:text-secondary-light
-                  hover:border-transparent
-                  ${
-                    isActive
-                      ? "bg-secondary-dark text-secondary-light border-transparent"
-                      : "text-secondary-dark border-secondary-dark"
-                  }
-                `
-              }
+              className="ml-4 px-7 py-2.5 text-[0.65rem] uppercase tracking-[0.3em] font-light border transition-all duration-300"
+              style={{
+                borderColor: "var(--color-secondary-dark)",
+                color: "var(--color-secondary-dark)",
+                background: "transparent",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "var(--color-secondary-dark)";
+                e.currentTarget.style.color = "var(--color-secondary-light)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = "var(--color-secondary-dark)";
+              }}
             >
               Prenota una consulenza
             </NavLink>
@@ -155,7 +149,7 @@ function Navbar() {
               className={({ isActive }) =>
                 `
                   ml-4 mt-4 px-7 py-2.5
-                  text-sm uppercase tracking-[0.28em] font-light
+                  text-sm
                   uppercase
                   tracking-[0.28em]
                   font-light
