@@ -1,4 +1,4 @@
-function StoryBlock({ image, title, subtitle, children, reverse = false }) {
+export default function ImgTxt({ image, title, subtitle, children, reverse = false }) {
   return (
     <section className="relative py-24 bg-secondary-light overflow-hidden">
 
@@ -46,17 +46,17 @@ function StoryBlock({ image, title, subtitle, children, reverse = false }) {
           {/* TEXT */}
           <div className={`flex flex-col gap-5 text-center lg:text-left ${reverse ? "lg:items-end lg:text-right" : ""}`}>
 
-            <span className="text-xs uppercase tracking-[0.3em] text-black/40">
+            <span className="subtitle">
               {subtitle}
             </span>
 
-            <h2 className="font-serif text-3xl lg:text-4xl text-black">
+            <h2 className="title text-3xl sm:text-4xl lg:text-5xl">
               {title}
             </h2>
 
             <div className="w-16 h-px bg-black/20 mx-auto lg:mx-0" />
 
-            <p className="text-sm lg:text-base text-black/70 leading-relaxed max-w-xl">
+            <p className="paragraph">
               {children}
             </p>
 
@@ -67,5 +67,3 @@ function StoryBlock({ image, title, subtitle, children, reverse = false }) {
     </section>
   );
 }
-
-export default StoryBlock;

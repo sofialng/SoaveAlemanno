@@ -6,13 +6,22 @@ import DoveISogni from "../components/DoveISogni";
 import soave from "../img/soave.jpg";
 import certificazione from "../img/certificazione.jpeg";
 import daniela from "../img/daniela.jpg";
+import PageIntro from "../components/PageIntro";
 
 function About() {  
   return (
     <>
       <main>
-
         {/* Inserire qui i servizi con elenco di chi siamo, DOVE operiamo e cosa facciamo, quali sono i pacchetti disponibili */}
+
+        <div className="w-full px-6 pt-30 pb-2 md:px-12 bg-secondary-light">
+          <PageIntro
+            header="Chi sono"
+            title="Ciao, sono Soave"
+            text="Una selezione di momenti, dettagli e atmosfere che raccontano
+              il nostro modo di progettare matrimoni ed eventi."
+            />
+        </div>
 
         <ChiSono
           picture={soave} 

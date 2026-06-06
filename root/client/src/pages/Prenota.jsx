@@ -5,7 +5,7 @@ function Prenota() {
   return (
     <>
       <main>
-        <div className="flex flex-col w-full px-4 sm:px-8 lg:px-16 pt-40 text-center bg-secondary-light">
+        {/* <div className="flex flex-col w-full px-4 sm:px-8 lg:px-16 pt-40 text-center bg-secondary-light">
 
             <p className="text-xs uppercase tracking-[0.35em] text-black/50">
               contatti
@@ -20,7 +20,7 @@ function Prenota() {
               in un’esperienza elegante, curata e totalmente personalizzata.
             </p>
 
-          </div>
+          </div> */}
         <ContactForm />
       </main>
     </>

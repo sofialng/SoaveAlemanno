@@ -2,90 +2,180 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../img/logo.png";
 
+const links = [
+  { to: "/", label: "Home" },
+  { to: "/chisono", label: "Chi sono" },
+  { to: "/galleria", label: "Galleria" },
+];
+
 function Navbar() {
-    const [open, setOpen] = useState(false);
-    const [isSticky, setIsSticky] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
 
-    useEffect(() => {
-        const onScroll = () => {
-            setIsSticky(window.scrollY > 10);
-        };
+  useEffect(() => {
+    const onScroll = () => setIsSticky(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-        window.addEventListener("scroll", onScroll);
-        onScroll(); // trigger iniziale
+  // Blocca scroll body quando menu mobile aperto
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [open]);
 
-        return () => window.removeEventListener("scroll", onScroll);
-    }, []);
+  const navLinkClass = ({ isActive }) =>
+    [
+      "text-[0.68rem] uppercase tracking-[0.25em] font-light transition-all duration-300 pb-0.5 border-b",
+      isActive
+        ? "border-[var(--color-secondary-dark)] text-[var(--color-secondary-dark)]"
+        : "border-transparent text-black/80 hover:text-black/90 hover:border-[var(--color-primary-dark)]/30",
+    ].join(" ");
 
-   return (
+  const mobileLinkClass = ({ isActive }) =>
+    [
+      "text-sm uppercase tracking-[0.28em] font-light py-3 border-b w-full text-center transition-colors duration-200",
+      isActive
+        ? "text-[var(--color-secondary-dark)] border-[var(--color-secondary-dark)]"
+        : "text-black/80 border-transparent hover:text-black/90",
+    ].join(" ");
+
+  return (
     <>
-      {/* overlay mobile */}
+      {/* Overlay mobile */}
       {open && (
-        <div className="fixed inset-0 bg-black/20 backdrop-blur-sm lg:hidden z-40" />
+        <div
+          className="fixed inset-0 z-40 lg:hidden backdrop-blur-sm"
+          onClick={() => setOpen(false)}
+        />
       )}
 
-      {/* NAVBAR OVERLAY */}
       <nav
-        className="
-          absolute top-0 left-0 w-full z-50
-          transition-all duration-300 bg-transparent"
+        className="absolute top-0 left-0 w-full z-50 transition-all duration-500"
       >
-        <div className="h-20 flex items-center justify-between px-15">
+        <div className="max-w-7xl mx-auto h-20 flex items-center justify-between px-6 md:px-12">
 
-            {/* Logo */}
-            <NavLink to="/" className="h-full flex items-center">
-                <img
-                    src={logo}
-                    alt="Soave"
-                    className="h-full w-auto p-2 cursor-pointer"
-                />
+          {/* Logo */}
+          <NavLink to="/" className="h-full flex items-center">
+            <img src={logo} alt="Soave" className="h-full w-auto p-3 cursor-pointer" />
+          </NavLink>
+
+          {/* Desktop links */}
+          <div className="hidden lg:flex items-center gap-10">
+            {links.map(({ to, label }) => (
+              <NavLink key={to} to={to} className={navLinkClass}>
+                {label}
+              </NavLink>
+            ))}
+
+            {/* CTA */}
+            <NavLink
+              to="/prenota"
+              className={({ isActive }) =>
+                `
+                  ml-4 px-7 py-2.5
+                  text-[0.65rem]
+                  uppercase
+                  tracking-[0.28em]
+                  font-light
+                  border
+                  transition-all
+                  duration-300
+                  hover:bg-primary-dark
+                  hover:text-secondary-light
+                  hover:border-transparent
+                  ${
+                    isActive
+                      ? "bg-secondary-dark text-secondary-light border-transparent"
+                      : "text-secondary-dark border-secondary-dark"
+                  }
+                `
+              }
+            >
+              Prenota una consulenza
             </NavLink>
-
-          {/* Menu Desktop */}
-          <div className="hidden lg:flex items-center gap-4">
-                <NavLink to="/" className={({ isActive }) => isActive ? "text-black font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-secondary-dark hover:font-bold"}>
-                    Home
-                </NavLink>
-                <NavLink to="/chisono" className={({ isActive }) => isActive ? "text-black font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-secondary-dark hover:font-bold"}>
-                    Chi sono
-                </NavLink>
-                {/*<a className="px-4 whitespace-nowrap">Servizi</a>*/}
-                <NavLink to="/galleria" className={({ isActive }) => isActive ? "text-black font-bold px-4 whitespace-nowrap transition-all duration-300" : "px-4 whitespace-nowrap transition-all duration-300 hover:-translate-y-0.5 hover:text-secondary-dark hover:font-bold"}>
-                    Galleria
-                </NavLink>
-                <NavLink to="/prenota" className="ml-4 button-highlight">
-                    Prenota una consulenza
-                </NavLink>
           </div>
 
-          {/* HAMBURGER */}
+          {/* Hamburger */}
           <button
             onClick={() => setOpen(!open)}
-            className="lg:hidden text-3xl text-primary-dark"
+            className="lg:hidden flex flex-col justify-center items-center gap-1.5 w-8 h-8"
+            aria-label={open ? "Chiudi menu" : "Apri menu"}
+            style={{ background: "none", border: "none", cursor: "pointer" }}
           >
-            ☰
+            <span
+              className="block w-6 h-px transition-all duration-300"
+              style={{
+                background: "var(--color-secondary-dark)",
+                transform: open ? "translateY(4px) rotate(45deg)" : "none",
+              }}
+            />
+            <span
+              className="block h-px transition-all duration-300"
+              style={{
+                background: "var(--color-secondary-dark)",
+                width: open ? "0" : "1rem",
+                opacity: open ? 0 : 1,
+              }}
+            />
+            <span
+              className="block w-6 h-px transition-all duration-300"
+              style={{
+                background: "var(--color-secondary-dark)",
+                transform: open ? "translateY(-4px) rotate(-45deg)" : "none",
+              }}
+            />
           </button>
         </div>
 
-        {/* MOBILE MENU */}
-        {open && (
-          <div className="lg:hidden absolute top-20 left-0 w-full">
-            <div className="flex flex-col items-center py-6 gap-4 text-lg">
-                <NavLink to="/" className={({ isActive }) => isActive ? "font-bold px-4 whitespace-nowrap" : "px-4 whitespace-nowrap"}  onClick={() => setOpen(false)}>
-                    Home
-                </NavLink>
-                <NavLink to="/chisono" className={({ isActive }) => isActive ? "font-bold px-4 whitespace-nowrap" : "px-4 whitespace-nowrap"}  onClick={() => setOpen(false)}>
-                    Chi sono
-                </NavLink>
-                <NavLink to="/galleria" className={({ isActive }) => isActive ? "font-bold px-4 whitespace-nowrap" : "px-4 whitespace-nowrap"}  onClick={() => setOpen(false)}>
-                    Galleria
-                </NavLink>
-                <NavLink to="/prenota" className="button-highlight" onClick={() => setOpen(false)}>
-                    Prenota una consulenza
-                </NavLink>
-            </div>
+        {/* Mobile menu */}
+        <div
+          className="lg:hidden overflow-hidden"
+          style={{
+            maxHeight: open ? "400px" : "0",
+            background: "transparent",
+          }}
+        >
+          <div className="flex flex-col items-center px-6 py-8 gap-1">
+            {links.map(({ to, label }) => (
+              <NavLink
+                key={to}
+                to={to}
+                className={mobileLinkClass}
+                onClick={() => setOpen(false)}
+              >
+                {label}
+              </NavLink>
+            ))}
+
+            <NavLink
+              to="/prenota"
+              onClick={() => setOpen(false)}
+              className={({ isActive }) =>
+                `
+                  ml-4 mt-4 px-7 py-2.5
+                  text-sm uppercase tracking-[0.28em] font-light
+                  uppercase
+                  tracking-[0.28em]
+                  font-light
+                  border
+                  transition-all
+                  duration-300
+                  hover:bg-primary-dark
+                  hover:text-secondary-light
+                  hover:border-transparent
+                  ${
+                    isActive
+                      ? "bg-secondary-dark text-secondary-light border-transparent"
+                      : "text-secondary-dark border-secondary-dark"
+                  }
+                `}
+            >
+              Prenota una consulenza
+            </NavLink>
           </div>
-        )}
+        </div>
       </nav>
     </>
   );

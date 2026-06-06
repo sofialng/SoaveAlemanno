@@ -1,4 +1,4 @@
-function DoveISogni({ picture, title, subtitle, children }) {
+export default function TxtImg({ picture, title, subtitle, children }) {
   return (
     <section className="relative min-h-screen bg-secondary-light flex items-center overflow-hidden">
 
@@ -12,18 +12,17 @@ function DoveISogni({ picture, title, subtitle, children }) {
           {/* TEXT */}
           <div className="flex flex-col gap-6 text-center lg:text-left">
 
-            {/* decorative line */}
             <div className="w-16 h-px bg-black/20 mx-auto lg:mx-0" />
 
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl tracking-wide text-black">
+            <h1 className="title max-text-3xl">
               {title}
             </h1>
 
-            <h3 className="text-sm sm:text-base uppercase tracking-widest text-black/60">
+            <h3 className="subtitle">
               {subtitle}
             </h3>
 
-            <p className="text-sm sm:text-base leading-relaxed text-black/70 max-w-xl mx-auto lg:mx-0">
+            <p className="paragraph">
               {children}
             </p>
 
@@ -60,5 +59,3 @@ function DoveISogni({ picture, title, subtitle, children }) {
     </section>
   );
 }
-
-export default DoveISogni;

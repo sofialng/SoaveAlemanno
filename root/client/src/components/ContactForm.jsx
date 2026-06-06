@@ -1,5 +1,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import PageIntro from "./PageIntro";
 
 export default function WeddingPlannerForm() {
   const [form, setForm] = useState({
@@ -15,144 +16,254 @@ export default function WeddingPlannerForm() {
     copyEmail: false,
   });
 
+  const [status, setStatus] = useState(null); // null | "sending" | "ok" | "error"
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-
-    setForm({
-      ...form,
-      [name]: type === "checkbox" ? checked : value,
-    });
+    setForm({ ...form, [name]: type === "checkbox" ? checked : value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    setStatus("sending");
     emailjs
-      .send(
-        "service_fd1mwdm",
-        "template_ptfkjbd",
-        form,
-        "w-ogfvcy2k4L2sMPR"
-      )
-      .then(() => {
-        alert("Richiesta inviata 💌");
-      })
-      .catch((err) => {
-        console.error(err);
-        alert("Errore nell'invio");
-      });
+      .send("service_fd1mwdm", "template_ptfkjbd", form, "w-ogfvcy2k4L2sMPR")
+      .then(() => setStatus("ok"))
+      .catch((err) => { console.error(err); setStatus("error"); });
   };
 
+  const inputClass = `
+    w-full px-4 py-3
+    bg-transparent
+    border-b border-black/20
+    focus:outline-none focus:border-primary-dark
+    transition-colors duration-300
+    text-black/80 placeholder:text-black/35
+    text-sm font-light tracking-wide
+  `;
+
   return (
-    <section className="min-h-screen bg-secondary-light px-6 py-20">
+    <section
+      className="min-h-screen py-30 px-6 bg-secondary-light"
+    >
+      <div className="max-w-3xl mx-auto">
 
-      {/* FORM CARD */}
-      <div className="max-w-4xl mx-auto">
+        <PageIntro
+            header="Iniziamo insieme"
+            title="Raccontaci il vostro giorno"
+            text="Una selezione di momenti, dettagli e atmosfere che raccontano
+            il nostro modo di progettare matrimoni ed eventi."
+            />
 
-        <div className="
-          backdrop-blur-xl
-          bg-white/70
-          border border-white/40
-          shadow-2xl
-          rounded-3xl
-          p-10 md:p-14
-        ">
+        {/* ── FORM ── */}
+        <form onSubmit={handleSubmit}>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
+          {/* SEZIONE 1 — La coppia */}
+          <fieldset className="mb-12">
+            <legend
+              className="text-[0.62rem] uppercase tracking-[0.35em] font-light mb-8 flex items-center gap-4 w-full text-black/80"
+            >
+              <span>01 &nbsp;—&nbsp; La coppia</span>
+              <span
+                className="flex-1 h-px"
+                style={{ background: "var(--color-primary-dark)", opacity: 0.1 }}
+              />
+            </legend>
 
-            {/* GRID */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-
-              {[
-                { name: "names", placeholder: "Nome della coppia" },
-                { name: "email", placeholder: "Email", type: "email" },
-                { name: "phone", placeholder: "Telefono", type: "tel" },
-                { name: "period", placeholder: "Periodo matrimonio" },
-                { name: "location", placeholder: "Location" },
-                { name: "guests", placeholder: "Numero invitati", type: "number" },
-                { name: "budget", placeholder: "Budget (€)" },
-              ].map((field) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
+              <div className="col-span-2">
                 <input
-                  key={field.name}
-                  name={field.name}
-                  type={field.type || "text"}
-                  value={form[field.name]}
+                  name="names"
+                  type="text"
+                  value={form.names}
                   onChange={handleChange}
-                  placeholder={field.placeholder}
-                  className="
-                    w-full px-4 py-3 rounded-xl
-                    bg-white/60
-                    border border-black/10
-                    focus:outline-none focus:ring-2 focus:ring-black/20
-                    transition-all duration-300
-                  "
+                  placeholder="Nome della coppia"
+                  className={inputClass}
                 />
-              ))}
-
-              {/* STYLE */}
-              <select
-                name="style"
-                value={form.style}
+              </div>
+              <input
+                name="email"
+                type="email"
+                value={form.email}
                 onChange={handleChange}
-                className="
-                  w-full px-4 py-3 rounded-xl
-                  bg-white/60
-                  border border-black/10
-                "
-              >
-                <option value="">Stile matrimonio</option>
-                <option value="classico">Classico</option>
-                <option value="luxury">Luxury</option>
-                <option value="boho">Boho</option>
-                <option value="minimal">Minimal</option>
-                <option value="rustico">Rustico</option>
-              </select>
+                placeholder="Email"
+                className={inputClass}
+              />
+              <input
+                name="phone"
+                type="tel"
+                value={form.phone}
+                onChange={handleChange}
+                placeholder="Telefono"
+                className={inputClass}
+              />
             </div>
+          </fieldset>
 
-            {/* MESSAGE */}
+          {/* SEZIONE 2 — Il matrimonio */}
+          <fieldset className="mb-12">
+            <legend
+              className="text-[0.62rem] uppercase tracking-[0.35em] font-light mb-8 flex items-center gap-4 w-full text-black/80"
+            >
+              <span>02 &nbsp;—&nbsp; Il matrimonio</span>
+              <span
+                className="flex-1 h-px"
+                style={{ background: "var(--color-primary-dark)", opacity: 0.1 }}
+              />
+            </legend>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
+              <input
+                name="period"
+                type="text"
+                value={form.period}
+                onChange={handleChange}
+                placeholder="Periodo del matrimonio"
+                className={inputClass}
+              />
+              <input
+                name="location"
+                type="text"
+                value={form.location}
+                onChange={handleChange}
+                placeholder="Location desiderata"
+                className={inputClass}
+              />
+              <input
+                name="guests"
+                type="number"
+                value={form.guests}
+                onChange={handleChange}
+                placeholder="Numero di invitati"
+                className={inputClass}
+              />
+              <input
+                name="budget"
+                type="text"
+                value={form.budget}
+                onChange={handleChange}
+                placeholder="Budget indicativo (€)"
+                className={inputClass}
+              />
+              <div className="col-span-2">
+                <select
+                  name="style"
+                  value={form.style}
+                  onChange={handleChange}
+                  className={inputClass}
+                  style={{ appearance: "none", cursor: "pointer" }}
+                >
+                  <option value="" disabled>Stile del matrimonio</option>
+                  <option value="classico">Classico</option>
+                  <option value="luxury">Luxury</option>
+                  <option value="boho">Boho</option>
+                  <option value="minimal">Minimal</option>
+                  <option value="rustico">Rustico</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          {/* SEZIONE 3 — Il messaggio */}
+          <fieldset className="mb-12">
+            <legend
+              className="text-[0.62rem] uppercase tracking-[0.35em] font-light mb-8 flex items-center gap-4 w-full text-black/80"
+            >
+              <span>03 &nbsp;—&nbsp; Il vostro sogno</span>
+              <span
+                className="flex-1 h-px"
+                style={{ background: "var(--color-primary-dark)", opacity: 0.1 }}
+              />
+            </legend>
+
             <textarea
               name="message"
               value={form.message}
               onChange={handleChange}
               rows="5"
-              placeholder="Raccontaci la tua idea..."
-              className="
-                w-full px-4 py-3 rounded-xl
-                bg-white/60
-                border border-black/10
-                focus:outline-none focus:ring-2 focus:ring-black/20
-                transition-all duration-300
-              "
+              placeholder="Raccontaci la vostra idea, i dettagli che sognate, le emozioni che volete vivere…"
+              className={inputClass + " resize-none"}
             />
+          </fieldset>
 
-            {/* CHECKBOX */}
-            <label className="flex items-center gap-3 text-sm text-black/60">
-              <input
-                type="checkbox"
-                name="copyEmail"
-                checked={form.copyEmail}
-                onChange={handleChange}
-                className="accent-black"
-              />
-              Ricevi una copia della richiesta via email
-            </label>
+          {/* CHECKBOX */}
+          <label
+            className="flex items-center gap-3 text-xs font-light tracking-wide mb-10 cursor-pointer text-black/80"
+          >
+            <span
+              className="w-4 h-4 border flex items-center justify-center flex-shrink-0 transition-colors duration-200"
+              style={{
+                borderColor: form.copyEmail
+                  ? "var(--color-secondary-dark)"
+                  : "black/80",
+                opacity: form.copyEmail ? 1 : 0.3,
+              }}
+            >
+              {form.copyEmail && (
+                <span
+                  className="w-2 h-2 block bg-secondary-dark"
+                />
+              )}
+            </span>
+            <input
+              type="checkbox"
+              name="copyEmail"
+              checked={form.copyEmail}
+              onChange={handleChange}
+              className="sr-only"
+            />
+            Ricevi una copia della richiesta via email
+          </label>
 
-            {/* BUTTON */}
+          {/* SUBMIT */}
+          <div className="text-center">
             <button
               type="submit"
+              disabled={status === "sending" || status === "ok"}
               className="
-                w-full py-3 rounded-full
-                bg-black text-white
-                hover:bg-black/80
-                transition-all duration-300
+                button-elegant
               "
+              style={{
+                borderColor: "var(--color-secondary-dark)",
+                color: status === "ok"
+                  ? "var(--color-secondary-light)"
+                  : "var(--color-secondary-dark)",
+                background: status === "ok"
+                  ? "var(--color-secondary-dark)"
+                  : "transparent",
+              }}
+              onMouseEnter={(e) => {
+                if (status !== "ok") {
+                  e.currentTarget.style.background = "var(--color-secondary-dark)";
+                  e.currentTarget.style.color = "var(--color-secondary-light)";
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (status !== "ok") {
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.color = "var(--color-secondary-dark)";
+                }
+              }}
             >
-              Invia richiesta
+              {status === "sending"
+                ? "Invio in corso…"
+                : status === "ok"
+                ? "Richiesta inviata ✦"
+                : status === "error"
+                ? "Riprova"
+                : "Invia richiesta"}
             </button>
 
-          </form>
+            {status === "error" && (
+              <p
+                className="mt-4 text-xs tracking-wide font-light text-black/80"
+              >
+                Si è verificato un errore. Riprova o scrivici direttamente.
+              </p>
+            )}
+          </div>
 
-        </div>
+        </form>
       </div>
     </section>
   );
