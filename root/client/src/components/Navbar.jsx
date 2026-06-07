@@ -58,7 +58,7 @@ function Navbar() {
 
           {/* Logo */}
           <NavLink to="/" className="h-full flex items-center">
-            <img src={logo} alt="Soave" className="h-full w-auto p-3 cursor-pointer" />
+            <img src={logo} alt="Soave" className="h-full w-auto p-1 cursor-pointer" />
           </NavLink>
 
           {/* Desktop links */}
