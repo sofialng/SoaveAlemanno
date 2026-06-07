@@ -71,7 +71,7 @@ body {
   }
 
   .title {
-    @apply font-serif text-4xl md:text-6xl mt-4 font-light tracking-wide text-[#1a1a1a];
+    @apply font-serif text-4xl md:text-6xl mt-4 font-light tracking-wide text-black/80;
   }
 
   .subtitle {
