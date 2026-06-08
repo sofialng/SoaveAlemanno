@@ -11,7 +11,7 @@ export default function WeddingPlannerForm() {
     location: "",
     guests: "",
     budget: "",
-    style: "",
+    // style: "",
     message: "",
     copyEmail: false,
   });
@@ -145,7 +145,7 @@ export default function WeddingPlannerForm() {
                 placeholder="Budget indicativo (€)"
                 className={inputClass}
               />
-              <div className="col-span-2">
+              {/* <div className="col-span-2">
                 <select
                   name="style"
                   value={form.style}
@@ -160,7 +160,7 @@ export default function WeddingPlannerForm() {
                   <option value="minimal">Minimal</option>
                   <option value="rustico">Rustico</option>
                 </select>
-              </div>
+              </div> */}
             </div>
           </fieldset>
 

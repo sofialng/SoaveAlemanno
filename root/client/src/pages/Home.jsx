@@ -21,6 +21,8 @@ import ServiceExplorer from "../components/ServiceExplorer";
 import VerticalRhythm from "../components/VerticalRhythm";
 import PinnedStory from "../components/PinnedStory";
 import ProcessFlow from "../components/ProcessFlow";
+import SalentoSection from "../components/Map";
+import WeddingTypes from "../components/Carousel";
 
 const services = [
   {
@@ -132,6 +134,10 @@ function Home() {
           author="Paul Auster"
           subtitle="Mbo chi è questo?"
         />
+
+        <SalentoSection />
+
+        <WeddingTypes />
 
         <OgniEvento quote={<>Ogni evento deve essere un vero e proprio <span className="font-bold">percorso esperienziale</span> in grado di <span className="font-bold">raccontare</span> ed <span className="font-bold">esprimere</span> sé stessi, un <span className="font-bold">viaggio</span> unico ed inimitabile che sappia valorizzare pienamente ciò che si vuole <span className="font-bold">trasmettere</span>.</>}/>
 
