@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import About from "./pages/ChiSono";
 import Gallery from "./pages/Galleria";
 import Prenota from "./pages/Prenota";
+import Privacy from "./pages/Privacy";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/chisono" element={<About />} />
         <Route path="/galleria" element={<Gallery />} />
         <Route path="/prenota" element={<Prenota />} />
+        <Route path="/privacy" element={<Privacy />} />
         <Route path="*" element={<Home />} />
       </Routes>
 

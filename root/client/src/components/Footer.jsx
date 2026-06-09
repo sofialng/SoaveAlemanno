@@ -1,5 +1,6 @@
 import soave from '../img/soave.jpg';
 import mariella from '../img/vaso.jpg';
+import { NavLink } from 'react-router-dom';
 
 const socials = [
   {
@@ -132,6 +133,20 @@ function Footer() {
             È vietata la copia, la riproduzione e la pubblicazione dei contenuti di questo sito,
             in qualsiasi modo o forma, non autorizzata espressamente dall'autore. © Copyright 2024
           </p>
+
+          <NavLink
+            to="/privacy"
+            className={({ isActive }) =>
+              `relative text-[0.62rem] font-light tracking-wide cursor-pointer
+              text-white/40 hover:text-white transition-colors duration-300
+              after:content-[''] after:absolute after:left-0 after:-bottom-0.5
+              after:h-px after:w-0 after:bg-white
+              hover:after:w-full after:transition-all after:duration-300
+              ${isActive ? "text-white after:w-full" : ""}`
+            }
+          >
+            Privacy Policy
+          </NavLink>
 
           {/* Social */}
           <div className="flex gap-5">

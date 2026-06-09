@@ -1,6 +1,12 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+
+import { NavLink } from "react-router-dom";
 import PageIntro from "./PageIntro";
+
+const RequiredStar = () => (
+  <span className="text-primary-dark ml-1 ">*</span>
+);
 
 export default function WeddingPlannerForm() {
   const [form, setForm] = useState({
@@ -14,6 +20,7 @@ export default function WeddingPlannerForm() {
     // style: "",
     message: "",
     copyEmail: false,
+    acceptPrivacy: false
   });
 
   const [status, setStatus] = useState(null); // null | "sending" | "ok" | "error"
@@ -63,7 +70,8 @@ export default function WeddingPlannerForm() {
             <legend
               className="text-[0.62rem] uppercase tracking-[0.35em] font-light mb-8 flex items-center gap-4 w-full text-black/80"
             >
-              <span>01 &nbsp;—&nbsp; La coppia</span>
+              <span>01 &nbsp;—&nbsp; La coppia</span> 
+              
               <span
                 className="flex-1 h-px"
                 style={{ background: "var(--color-primary-dark)", opacity: 0.1 }}
@@ -77,7 +85,8 @@ export default function WeddingPlannerForm() {
                   type="text"
                   value={form.names}
                   onChange={handleChange}
-                  placeholder="Nome della coppia"
+                  placeholder="Nome della coppia *"
+                  required
                   className={inputClass}
                 />
               </div>
@@ -86,7 +95,8 @@ export default function WeddingPlannerForm() {
                 type="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder="Email"
+                placeholder="Email *"
+                required
                 className={inputClass}
               />
               <input
@@ -94,7 +104,8 @@ export default function WeddingPlannerForm() {
                 type="tel"
                 value={form.phone}
                 onChange={handleChange}
-                placeholder="Telefono"
+                placeholder="Telefono *"
+                required
                 className={inputClass}
               />
             </div>
@@ -213,6 +224,42 @@ export default function WeddingPlannerForm() {
               className="sr-only"
             />
             Ricevi una copia della richiesta via email
+          </label>
+
+          <label className="flex items-start gap-3 text-xs font-light tracking-wide mb-10 cursor-pointer text-black/80">
+            <span
+              className="w-4 h-4 border flex items-center justify-center flex-shrink-0 transition-colors duration-200"
+              style={{
+                borderColor: form.acceptPrivacy ? "var(--color-secondary-dark)" : "rgba(0,0,0,0.3)",
+                opacity: form.acceptPrivacy ? 1 : 0.5,
+              }}
+            >
+              {form.acceptPrivacy && (
+                <span className="w-2 h-2 block bg-secondary-dark" />
+              )}
+            </span>
+
+            <input
+              type="checkbox"
+              name="acceptPrivacy"
+              checked={form.acceptPrivacy}
+              onChange={handleChange}
+              className="sr-only"
+              required
+            />
+
+            <span>
+              Accetto la{" "}
+              <NavLink
+                to="/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-black transition-colors duration-200"
+              >
+              Privacy Policy
+              </NavLink>
+              <RequiredStar />
+            </span>
           </label>
 
           {/* SUBMIT */}
