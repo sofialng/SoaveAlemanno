@@ -33,15 +33,11 @@ const cards = [
   },
 ];
 
+const symbols = ["✦", "❀", "✿", "✧"];
+
 export default function Cards() {
   return (
-    <section className="relative py-28 overflow-hidden">
-
-      {/* 🌈 PREMIUM BACKGROUND (mesh gradient) */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,#f5e6d8_0%,transparent_40%),radial-gradient(circle_at_80%_30%,#e9f0ea_0%,transparent_45%),radial-gradient(circle_at_50%_80%,#f3eaf5_0%,transparent_40%)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#fbfaf7] via-[#f7f3ee] to-[#f9f6f2]" />
-      </div>
+    <section className="relative py-28 overflow-hidden bg-secondary-light">
 
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
 
@@ -95,7 +91,7 @@ export default function Cards() {
 
               {/* NUMBER (desktop only) */}
               <div className="ml-auto lg:ml-0 lg:mt-auto text-xs tracking-[0.3em] text-black/30">
-                {String(i + 1).padStart(2, "0")}
+                {symbols[i % symbols.length]}
               </div>
 
             </div>

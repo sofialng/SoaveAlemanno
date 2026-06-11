@@ -83,7 +83,7 @@ export default function BoxToForm() {
             e.currentTarget.style.color = "var(--color-secondary-dark)";
           }}
         >
-          Prenota una consulenza
+          Prenota una consulenza gratuita
         </NavLink>
 
       </div>

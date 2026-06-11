@@ -7,6 +7,7 @@ import Privacy from "./pages/Privacy";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import CookieBanner from "./components/CookieBanner";
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
       </Routes>
 
       <ScrollToTopButton />
+
+      <CookieBanner />
 
       <Footer />
     </div>

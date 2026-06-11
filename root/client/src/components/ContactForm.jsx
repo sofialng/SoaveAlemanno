@@ -1,12 +1,16 @@
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
-
 import { NavLink } from "react-router-dom";
 import PageIntro from "./PageIntro";
 
 const RequiredStar = () => (
   <span className="text-primary-dark ml-1 ">*</span>
 );
+
+const formatEuro = (value) => {
+  const number = value.replace(/\D/g, "");
+  if (!number) return "";
+  return new Intl.NumberFormat("it-IT").format(number) + " €";
+};
 
 export default function WeddingPlannerForm() {
   const [form, setForm] = useState({
@@ -30,13 +34,73 @@ export default function WeddingPlannerForm() {
     setForm({ ...form, [name]: type === "checkbox" ? checked : value });
   };
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setStatus("sending");
+  //   emailjs
+  //     .send("service_fd1mwdm", "template_ptfkjbd", form, "w-ogfvcy2k4L2sMPR")
+  //     .then(() => setStatus("ok"))
+  //     .catch((err) => { console.error(err); setStatus("error"); });
+  // };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   if (!form.acceptPrivacy) {
+  //     alert("Devi accettare la Privacy Policy");
+  //     return;
+  //   }
+
+  //   setStatus("sending");
+
+  //   emailjs
+  //     .send("service_fd1mwdm", "template_ptfkjbd", form, "w-ogfvcy2k4L2sMPR")
+  //     .then(() => setStatus("ok"))
+  //     .catch((err) => {
+  //       console.error(err);
+  //       setStatus("error");
+  //     });
+  // };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("sending");
-    emailjs
-      .send("service_fd1mwdm", "template_ptfkjbd", form, "w-ogfvcy2k4L2sMPR")
-      .then(() => setStatus("ok"))
-      .catch((err) => { console.error(err); setStatus("error"); });
+
+    if (!form.acceptPrivacy) {
+      alert("Devi accettare la Privacy Policy");
+      return;
+    }
+
+    try {
+      setStatus("sending");
+
+      const response = await fetch(
+        "http://localhost:3000/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(form),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Errore invio");
+      }
+
+      setStatus("ok");
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+    }
+  };
+
+  const handleBudgetChange = (e) => {
+    const raw = e.target.value;
+    setForm({
+      ...form,
+      budget: formatEuro(raw),
+    });
   };
 
   const inputClass = `
@@ -106,6 +170,7 @@ export default function WeddingPlannerForm() {
                 onChange={handleChange}
                 placeholder="Telefono *"
                 required
+                pattern="^\+?[0-9\s]{7,15}$"
                 className={inputClass}
               />
             </div>
@@ -146,13 +211,14 @@ export default function WeddingPlannerForm() {
                 value={form.guests}
                 onChange={handleChange}
                 placeholder="Numero di invitati"
+                min="0"
                 className={inputClass}
               />
               <input
                 name="budget"
                 type="text"
                 value={form.budget}
-                onChange={handleChange}
+                onChange={handleBudgetChange}
                 placeholder="Budget indicativo (€)"
                 className={inputClass}
               />

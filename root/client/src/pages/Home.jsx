@@ -7,12 +7,11 @@ import QuoteBlock from "../components/QuoteBlock";
 
 import BoxToForm from "../components/BoxToForm";
 
-import board from "../img/board.jpg"
-import daniela from "../img/daniela.jpg"
+import img from "../img/img";
+import { items, services } from "../assets/content/content";
 
 // Ci piacciono? 
 import Emozioni from "../components/Emozioni";
-import Arches from "../components/Arches";
 import OgniEvento from "../components/OgniEvento";
 import EditorialBlock from "../components/EditorialBlock";
 import WeddingJourney from "../components/Journey";
@@ -24,30 +23,6 @@ import ProcessFlow from "../components/ProcessFlow";
 import SalentoSection from "../components/Map";
 import WeddingTypes from "../components/Carousel";
 
-const services = [
-  {
-    title: "Matrimonio completo",
-    subtitle: "full planning",
-    image: "/img/wedding1.jpg",
-    description: "Gestiamo ogni fase del tuo matrimonio, dall’idea iniziale fino al giorno dell’evento.",
-    services: ["Location", "Design", "Coordination", "Vendors"]
-  },
-  {
-    title: "Consulenza",
-    subtitle: "wedding consulting",
-    image: "/img/wedding2.jpg",
-    description: "Ti aiutiamo a costruire il tuo evento passo dopo passo.",
-    services: ["Budget", "Style", "Timeline"]
-  },
-  {
-    title: "Destination wedding",
-    subtitle: "italy & abroad",
-    image: "/img/wedding3.jpg",
-    description: "Organizziamo matrimoni in location esclusive in Italia e all’estero.",
-    services: ["Travel", "Logistics", "Design"]
-  }
-];
-
 function Home() {
   return (
     <>
@@ -56,7 +31,7 @@ function Home() {
        
         <section id="DoveISogni">
           <TxtImg 
-            picture={board} 
+            picture={img.board} 
             title={<>Dove i <span className="font-calligraphy">sogni</span> prendono forma</>}
             subtitle="Siamo un team di professioniste specializzate in matrimoni ed eventi, pronte a dare forma ai tuoi sogni."
             >
@@ -67,7 +42,7 @@ function Home() {
         </section>
 
         <ImgTxt
-          image={board}
+          image={img.board}
           title="Il tuo giorno perfetto"
           subtitle="wedding experience"
         >
@@ -75,7 +50,7 @@ function Home() {
         </ImgTxt>
 
         <EditorialBlock
-          image={board}
+          image={img.board}
           title="Momenti che restano"
           subtitle="wedding stories"
         >
@@ -83,34 +58,11 @@ function Home() {
         </EditorialBlock>
 
         <WeddingJourney
-          items={[
-            {
-              step: "01",
-              title: "Conosciamoci",
-              text: "Iniziamo ascoltando la tua storia, i tuoi desideri e la tua visione.",
-            },
-            {
-              step: "02",
-              title: "Progettazione",
-              text: "Costruiamo insieme un concept estetico e organizzativo su misura.",
-              image: daniela,
-            },
-            {
-              step: "03",
-              title: "Realizzazione",
-              text: "Ogni dettaglio prende vita con cura, precisione e armonia.",
-              image: daniela,
-            },
-            {
-              step: "04",
-              title: "Il tuo giorno",
-              text: "Viviamo insieme il momento, trasformando emozione in ricordo.",
-            },
-          ]}
+          items={items}
         />
 
         <SideRevealStory
-          image={board}
+          image={img.board}
           title="Un giorno irripetibile"
           subtitle="wedding experience"
                 >
@@ -177,19 +129,19 @@ function Home() {
               tag: "concept",
               title: "La tua storia",
               text: "Ogni matrimonio nasce da un’identità unica e irripetibile.",
-              image: daniela
+              image: img.daniela
             },
             {
               tag: "design",
               title: "Costruiamo l’atmosfera",
               text: "Luce, colori e materiali definiscono il mood dell’evento.",
-              image: board
+              image: img.board
             },
             {
               tag: "execution",
               title: "Realizzazione perfetta",
               text: "Ogni dettaglio viene orchestrato con precisione assoluta.",
-              image: daniela
+              image: img.daniela
             }
           ]}
         />
