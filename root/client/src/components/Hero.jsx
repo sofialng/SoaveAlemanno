@@ -4,7 +4,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative h-screen overflow-hidden flex items-center justify-center"
+      className="relative h-[100svh] min-h-[100dvh] overflow-hidden flex items-center justify-center"
       style={{
         backgroundImage: `url(${img.home.hero})`,
         backgroundSize: "cover",
