@@ -1,10 +1,15 @@
 import ImgGrid from "../components/ImgGrid";
 
+import {
+  galleries,
+} from "../assets/content/content";
+
 function Gallery() {  
   return (
     <>
       <main>
-        <ImgGrid />
+        <ImgGrid 
+          galleries={galleries}/>
       </main>
     </>
   );

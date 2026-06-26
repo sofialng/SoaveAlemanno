@@ -1,41 +1,7 @@
-import finishLine from "../img/finish-line.svg";
-import powerful from "../img/powerful.svg";
-import creative from "../img/creative.svg";
-import visionBoard from "../img/vision-board.svg";
-
-const cards = [
-  {
-    src: finishLine,
-    alt: "Finish line",
-    titolo: "Inarrestabile",
-    testo:
-      "Trascinatrice piena di energie con la mente sempre in fermento e mille idee da sviluppare.",
-  },
-  {
-    src: powerful,
-    alt: "Powerful",
-    titolo: "Forte",
-    testo:
-      "Quando c'è un obiettivo da raggiungere non c'è ostacolo che possa farmi desistere.",
-  },
-  {
-    src: creative,
-    alt: "Creative",
-    titolo: "Appassionata",
-    testo: "Amo ciò che faccio e ci metto tutta me stessa.",
-  },
-  {
-    src: visionBoard,
-    alt: "Vision board",
-    titolo: "Attenta",
-    testo:
-      "Ogni evento è unico e irripetibile: un’organizzazione impeccabile è la chiave per una riuscita perfetta.",
-  },
-];
-
 const symbols = ["✦", "❀", "✿", "✧"];
 
-export default function Cards() {
+
+export default function Cards({ title, subtitle, cards }) {
   return (
     <section className="relative py-28 overflow-hidden bg-secondary-light">
 
@@ -44,11 +10,11 @@ export default function Cards() {
         {/* HEADER */}
         <div className="text-center mb-16">
           <p className="title">
-            Se dovessi descrivermi
+            {title}
           </p>
 
-          <p className="subtitle">
-            …potrei dire di me che sono:
+          <p className="subtitle mt-4">
+            {subtitle}
           </p>
         </div>
 

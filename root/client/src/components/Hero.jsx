@@ -1,21 +1,12 @@
-import sfondoHome from "../img/hero2.jpg";
-import logo from "../img/logo.png";
+import img from "../img/img";
 
-function HomeScreen() {
-  const scrollToSection = () => {
-    const element = document.getElementById("DoveISogni");
-    const navbar = document.getElementById("navbar");
-    if (!element) return;
-    const navbarHeight = navbar?.offsetHeight || 0;
-    const top = element.getBoundingClientRect().top + window.scrollY - navbarHeight + 1;
-    window.scrollTo({ top, behavior: "smooth" });
-  };
+export default function Hero() {
 
   return (
     <section
       className="relative h-screen overflow-hidden flex items-center justify-center"
       style={{
-        backgroundImage: `url(${sfondoHome})`,
+        backgroundImage: `url(${img.home.hero})`,
         backgroundAttachment: "fixed",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -52,7 +43,7 @@ function HomeScreen() {
         <div className="flex items-center gap-4">
           <div className="w-12 h-px bg-black"/>
           <span className="text-[0.65rem] tracking-[0.5em] uppercase font-light">
-            Wedding &amp; Event Planner
+            Soave Alemanno - Wedding &amp; Event Planner
           </span>
           <div className="w-12 h-px bg-black"/>
         </div>
@@ -68,8 +59,7 @@ function HomeScreen() {
         <p
           className="max-w-md text-sm md:text-base font-light leading-relaxed tracking-wide"
         >
-          Ogni dettaglio pensato per voi. Ogni emozione vissuta come se fosse
-          l'unica che conta.
+          Al resto, penso io.
         </p>
 
         {/* CTA */}
@@ -127,5 +117,3 @@ function HomeScreen() {
     </section>
   );
 }
-
-export default HomeScreen;

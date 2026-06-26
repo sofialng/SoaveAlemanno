@@ -1,40 +1,7 @@
 import { useState, useEffect, useRef } from "react";
-
-import vaso from "../img/vaso.jpg";
-import daniela from "../img/daniela-full.jpg";
 import PageIntro from "./PageIntro";
 
-const galleries = [
-  {
-    title: "Matrimoni",
-    subtitle: "Atmosfere romantiche e dettagli senza tempo",
-    images: [
-      { src: daniela, alt: "Daniela", caption: "La sposa" },
-      { src: vaso, alt: "Vaso", caption: "Centrotavola" },
-      { src: daniela, alt: "Daniela", caption: "Ritratto" },
-    ],
-  },
-  {
-    title: "Allestimenti",
-    subtitle: "Fiori, luci e scenografie personalizzate",
-    images: [
-      { src: vaso, alt: "Vaso", caption: "Composizione floreale" },
-      { src: daniela, alt: "Daniela", caption: "Dettaglio" },
-      { src: vaso, alt: "Vaso", caption: "Tavola degli sposi" },
-    ],
-  },
-  {
-    title: "Momenti",
-    subtitle: "Emozioni autentiche da ricordare",
-    images: [
-      { src: daniela, alt: "Daniela", caption: "Primo ballo" },
-      { src: vaso, alt: "Vaso", caption: "Bouquet" },
-      { src: daniela, alt: "Daniela", caption: "L'abbraccio" },
-    ],
-  },
-];
-
-function ImgGrid() {
+function ImgGrid({ galleries }) {
   const allImages = galleries.flatMap((s) => s.images);
   const [activeSection, setActiveSection] = useState(0);
   const [selected, setSelected] = useState(null);
@@ -175,6 +142,8 @@ function ImgGrid() {
                         <img
                           src={image.src}
                           alt={image.alt}
+                          onContextMenu={(e) => e.preventDefault()}
+                          draggable={false}
                           className="w-full transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                         />
                       </div>
@@ -231,6 +200,8 @@ function ImgGrid() {
             <img
               src={allImages[selected].src}
               alt={allImages[selected].alt}
+              onContextMenu={(e) => e.preventDefault()}
+              draggable={false}
               className="max-w-[88vw] max-h-[78vh] object-contain rounded-xl"
             />
             {/* Caption nel lightbox */}

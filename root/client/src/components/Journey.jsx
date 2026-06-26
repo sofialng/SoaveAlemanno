@@ -1,4 +1,4 @@
-function WeddingJourney({ items = [] }) {
+export default function Journey({ title, subtitle, paragraph,items = [] }) {
   return (
     <section className="relative bg-secondary-light py-24 overflow-hidden">
 
@@ -10,11 +10,17 @@ function WeddingJourney({ items = [] }) {
         {/* header */}
         <div className="text-center mb-16">
           <p className="text-xs uppercase tracking-[0.35em] text-black/50">
-            il nostro processo
+            {subtitle}
           </p>
           <h2 className="font-serif text-4xl md:text-5xl text-black mt-3">
-            Il viaggio verso il tuo giorno perfetto
+            {title}
           </h2>
+        </div>
+
+        <div className="text-center mb-16">
+          <p className="paragraph">
+            {paragraph}
+          </p>
         </div>
 
         {/* timeline */}
@@ -76,5 +82,3 @@ function WeddingJourney({ items = [] }) {
     </section>
   );
 }
-
-export default WeddingJourney;

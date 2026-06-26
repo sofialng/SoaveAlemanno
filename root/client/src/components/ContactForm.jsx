@@ -12,7 +12,7 @@ const formatEuro = (value) => {
   return new Intl.NumberFormat("it-IT").format(number) + " €";
 };
 
-export default function WeddingPlannerForm() {
+export default function WeddingPlannerForm({ title, subtitle, paragraph }) {
   const [form, setForm] = useState({
     names: "",
     email: "",
@@ -33,34 +33,6 @@ export default function WeddingPlannerForm() {
     const { name, value, type, checked } = e.target;
     setForm({ ...form, [name]: type === "checkbox" ? checked : value });
   };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setStatus("sending");
-  //   emailjs
-  //     .send("service_fd1mwdm", "template_ptfkjbd", form, "w-ogfvcy2k4L2sMPR")
-  //     .then(() => setStatus("ok"))
-  //     .catch((err) => { console.error(err); setStatus("error"); });
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   if (!form.acceptPrivacy) {
-  //     alert("Devi accettare la Privacy Policy");
-  //     return;
-  //   }
-
-  //   setStatus("sending");
-
-  //   emailjs
-  //     .send("service_fd1mwdm", "template_ptfkjbd", form, "w-ogfvcy2k4L2sMPR")
-  //     .then(() => setStatus("ok"))
-  //     .catch((err) => {
-  //       console.error(err);
-  //       setStatus("error");
-  //     });
-  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -120,10 +92,9 @@ export default function WeddingPlannerForm() {
       <div className="max-w-3xl mx-auto">
 
         <PageIntro
-            header="Iniziamo insieme"
-            title="Raccontaci il vostro giorno"
-            text="Una selezione di momenti, dettagli e atmosfere che raccontano
-            il nostro modo di progettare matrimoni ed eventi."
+            header={subtitle}
+            title={title}
+            text={paragraph}
             />
 
         {/* ── FORM ── */}

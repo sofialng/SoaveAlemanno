@@ -1,4 +1,4 @@
-function SideRevealStory({ image, title, subtitle, children }) {
+export default function TransparentDescription({ image, title, subtitle, paragraph }) {
   return (
     <section className="relative min-h-screen flex items-center bg-secondary-light overflow-hidden">
 
@@ -6,7 +6,6 @@ function SideRevealStory({ image, title, subtitle, children }) {
       <div className="absolute inset-0">
         <img
           src={image}
-          alt={title}
           className="w-full h-full object-cover"
         />
 
@@ -14,7 +13,7 @@ function SideRevealStory({ image, title, subtitle, children }) {
         <div className="absolute inset-0 bg-black/30" />
       </div>
 
-      {/* CONTENT PANEL */}
+      {/* CONTENT */}
       <div className="relative w-full max-w-7xl mx-auto px-6 lg:px-20 flex justify-end">
 
         <div className="
@@ -28,25 +27,22 @@ function SideRevealStory({ image, title, subtitle, children }) {
           text-white
         ">
 
-          <p className="text-xs uppercase tracking-[0.35em] text-white/60">
+          <p className="subtitle text-secondary-light">
             {subtitle}
           </p>
 
-          <h2 className="font-serif text-4xl md:text-5xl mt-3 leading-tight">
+          <h2 className="title text-4xl md:text-5xl text-secondary-light">
             {title}
           </h2>
 
           <div className="w-16 h-px bg-white/30 my-6" />
 
-          <p className="text-sm md:text-base text-white/80 leading-relaxed">
-            {children}
+          <p className="paragraph text-secondary-light/80">
+            {paragraph}
           </p>
 
         </div>
-
       </div>
     </section>
   );
 }
-
-export default SideRevealStory;

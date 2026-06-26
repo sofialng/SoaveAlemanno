@@ -1,9 +1,6 @@
-export default function TxtImg({ picture, title, subtitle, children }) {
+export default function TxtImg({ picture, title, subtitle, paragraph }) {
   return (
-    <section className="relative min-h-screen bg-secondary-light flex items-center overflow-hidden">
-
-      {/* subtle background glow */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent pointer-events-none" />
+    <section className="relative min-h-screen flex items-center overflow-hidden">
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-20 w-full">
 
@@ -18,12 +15,14 @@ export default function TxtImg({ picture, title, subtitle, children }) {
               {title}
             </h1>
 
-            <h3 className="subtitle">
-              {subtitle}
-            </h3>
+            {subtitle &&  (
+              <h3 className="subtitle">
+                {subtitle}
+              </h3>
+            )}
 
-            <p className="paragraph">
-              {children}
+            <p className="paragraph text-justify">
+              {paragraph}
             </p>
 
           </div>

@@ -79,11 +79,15 @@ body {
   }
 
   .paragraph {
-    @apply max-w-2xl mx-auto mt-6 text-black/60 font-light leading-relaxed;
+    @apply max-w-2xl mx-auto mt-6 text-black/60 font-light leading-relaxed text-justify;
   }
   
   .clickable-image {
     @apply max-w-full max-h-full h-auto object-contain rounded-2xl cursor-pointer transition-transform duration-300 hover:scale-105;
   }
   
+  body {
+    background-color: var(--color-secondary-light);
+  }
+
 }

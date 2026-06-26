@@ -62,60 +62,53 @@ function LeafletMap() {
   );
 }
 
-function SalentoSection() {
+function SalentoSection({ image, title, subtitle, paragraph }) {
   return (
     <section
-      className="relative min-h-screen flex items-center overflow-hidden bg-secondary-light"
+      className="relative min-h-screen flex items-center overflow-hidden"
     >
       <div className="relative max-w-7xl mx-auto px-6 lg:px-20 w-full py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-16 items-center">
 
           {/* Mappa */}
-          <div className="flex justify-center order-1">
+          {/* <div className="flex justify-center order-1">
             <div className="relative w-full max-w-md overflow-hidden">
               <LeafletMap className="w-full"/>
+            </div>
+          </div> */}
+          <div className="flex justify-center order-2">
+            <div className="relative w-full max-w-md overflow-hidden">
+              <img
+                src={image}
+                alt="Location matrimonio"
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
 
           {/* Testo */}
-          <div className="flex flex-col gap-6 text-center lg:text-left order-2">
+          <div className="flex flex-col gap-6 text-center lg:text-left order-1">
 
             <div className="flex items-center gap-3 justify-center lg:justify-start">
               <div className="w-8 h-px bg-secondary-dark"/>
               <span
                 className="text-[0.58rem] uppercase tracking-[0.4em] font-light text-secondary-dark"
               >
-                Il nostro territorio
+                {subtitle}
               </span>
             </div>
 
             <h2
               className="title"
             >
-              Salento: dove il mare incontra
-              <br />
-              <span className="font-calligraphy">l'amore</span>
+              {title}
             </h2>
 
             <div
               className="w-10 h-px mx-auto lg:mx-0 bg-secondary-dark"
             />
 
-            <p
-              className="paragraph"
-            >
-              Il Salento è una terra di luce, di pietra leccese e di orizzonti infiniti.
-              Tra masserie storiche, ville sul mare e giardini mediterranei, ogni venue
-              racconta una storia unica: la vostra.
-            </p>
-
-            <p
-              className="paragraph"
-            >
-              Organizziamo matrimoni ed eventi in tutta la penisola salentina: da Lecce
-              a Otranto, da Gallipoli alle campagne di Nardò, portando eleganza e cura
-              in ogni angolo di questa terra straordinaria.
-            </p>
+            {paragraph}
 
             <div className="flex flex-wrap gap-2 justify-center lg:justify-start mt-2">
               {["Lecce", "Otranto", "Gallipoli", "Nardò", "Galatina", "Maglie"].map((loc) => (

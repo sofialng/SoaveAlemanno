@@ -1,6 +1,6 @@
-export default function ImgTxt({ image, title, subtitle, children, reverse = false }) {
+export default function ImgTxt({ picture, title, subtitle, paragraph, reverse = false }) {
   return (
-    <section className="relative py-24 bg-secondary-light overflow-hidden">
+    <section className="relative py-24 overflow-hidden">
 
       {/* subtle background line */}
       <div className="absolute inset-0 flex justify-center">
@@ -25,7 +25,7 @@ export default function ImgTxt({ image, title, subtitle, children, reverse = fal
               <div className="absolute -inset-3 border border-black/10 rounded-2xl transition group-hover:-inset-4" />
 
               <img
-                src={image}
+                src={picture}
                 alt={title}
                 className="
                   relative
@@ -57,7 +57,7 @@ export default function ImgTxt({ image, title, subtitle, children, reverse = fal
             <div className="w-16 h-px bg-black/20 mx-auto lg:mx-0" />
 
             <p className="paragraph">
-              {children}
+              {paragraph}
             </p>
 
           </div>

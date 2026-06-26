@@ -1,66 +1,16 @@
 import { useRef, useState, useEffect } from "react";
 
-import masseria from "../img/daniela.jpg";
-import mare from "../img/daniela.jpg";
-import centrostorico from "../img/daniela.jpg";
-import tenuta from "../img/daniela.jpg";
-
-const tipi = [
-  {
-    numero: "01",
-    titolo: "Masseria",
-    sottotitolo: "Tra ulivi e pietra leccese",
-    descrizione:
-      "Le masserie salentine offrono un'atmosfera autentica e senza tempo. Cortili in pietra, giardini profumati di lavanda e ulivi secolari fanno da cornice a matrimoni intimi e raffinati.",
-    dettagli: ["Fino a 200 ospiti", "Catering interno", "Alloggi in loco"],
-    img: masseria,
-  },
-  {
-    numero: "02",
-    titolo: "Sul mare",
-    sottotitolo: "Acque cristalline come scenario",
-    descrizione:
-      "Dal tramonto di Gallipoli alle calette di Otranto, sposarsi con il mare come orizzonte è il sogno di molte coppie. Ville private e lidi esclusivi per una cerimonia indimenticabile.",
-    dettagli: ["Vista mare garantita", "Cerimonia in spiaggia", "Aperitivo al tramonto"],
-    img: mare,
-  },
-  {
-    numero: "03",
-    titolo: "Centro storico",
-    sottotitolo: "Lecce barocca e le sue piazze",
-    descrizione:
-      "I palazzi nobiliari, le chiese barocche e i chiostri di Lecce e Galatina creano uno scenario unico. Ogni angolo è un dettaglio architettonico che racconta secoli di storia.",
-    dettagli: ["Palazzo nobiliare", "Chiostro privato", "Illuminazione notturna"],
-    img: centrostorico,
-  },
-  {
-    numero: "04",
-    titolo: "Tenuta vinicola",
-    sottotitolo: "Tra vigneti e Primitivo",
-    descrizione:
-      "Le tenute vitivinicole del Salento combinano eleganza rurale e hospitalità raffinata. Un matrimonio tra i filari con degustazione dei vini locali conquista ogni ospite.",
-    dettagli: ["Degustazione inclusa", "Scenografia naturale", "Cantine visitabili"],
-    img: tenuta,
-  },
-];
-
-// Duplica per loop infinito: [...tipi, ...tipi, ...tipi]
-const LOOP = [...tipi, ...tipi, ...tipi];
-const COUNT = tipi.length;
-// Partiamo dal secondo gruppo (indice COUNT) così si può scorrere in entrambe le direzioni
-const INITIAL = COUNT;
-
-export default function TipiMatrimonio() {
+export default function TipiMatrimonio({ tipi }) {
+  const LOOP = [...tipi, ...tipi, ...tipi];
+  const COUNT = tipi.length;
+  const INITIAL = COUNT;
   const [current, setCurrent] = useState(INITIAL);
   const [transitioning, setTransitioning] = useState(true);
   const trackRef = useRef(null);
   const startX = useRef(null);
-  const autoRef = useRef(null);
 
-  // Indice "reale" nel gruppo originale (0-3)
   const realIdx = current % COUNT;
 
-  // Quando arriviamo agli estremi del loop, saltiamo silenziosamente al centro
   useEffect(() => {
     if (!transitioning) return;
     if (current <= 1) {
@@ -84,6 +34,31 @@ export default function TipiMatrimonio() {
       });
     }
   }, [transitioning]);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      switch (e.key) {
+        case "ArrowRight":
+          setCurrent((p) => p + 1);
+          setTransitioning(true);
+          break;
+
+        case "ArrowLeft":
+          setCurrent((p) => p - 1);
+          setTransitioning(true);
+          break;
+
+        default:
+          break;
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   const go = (dir) => {
     setCurrent((p) => p + dir);
@@ -221,19 +196,19 @@ export default function TipiMatrimonio() {
                   }}
                 >
                   <p
-                    className="subtitle text-primary-dark"
+                    className="subtitle text-secondary-dark"
                   >
                     {tipo.numero}
                   </p>
 
                   <h3
-                    className="title text-3xl mb-1"
+                    className="title text-3xl mb-1 text-primary-dark"
                   >
                     {tipo.titolo}
                   </h3>
 
                   <p
-                    className="subtitle text-black/40"
+                    className="subtitle text-black/40 leading-5 mt-4"
                   >
                     {tipo.sottotitolo}
                   </p>
