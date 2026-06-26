@@ -3,17 +3,17 @@ import img from "../img/img";
 export default function Hero() {
 
   return (
-    <section
-      className="relative h-[100svh] min-h-[100dvh] overflow-hidden flex items-center justify-center"
-      style={{
-        backgroundImage: `url(${img.home.hero})`,
-        backgroundSize: "cover",
-        backgroundAttachment: "fixed",
-        backgroundPosition: window.innerWidth < 768 
-          ? "center top" 
-          : "center center",
-      }}
-      >
+    <section className="relative h-[100svh] min-h-[100dvh] overflow-hidden flex items-center justify-center">
+
+      {/* BACKGROUND FISSO */}
+      <div
+        className="fixed inset-0 -z-20"
+        style={{
+          backgroundImage: `url(${img.home.hero})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+        }}
+      />
 
       {/* Overlay bianco */}
       <div

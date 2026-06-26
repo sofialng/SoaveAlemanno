@@ -90,4 +90,9 @@ body {
     background-color: var(--color-secondary-light);
   }
 
+  @media (min-width: 768px) {
+  .hero-bg {
+    background-attachment: fixed;
+  }
+}
 }

@@ -60,7 +60,7 @@ function ImgGrid({ galleries }) {
   return (
     <>
       <section className="bg-secondary-light py-30">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className="w-full max-w-7xl mx-auto px-5 md:px-12 overflow-hidden">
 
           <PageIntro
             header="Galleria"
@@ -70,13 +70,37 @@ function ImgGrid({ galleries }) {
             />
 
           {/* ── TAB NAV ── */}
-          <div className="flex justify-center mb-20">
-            <div className="flex border-b border-[#e0dbd3]">
+          <div className="flex justify-center mb-20 w-full">
+            <div
+              className="
+                flex
+                flex-col
+                items-center
+                w-full
+                md:border-b md:border-[#e0dbd3]
+                md:flex-row
+                md:w-auto
+              "
+            >
               {galleries.map((s, idx) => (
                 <button
                   key={idx}
                   onClick={() => scrollToSection(idx)}
-                  className="relative px-8 py-3 text-[0.7rem] uppercase tracking-[0.25em] font-light transition-colors duration-300"
+                  className="
+                    relative
+                    w-full
+                    md:w-auto
+                    px-4
+                    md:px-8
+                    py-3
+                    text-[0.65rem]
+                    uppercase
+                    tracking-[0.25em]
+                    font-light
+                    transition-colors
+                    duration-300
+                    whitespace-nowrap
+                  "
                   style={{
                     color: activeSection === idx ? "#1a1a1a" : "#9a9085",
                     background: "transparent",
@@ -85,11 +109,12 @@ function ImgGrid({ galleries }) {
                   }}
                 >
                   <span>{s.title}</span>
-                  {/* underline attivo */}
+
                   <span
-                    className="absolute bottom-0 left-0 w-full h-px transition-all duration-300"
+                    className="absolute bottom-0 left-0 w-full h-px"
                     style={{
-                      background: activeSection === idx ? "#b89b6e" : "transparent",
+                      background:
+                        activeSection === idx ? "#b89b6e" : "transparent",
                     }}
                   />
                 </button>

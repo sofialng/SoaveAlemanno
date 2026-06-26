@@ -12,7 +12,7 @@ import CookieBanner from "./components/CookieBanner";
 function App() {
   return (
     <>
-    <div className="relative z-50">
+    <div className="w-screen overflow-x-hidden">
       <Navbar />
       
       <Routes basename="/SoaveAlemanno">

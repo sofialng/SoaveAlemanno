@@ -178,7 +178,7 @@ export default function TipiMatrimonio({ tipi }) {
                     className="w-full h-full object-cover transition-transform duration-700"
                     style={{
                       transform: isActive ? "scale(1.03)" : "scale(1)",
-                      filter: isActive ? "none" : "brightness(0.6) saturate(0.7)",
+                      filter: isActive ? "none" : "brightness(0.85)",
                     }}
                   />
                 </div>
@@ -195,11 +195,11 @@ export default function TipiMatrimonio({ tipi }) {
                     transition: "border-color 0.4s, background 0.4s",
                   }}
                 >
-                  <p
+                  {/* <p
                     className="subtitle text-secondary-dark"
                   >
                     {tipo.numero}
-                  </p>
+                  </p> */}
 
                   <h3
                     className="title text-3xl mb-1 text-primary-dark"
@@ -207,11 +207,11 @@ export default function TipiMatrimonio({ tipi }) {
                     {tipo.titolo}
                   </h3>
 
-                  <p
+                  {/* <p
                     className="subtitle text-black/40 leading-5 mt-4"
                   >
                     {tipo.sottotitolo}
-                  </p>
+                  </p> */}
 
                   <p
                     className="paragraph mb-4"

@@ -48,13 +48,15 @@ function Home() {
             />
         </section>
 
-        <ImgTxt
-          picture={scenografie_d_amore.picture}
-          title={scenografie_d_amore.title}
-          subtitle={scenografie_d_amore.subtitle}
-          paragraph={scenografie_d_amore.paragraph}
-          reverse={true}
-        />
+        <div className="bg-secondary-light">
+          <ImgTxt
+            picture={scenografie_d_amore.picture}
+            title={scenografie_d_amore.title}
+            subtitle={scenografie_d_amore.subtitle}
+            paragraph={scenografie_d_amore.paragraph}
+            reverse={true}
+          />
+        </div>
 
         <QuoteBlock
           quote={quote_caramagna.quote}
@@ -90,12 +92,14 @@ function Home() {
           subtitle={quote_auster.subtitle}
         />
 
-        <ServiceExplorer 
-          title={services.title}
-          subtitle={services.subtitle}
-          paragraph={services.paragraph}
-          data={services.list} 
-        />
+        <div className="bg-secondary-light">
+          <ServiceExplorer 
+            title={services.title}
+            subtitle={services.subtitle}
+            paragraph={services.paragraph}
+            data={services.list} 
+          />
+        </div>
 
         <PatternZigZag
           children={
@@ -112,7 +116,9 @@ function Home() {
           tipi={wedding_types}
         />
    
-        <BoxToForm />
+        <div className="bg-secondary-light">
+          <BoxToForm />
+        </div>
 
       </main>
     </>

@@ -7,7 +7,7 @@ import {
 function Gallery() {  
   return (
     <>
-      <main>
+      <main className="w-full overflow-x-hidden">
         <ImgGrid 
           galleries={galleries}/>
       </main>
