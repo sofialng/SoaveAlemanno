@@ -7,9 +7,11 @@ export default function Hero() {
       className="relative h-screen overflow-hidden flex items-center justify-center"
       style={{
         backgroundImage: `url(${img.home.hero})`,
-        backgroundAttachment: "fixed",
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+        backgroundPosition: window.innerWidth < 768 
+          ? "center top" 
+          : "center center",
       }}
       >
 

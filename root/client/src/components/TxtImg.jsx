@@ -2,7 +2,7 @@ export default function TxtImg({ picture, title, subtitle, paragraph }) {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-20 w-full">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-20 w-full  mb-8">
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 

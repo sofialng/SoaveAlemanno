@@ -68,20 +68,32 @@ export default function TxtLayout({ title, subtitle, paragraph, cards, quote_blo
 
             <NavLink
                 to="/prenota"
-                className="px-10 py-3.5 my-3 text-[0.65rem] uppercase tracking-[0.3em] font-light border transition-all duration-300"
+                className="
+                  px-6 sm:px-10
+                  py-3.5
+                  my-3
+                  text-[0.55rem] sm:text-[0.65rem]
+                  uppercase
+                  tracking-[0.25em] sm:tracking-[0.3em]
+                  font-light
+                  border
+                  transition-all
+                  duration-300
+                  whitespace-nowrap
+                  "
                 style={{
-                borderColor: "var(--color-secondary-dark)",
-                color: "var(--color-secondary-dark)",
-                background: "transparent",
-                }}
+                  borderColor: "var(--color-secondary-dark)",
+                  color: "var(--color-secondary-dark)",
+                  background: "transparent",
+                  }}
                 onMouseEnter={(e) => {
-                e.currentTarget.style.background = "var(--color-secondary-dark)";
-                e.currentTarget.style.color = "var(--color-secondary-light)";
-                }}
+                  e.currentTarget.style.background = "var(--color-secondary-dark)";
+                  e.currentTarget.style.color = "var(--color-secondary-light)";
+                  }}
                 onMouseLeave={(e) => {
-                e.currentTarget.style.background = "transparent";
-                e.currentTarget.style.color = "var(--color-secondary-dark)";
-                }}
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.color = "var(--color-secondary-dark)";
+                  }}
             >
                 Prenota una consulenza gratuita
             </NavLink>

@@ -68,7 +68,19 @@ export default function BoxToForm() {
         {/* CTA */}
         <NavLink
           to="/prenota"
-          className="px-10 py-3.5 my-3 text-[0.65rem] uppercase tracking-[0.3em] font-light border transition-all duration-300"
+          className="
+            px-6 sm:px-10
+            py-3.5
+            my-3
+            text-[0.55rem] sm:text-[0.65rem]
+            uppercase
+            tracking-[0.25em] sm:tracking-[0.3em]
+            font-light
+            border
+            transition-all
+            duration-300
+            whitespace-nowrap
+            "
           style={{
             borderColor: "var(--color-secondary-dark)",
             color: "var(--color-secondary-dark)",
