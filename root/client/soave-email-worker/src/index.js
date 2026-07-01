@@ -91,6 +91,7 @@ async function sendViaResend(env, payload) {
 const ALLOWED_ORIGINS = [
   "http://localhost:5173",
   "https://soavealemanno.it",
+  "https://soavealemanno.pages.dev/",
 ];
 
 function getCorsHeaders(request) {
