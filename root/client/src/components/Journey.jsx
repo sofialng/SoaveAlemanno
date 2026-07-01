@@ -68,7 +68,8 @@ export default function Journey({ title, subtitle, paragraph,items = [] }) {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-64 object-cover rounded-xl shadow-md"
+                    draggable={false} onContextMenu={(e) => e.preventDefault()}
+                    className="w-full h-64 object-cover shadow-md"
                   />
                 </div>
               )}

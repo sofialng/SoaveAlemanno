@@ -5,7 +5,7 @@ export default function TxtLayout({ title, subtitle, paragraph, cards, quote_blo
 
   return (
     <section className="py-32">
-      <div className="max-w-7xl mx-auto px-6 lg:grid lg:grid-cols-12 gap-16">
+      <div className="max-w-7xl mx-auto px-6 lg:grid lg:grid-cols-12 gap-16 items-start">
 
         <div className="lg:col-span-4 lg:sticky lg:top-28 self-start">
           <p className="subtitle">

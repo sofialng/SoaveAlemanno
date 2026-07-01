@@ -162,14 +162,14 @@ function ImgGrid({ galleries }) {
                       onClick={() => setSelected(gIdx)}
                     >
                       {/* Immagine */}
-                      <div className="overflow-hidden rounded-xl relative">
-                        <div className="absolute inset-0 bg-[#1a1409]/0 group-hover:bg-[#1a1409]/10 transition-colors duration-500 z-10 rounded-xl" />
+                      <div className="overflow-hidden relative">
+                        <div className="absolute inset-0 bg-[#1a1409]/0 group-hover:bg-[#1a1409]/10 transition-colors duration-500 z-10" />
                         <img
                           src={image.src}
                           alt={image.alt}
                           onContextMenu={(e) => e.preventDefault()}
                           draggable={false}
-                          className="w-full transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                          className="w-full transition-transform duration-700 ease-out"
                         />
                       </div>
 
@@ -227,7 +227,7 @@ function ImgGrid({ galleries }) {
               alt={allImages[selected].alt}
               onContextMenu={(e) => e.preventDefault()}
               draggable={false}
-              className="max-w-[88vw] max-h-[78vh] object-contain rounded-xl"
+              className="max-w-[88vw] max-h-[78vh] object-contain"
             />
             {/* Caption nel lightbox */}
             <div className="text-center">
@@ -245,7 +245,7 @@ function ImgGrid({ galleries }) {
 
           {/* Next */}
           <button
-            className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 text-white/40 hover:text-white/80 text-6xl transition-all duration-200 hover:scale-110"
+            className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 text-white/40 hover:text-white/80 text-6xl transition-all duration-200"
             style={{ background: "none", border: "none", cursor: "pointer" }}
             onClick={(e) => { e.stopPropagation(); setSelected((p) => (p + 1) % allImages.length); }}
             aria-label="Successiva"

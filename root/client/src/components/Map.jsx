@@ -80,6 +80,7 @@ function SalentoSection({ image, title, subtitle, paragraph }) {
             <div className="relative w-full max-w-md overflow-hidden">
               <img
                 src={image}
+                draggable={false} onContextMenu={(e) => e.preventDefault()}
                 alt="Location matrimonio"
                 className="w-full h-auto object-cover"
               />

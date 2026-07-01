@@ -8,7 +8,7 @@ import QuoteBlock from "../components/QuoteBlock";
 import TransparentDescription from "../components/Mosaic";
 import ServiceExplorer from "../components/ServiceExplorer";
 import SalentoSection from "../components/Map";
-import WeddingTypes from "../components/Carousel";
+import WeddingTypes from "../components/Carousel_v2";
 import BoxToForm from "../components/BoxToForm";
 import PatternFlowers from "../components/PatternFlowers"
 import PatternZigZag from "../components/PatternZigZag";
@@ -24,7 +24,8 @@ import {
   quote_caramagna,
   services,
   salento,
-  wedding_types
+  wedding_types,
+  box_to_form
 } from "../assets/content/content";
 
 function Home() {
@@ -117,7 +118,11 @@ function Home() {
         />
    
         <div className="bg-secondary-light">
-          <BoxToForm />
+          <BoxToForm 
+            img={box_to_form.picture}
+            title={box_to_form.title}
+            paragraph={box_to_form.paragraph}
+          />
         </div>
 
       </main>

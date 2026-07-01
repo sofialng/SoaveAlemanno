@@ -22,17 +22,17 @@ function ServiceExplorer({ title, subtitle, paragraph, data }) {
         </div>
 
         {/* LAYOUT */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           {/* LEFT - selector */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 lg:sticky lg:top-28 self-start">
 
             {data.map((item, index) => (
               <button
                 key={index}
                 onClick={() => setActive(index)}
                 className={`
-                  text-left px-5 py-4 rounded-xl transition-all
+                  text-left px-5 py-4 transition-all
                   border
                   ${
                     active === index
@@ -99,6 +99,7 @@ function ServiceExplorer({ title, subtitle, paragraph, data }) {
 
             <img
               src={data[active].image}
+              draggable={false} onContextMenu={(e) => e.preventDefault()}
               className="w-full h-[280px] object-cover shadow-lg mt-4"
             />
           </div>

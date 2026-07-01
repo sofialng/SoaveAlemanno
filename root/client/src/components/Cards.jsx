@@ -27,13 +27,13 @@ export default function Cards({ title, subtitle, cards }) {
               className="
                 flex-1
                 bg-white/60 backdrop-blur-md
-                border border-black/5
-                rounded-2xl
                 p-6 lg:p-8
                 flex lg:flex-col items-center justify-center
                 gap-5 lg:gap-6
                 transition-all duration-300
                 hover:bg-white/80 hover:-translate-y-1
+                shadow-sm hover:shadow-xl
+                border border-secondary-dark/20
               "
             >
 

@@ -33,17 +33,18 @@ export default function TxtImg({ picture, title, subtitle, paragraph }) {
             <div className="relative">
 
               {/* decorative frame */}
-              <div className="absolute -inset-4 border border-black/10 rounded-2xl" />
+              <div className="absolute -inset-4 border border-black/10 m-4" />
 
               <img
                 src={picture}
+                draggable={false} onContextMenu={(e) => e.preventDefault()}
                 alt="Foto"
                 className="
                   relative
                   w-full
                   max-w-md
                   lg:max-w-lg
-                  rounded-2xl
+                  p-4
                   object-cover
                   shadow-lg
                 "

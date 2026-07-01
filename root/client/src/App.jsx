@@ -18,7 +18,7 @@ import {
 function App() {
   return (
     <>
-    <div className="w-screen overflow-x-hidden">
+    <div className="w-screen">
       <Navbar />
       
       <Routes basename="/SoaveAlemanno">

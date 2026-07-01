@@ -117,6 +117,8 @@ function Footer({ socials, team }) {
               <a
                 key={label}
                 href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label={label}
                 className="transition-opacity duration-200 hover:opacity-100"
                 style={{ opacity: 0.35 }}

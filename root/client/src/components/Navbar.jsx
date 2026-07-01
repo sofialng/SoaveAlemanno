@@ -58,7 +58,7 @@ function Navbar() {
 
           {/* Logo */}
           <NavLink to="/" className="h-full flex items-center">
-            <img src={logo} alt="Soave" className="h-full w-auto p-1 cursor-pointer" />
+            <img src={logo} alt="Soave" className="h-full w-auto p-1 cursor-pointer" draggable={false} onContextMenu={(e) => e.preventDefault()}/>
           </NavLink>
 
           {/* Desktop links */}

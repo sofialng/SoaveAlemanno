@@ -1,8 +1,7 @@
 import heroImage from "../img/soave-alemanno-bg-2.svg";
-import cardImage from "../img/romantic-night.png";
 import { NavLink } from "react-router-dom";
 
-export default function BoxToForm() {
+export default function BoxToForm({ title, subtitle, img, paragraph }) {
   return (
     <section
       className="relative min-h-screen overflow-hidden flex items-center justify-center py-24 px-6 bg-primary-dark/40"
@@ -25,31 +24,30 @@ export default function BoxToForm() {
             className="absolute -bottom-2 -right-2 w-full h-full pointer-events-none"
           />
           <img
-            src={cardImage}
+            src={img}
             alt="Soave Alemanno"
+            draggable={false} onContextMenu={(e) => e.preventDefault()}
             className="relative w-auto h-52 object-cover"f89
             style={{ display: "block" }}
           />
         </div>
 
         {/* Ornament */}
-        <div className="flex items-center gap-4 w-full justify-center">
+        { subtitle && <div className="flex items-center gap-4 w-full justify-center">
           <div className="w-8 h-px bg-black/40"/>
           <span
             className="subtitle"
           >
-            Il vostro giorno
+            {subtitle}
           </span>
           <div className="w-8 h-px bg-black/40"/>
-        </div>
+        </div> }
 
         {/* Titolo */}
         <h2
           className="title text-xl sm:text-3xl lg:text-4xl"
         >
-          Pronti a vivere
-          <br />
-          <span className="italic">il giorno più bello?</span>
+          {title}
         </h2>
 
         {/* Separatore */}
@@ -61,8 +59,7 @@ export default function BoxToForm() {
         <p
           className="paragraph"
         >
-          Raccontami il tuo desiderio e insieme al mio team lo trasformeremo
-          in un evento curato in ogni dettaglio, con eleganza e armonia.
+          {paragraph}
         </p>
 
         {/* CTA */}

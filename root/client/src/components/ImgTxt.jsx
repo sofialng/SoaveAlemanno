@@ -22,21 +22,20 @@ export default function ImgTxt({ picture, title, subtitle, paragraph, reverse = 
             <div className="relative group">
 
               {/* decorative border */}
-              <div className="absolute -inset-3 border border-black/10 rounded-2xl transition group-hover:-inset-4" />
+              <div className="absolute -inset-4 border border-black/10 transition m-4" />
 
               <img
                 src={picture}
                 alt={title}
+                draggable={false} onContextMenu={(e) => e.preventDefault()}
                 className="
                   relative
                   w-full
                   max-w-md
                   lg:max-w-lg
-                  rounded-2xl
+                  p-4
                   object-cover
                   shadow-md
-                  transition duration-300
-                  group-hover:scale-[1.02]
                 "
               />
             </div>

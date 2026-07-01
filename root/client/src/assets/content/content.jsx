@@ -7,12 +7,12 @@ import img from "../../img/img";
 export const socials = [
   {
     label: "Facebook",
-    href: "#",
+    href: "https://www.facebook.com/share/1Yg3885ukr/?mibextid=wwXIfr",
     path: "M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12H17l-.5 3h-2.6v7A10 10 0 0 0 22 12z",
   },
   {
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/soavealemannowedding?igsh=dXN1YzdzcGpiYjhn",
     path: "M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5zm6-1.75a1.25 1.25 0 1 0 1.25 1.25A1.25 1.25 0 0 0 18 5.75z",
   },
   {
@@ -115,7 +115,7 @@ export const wedding_journey = {
             Il percorso inizia con un primo incontro privato. Il mio obiettivo in questa fase è comprendere ciò
             che sognate (anche quello che non riuscite ancora a esprimere a parole) per gettare le basi di un evento autentico.
           </>,
-        image: img.home.mazzo,
+        image: img.home.fedi,
     },
     {
         step: "02 - Il progetto",
@@ -126,7 +126,7 @@ export const wedding_journey = {
             In questa fase strategica,  diamo forma al vostro matrimonio. Ogni budget viene ottimizzato e ogni tempistica pianificata, 
             presentandovi un progetto sartoriale dettagliato che approveremo insieme.
           </>,
-        image: img.home.allestimento,
+        image: img.home.tavoli,
     },
     {
         step: "03 - La regia",
@@ -148,7 +148,7 @@ export const wedding_journey = {
             Il grande giorno è arrivato. Io e la mia squadra saremo sul posto per coordinare i fornitori, gestire la timeline 
             ed assicurarci che tutto scorra con impeccabile eleganza. 
           </>,
-        image: img.home.cerimonia,
+        image: img.home.bacio,
     },
   ]
 }
@@ -167,13 +167,13 @@ export const wedding_experience = {
 export const quote_caramagna = {
   quote: "Quando non riesco a dirtelo, cerco chi lo dice per me. E lo trovo in un bouquet di fiori.",
   author: "Fabrizio Caramagna",
-  subtitle: "Mbo chi è questo?"
+  subtitle: "Scrittore"
 }
 
 export const quote_auster = {
   quote: "La verità della storia è nei dettagli.",
   author: "Paul Auster",
-  subtitle: "Mbo chi è questo?"
+  subtitle: "Scrittore"
 }
 
 export const services = {
@@ -188,7 +188,7 @@ export const services = {
       {
         title: "Matrimonio Completo",
         subtitle: "Dall'ideazione al grande giorno: la gestione totale del vostro sogno",
-        image: "/img/wedding1.jpg",
+        image: img.home.ombre,
         description: "Un servizio esclusivo chiavi in mano pensato per le coppie che \
           desiderano un percorso sereno e impeccabile. Insieme al mio team, mi occuperò \
           di ogni singolo aspetto: ricerca dei fornitori d'élite, budget management, design \
@@ -199,7 +199,7 @@ export const services = {
       {
         title: "Consulenza Wedding su Misura",
         subtitle: "Hai già in mente come organizzare il tuo matrimonio, ma ti manca quella sicurezza in più per fare le scelte giuste?",
-        image: "/img/wedding2.jpg",
+        image: img.home.vestito,
         description: 
           <>
             <p>
@@ -241,7 +241,7 @@ export const services = {
       {
         title: "Destination Wedding in Salento",
         subtitle: "Il vostro Sì nella terra del sole, del mare e delle corti storiche",
-        image: "/img/wedding3.jpg",
+        image: img.home.tamburelli,
         description: "Specializzate nel trasformare il fascino autentico della Puglia in \
           un palcoscenico luxury per coppie straniere o fuori regione. Guidiamo voi e i vostri \
           ospiti alla scoperta del Salento, coordinando non solo il giorno del matrimonio in \
@@ -288,7 +288,13 @@ export const wedding_types = [
     descrizione:
       "Sposarsi dove il cielo incontra il mare del Salento. Immagina il rumore della risacca come colonna sonora, i colori caldi del tramonto che dipingono l'orizzonte e una festa a piedi nudi sulla spiaggia, avvolti dalla brezza e da un senso di assoluta libertà. Un \"Sì\" leggero, fresco e indimenticabile.",
     dettagli: ["Vista mare garantita", "Cerimonia in spiaggia", "Aperitivo al tramonto"],
-    img: img.cerimonia,
+    images: 
+      [
+        img.cerimonia,
+        img.cerimonia,
+        img.cerimonia
+      ],
+    direction: "right",
   },
   {
     numero: "02",
@@ -297,18 +303,45 @@ export const wedding_types = [
     descrizione:
       "Il fascino autentico della pietra antica, cortili segreti illuminati da una cascata di lucine e l'abbraccio di uliveti senza tempo. La masseria è l'essenza più vera del Salento: un’eleganza rustica e sofisticata al tempo stesso, che profuma di terra, di tradizione e di una grande festa in famiglia sotto le stelle.",
     dettagli: ["Fino a 200 ospiti", "Catering interno", "Alloggi in loco"],
-    img: img.cerimonia,
+    images: 
+      [
+        img.cerimonia,
+        img.cerimonia,
+        img.cerimonia
+      ],
+    direction: "left",
   },
   {
     numero: "03",
     titolo: "Matrimonio nel Borgo Antico",
     sottotitolo: "Il calore della pietra leccese, la poesia dei vicoli e il battito autentico del Salento.",
     descrizione:
-      "Sposarsi nel cuore di un borgo salentino significa immergersi in una favola di pietra dorata che si scalda al sole. Camminare tra le stradine storiche, mentre l'eco di una pizzica sembra risuonare in lontananza e i residenti vi accolgono con un sorriso, trasformerà il vostro matrimonio in un pezzo di storia di questa terra meravigliosa. Un \"Sì\" avvolgente, generoso e pieno di quella magia del Sud che ti resta dentro per sempre.",
+      "Sposarsi nel cuore di un borgo salentino significa immergersi in una favola di pietra dorata che si scalda al sole. Camminare tra le stradine storiche, mentre l'eco di una pizzica sembra risuonare in lontananza, trasformerà il vostro matrimonio in un pezzo di storia di questa terra meravigliosa. Un \"Sì\" pieno di quella magia del Sud che ti resta dentro per sempre.",
     dettagli: ["Palazzo nobiliare", "Chiostro privato", "Illuminazione notturna"],
-    img: img.cerimonia,
+    images: 
+      [
+        img.cerimonia,
+        img.cerimonia,
+        img.cerimonia
+      ],
+    direction: "left",
   },
 ];
+
+export const box_to_form = {
+  picture: img.home.fiori2,
+  title: 
+    <>
+      Pronti a vivere
+      <br />
+      <span className="italic">il giorno più bello?</span>
+    </>,
+  paragraph: 
+    <>
+      Raccontami il tuo desiderio e insieme al mio team lo trasformeremo
+      in un evento curato in ogni dettaglio, con eleganza e armonia.
+    </>,
+};
 
 /* ********************
  *     CHI SONO       * 
