@@ -32,25 +32,27 @@ export default function ImageStripe({picture, title, subtitle, paragraph, button
                 </p>
 
                 {/* CTA */}
-                <NavLink
-                    to="/galleria"
-                    className="px-10 py-3.5 my-8 text-[0.65rem] uppercase tracking-[0.3em] font-light border transition-all duration-300"
-                    style={{
-                    borderColor: "var(--color-secondary-light)",
-                    color: "var(--color-secondary-light)",
-                    background: "transparent",
-                    }}
-                    onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "var(--color-secondary-light)";
-                    e.currentTarget.style.color = "black";
-                    }}
-                    onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "transparent";
-                    e.currentTarget.style.color = "var(--color-secondary-light)";
-                    }}
-                >
-                    {button}
-                </NavLink>
+                {button && 
+                    <NavLink
+                        to="/galleria"
+                        className="px-10 py-3.5 my-8 text-[0.65rem] uppercase tracking-[0.3em] font-light border transition-all duration-300"
+                        style={{
+                        borderColor: "var(--color-secondary-light)",
+                        color: "var(--color-secondary-light)",
+                        background: "transparent",
+                        }}
+                        onMouseEnter={(e) => {
+                        e.currentTarget.style.background = "var(--color-secondary-light)";
+                        e.currentTarget.style.color = "black";
+                        }}
+                        onMouseLeave={(e) => {
+                        e.currentTarget.style.background = "transparent";
+                        e.currentTarget.style.color = "var(--color-secondary-light)";
+                        }}
+                    >
+                        {button}
+                    </NavLink>
+                }
             </div>
 
             {/* Sfondo */}

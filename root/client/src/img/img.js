@@ -35,7 +35,7 @@ function buildNestedImages(importedModules) {
 
 // importa tutto ricorsivamente
 const modules = import.meta.glob(
-  "./**/*.{png,jpg,jpeg,svg,webp}",
+  "./**/*.{png,jpg,jpeg,svg,webp,JPG}",
   {
     eager: true,
     import: "default",

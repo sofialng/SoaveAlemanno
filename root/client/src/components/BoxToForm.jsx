@@ -27,7 +27,7 @@ export default function BoxToForm() {
           <img
             src={cardImage}
             alt="Soave Alemanno"
-            className="relative w-auto h-52 object-cover"
+            className="relative w-auto h-52 object-cover"f89
             style={{ display: "block" }}
           />
         </div>

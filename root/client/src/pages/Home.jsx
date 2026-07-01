@@ -79,8 +79,8 @@ function Home() {
           items={wedding_journey.items}
         />
 
-        <TransparentDescription
-          image={wedding_experience.picture}
+        <ImageStripe
+          picture={wedding_experience.picture}
           title={wedding_experience.title}
           subtitle={wedding_experience.subtitle}
           paragraph={wedding_experience.paragraph}

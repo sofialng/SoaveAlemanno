@@ -46,7 +46,8 @@ export default function WeddingPlannerForm({ title, subtitle, paragraph }) {
       setStatus("sending");
 
       const response = await fetch(
-        "http://localhost:3000/api/contact",
+        // "http://localhost:3000/api/contact",
+        "https://soave-email-worker.soavealemanno.workers.dev",
         {
           method: "POST",
           headers: {

@@ -8,6 +8,7 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CookieBanner from "./components/CookieBanner";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path="/galleria" element={<Gallery />} />
         <Route path="/prenota" element={<Prenota />} />
         <Route path="/privacy" element={<Privacy />} />
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
 
       <ScrollToTopButton />

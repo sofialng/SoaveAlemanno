@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "soave-email-worker",
+  "main": "src/index.js",
+  "compatibility_date": "2025-01-01",
+  "vars": {
+    "EMAIL_FROM": "Soave Alemanno <noreply@soavealemanno.it>",
+    "EMAIL_TO": "info@soavealemanno.it"
+  }
+}

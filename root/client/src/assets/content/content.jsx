@@ -38,7 +38,7 @@ export const dove_i_sogni = {
 }
 
 export const scenografie_d_amore = {
-  picture: img.home.board,
+  picture: img.home.fiori,
   title: "Scenografie d'amore",
   subtitle: "La regia del vostro giorno perfetto",
   paragraph: "Non esistono due matrimoni uguali, perché non esistono due storie identiche. \
@@ -76,6 +76,7 @@ export const wedding_journey = {
             Il percorso inizia con un primo incontro privato. Il mio obiettivo in questa fase è comprendere ciò
             che sognate (anche quello che non riuscite ancora a esprimere a parole) per gettare le basi di un evento autentico.
           </>,
+        image: img.home.mazzo,
     },
     {
         step: "02 - Il progetto",
@@ -86,7 +87,7 @@ export const wedding_journey = {
             In questa fase strategica,  diamo forma al vostro matrimonio. Ogni budget viene ottimizzato e ogni tempistica pianificata, 
             presentandovi un progetto sartoriale dettagliato che approveremo insieme.
           </>,
-        image: img.daniela,
+        image: img.home.allestimento,
     },
     {
         step: "03 - La regia",
@@ -97,7 +98,7 @@ export const wedding_journey = {
             Mentre voi vi godete l'attesa, noi entriamo in azione. Coordino personalmente ogni aspetto burocratico, 
             logistico e creativo. 
           </>,
-        image: img.daniela,
+        image: img.home.confetti,
     },
     {
         step: "04 - la magia",
@@ -108,12 +109,13 @@ export const wedding_journey = {
             Il grande giorno è arrivato. Io e la mia squadra saremo sul posto per coordinare i fornitori, gestire la timeline 
             ed assicurarci che tutto scorra con impeccabile eleganza. 
           </>,
+        image: img.home.cerimonia,
     },
   ]
 }
 
 export const wedding_experience = {
-  picture: img.home.albero,
+  picture: img.home.brindisi_enrico_valentina,
   title: "La firma del vostro giorno perfetto",
   subtitle: "Wedding experience",
   paragraph: 
