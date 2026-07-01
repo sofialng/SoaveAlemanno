@@ -88,7 +88,7 @@ function SalentoSection({ image, title, subtitle, paragraph }) {
           </div>
 
           {/* Testo */}
-          <div className="flex flex-col gap-6 text-center lg:text-left order-1">
+          <div className="flex flex-col gap-6 lg:text-left order-1">
 
             <div className="flex items-center gap-3 justify-center lg:justify-start">
               <div className="w-8 h-px bg-secondary-dark"/>
@@ -109,7 +109,9 @@ function SalentoSection({ image, title, subtitle, paragraph }) {
               className="w-10 h-px mx-auto lg:mx-0 bg-secondary-dark"
             />
 
+            <p className="paragraph text-left">
             {paragraph}
+            </p>
 
             <div className="flex flex-wrap gap-2 justify-center lg:justify-start mt-2">
               {["Lecce", "Otranto", "Gallipoli", "Nardò", "Galatina", "Maglie"].map((loc) => (

@@ -77,7 +77,7 @@ export const dove_i_sogni = {
 }
 
 export const scenografie_d_amore = {
-  picture: img.home.fiori,
+  picture: img.home.danielafull,
   title: "Scenografie d'amore",
   subtitle: "La regia del vostro giorno perfetto",
   paragraph: "Non esistono due matrimoni uguali, perché non esistono due storie identiche. \
@@ -264,14 +264,14 @@ export const salento = {
   paragraph:
     <>
       <p
-        className="paragraph"
+        className="paragraph text-left"
       >
         Il Salento è una terra di luce, di pietra leccese e di orizzonti infiniti.
         Tra masserie storiche, ville sul mare e giardini mediterranei, ogni venue
         racconta una storia unica: la vostra.
       </p>
       <p
-        className="paragraph"
+        className="paragraph text-left"
       >
         Organizziamo matrimoni ed eventi in tutta la penisola salentina: da Lecce
         a Otranto, da Gallipoli alle campagne di Nardò, portando eleganza e cura
@@ -394,7 +394,7 @@ export const se_dovessi_descrivermi = {
         "Quando c'è un obiettivo da raggiungere non c'è ostacolo che possa farmi desistere.",
     },
     {
-      src: img.creative,
+      src: img.chisono.chiesa,
       alt: "Creative",
       titolo: "Appassionata",
       testo: "Amo ciò che faccio e ci metto tutta me stessa.",

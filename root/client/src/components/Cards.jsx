@@ -38,11 +38,11 @@ export default function Cards({ title, subtitle, cards }) {
             >
 
               {/* ICON */}
-              <img
+              {/* <img
                 src={card.src}
                 alt={card.alt}
                 className="w-auto h-30 lg:w-20 lg:h-20 object-contain flex-shrink-0"
-              />
+              /> */}
 
               {/* TEXT */}
               <div className="text-left lg:text-left">
@@ -50,7 +50,7 @@ export default function Cards({ title, subtitle, cards }) {
                   {card.titolo}
                 </h3>
 
-                <p className="paragraph mt-2">
+                <p className="paragraph mt-4 text-left">
                   {card.testo}
                 </p>
               </div>

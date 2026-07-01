@@ -79,7 +79,7 @@ body {
   }
 
   .paragraph {
-    @apply max-w-2xl mx-auto mt-6 text-black/60 font-light leading-relaxed text-justify;
+    @apply max-w-2xl mx-auto mt-6 text-black/60 font-light leading-relaxed text-center;
   }
   
   .clickable-image {

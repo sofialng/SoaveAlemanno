@@ -52,7 +52,7 @@ function ServiceExplorer({ title, subtitle, paragraph, data }) {
                   {item.title}
                 </p>
                 <p className={`
-                  paragraph text-sm m-0 p-0
+                  paragraph text-sm m-0 p-0 text-left
                   ${
                     active === index
                       ? "text-secondary-light/70"
@@ -76,7 +76,7 @@ function ServiceExplorer({ title, subtitle, paragraph, data }) {
                 {data[active].title}
               </h3>
 
-              <p className="paragraph">
+              <p className="paragraph text-left">
                 {data[active].description}
               </p>
 

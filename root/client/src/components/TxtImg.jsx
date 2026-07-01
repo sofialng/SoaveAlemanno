@@ -21,7 +21,7 @@ export default function TxtImg({ picture, title, subtitle, paragraph }) {
               </h3>
             )}
 
-            <p className="paragraph text-justify">
+            <p className="paragraph text-left">
               {paragraph}
             </p>
 

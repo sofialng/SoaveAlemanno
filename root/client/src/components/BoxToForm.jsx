@@ -15,7 +15,7 @@ export default function BoxToForm({ title, subtitle, img, paragraph }) {
 
       {/* BOX centrale */}
       <div
-        className="flex z-10 w-full max-w-xl flex flex-col items-center text-center gap-4 p-4 md:p-8 bg-secondary-light shadow-md"
+        className="flex z-10 w-full max-w-xl flex flex-col items-center text-center gap-4 p-8 md:p-16 bg-secondary-light shadow-md"
       >
 
         {/* Immagine */}

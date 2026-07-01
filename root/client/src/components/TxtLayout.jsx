@@ -18,7 +18,7 @@ export default function TxtLayout({ title, subtitle, paragraph, cards, quote_blo
 
           <div className="w-20 h-px bg-primary mb-8" />
 
-          <p className="paragraph mb-8">
+          <p className="paragraph mb-8 text-left">
             {paragraph}
           </p>
         </div>
@@ -41,7 +41,7 @@ export default function TxtLayout({ title, subtitle, paragraph, cards, quote_blo
                     {card.title}
                   </h3>
 
-                  <p className="paragraph">
+                  <p className="paragraph text-left">
                     {card.text}
                   </p>
                 </div>
@@ -62,7 +62,7 @@ export default function TxtLayout({ title, subtitle, paragraph, cards, quote_blo
               {title_2}
             </h3>
 
-            <p className="paragraph mb-16">
+            <p className="paragraph mb-16 text-left">
               {paragraph_2}
             </p>
 

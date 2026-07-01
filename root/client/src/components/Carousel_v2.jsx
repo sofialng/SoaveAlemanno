@@ -118,6 +118,7 @@ export default function Carousel({ tipi }) {
                   {/* DESCRIZIONE */}
                   <p className="
                     paragraph
+                    text-left
                     mb-6
                   ">
                     {tipo.descrizione}
