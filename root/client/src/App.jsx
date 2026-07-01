@@ -10,6 +10,11 @@ import Footer from "./components/Footer";
 import CookieBanner from "./components/CookieBanner";
 import PageNotFound from "./pages/PageNotFound";
 
+import {
+  socials,
+  team,
+} from "./assets/content/content";
+
 function App() {
   return (
     <>
@@ -29,7 +34,10 @@ function App() {
 
       <CookieBanner />
 
-      <Footer />
+      <Footer 
+        socials={socials}
+        team={team}
+      />
     </div>
     </>
   );

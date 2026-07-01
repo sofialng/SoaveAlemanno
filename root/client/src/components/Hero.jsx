@@ -3,7 +3,7 @@ import img from "../img/img";
 export default function Hero() {
 
   return (
-    <section className="relative h-[100svh] min-h-[100dvh] overflow-hidden flex items-center justify-center">
+    <section className="relative h-[100svh] min-h-[500px] overflow-hidden flex items-center justify-center">
 
       {/* BACKGROUND FISSO */}
       <div
@@ -21,7 +21,19 @@ export default function Hero() {
       />
 
       {/* Contenuto centrato */}
-      <div className="relative h-full flex flex-col items-center justify-center -translate-y-25 px-6 text-center gap-4 max-w-none md:max-w-5xl lg:max-w-7xl">
+        <div
+          className="
+            relative h-full
+            flex flex-col
+            items-center
+            justify-start
+            px-6
+            pt-40
+            text-center
+            gap-4
+            max-w-none md:max-w-5xl lg:max-w-7xl
+          "
+        >
       {/* <div
         className="
           relative h-full w-full
