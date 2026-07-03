@@ -6,9 +6,7 @@ export default function Carousel({ tipi }) {
       className="relative py-16 bg-secondary-light overflow-hidden"
     >
       {/* HEADER */}
-      <div
-        className="max-w-5xl mx-auto px-6 lg:px-20 mb-16"
-      >
+      <div className="max-w-5xl mx-auto px-6 lg:px-20 mb-16">
         <div className="flex items-center gap-3 mb-4">
           <span className="subtitle">Le nostre proposte</span>
         </div>
@@ -16,6 +14,9 @@ export default function Carousel({ tipi }) {
           Un matrimonio per ogni
           <span className="font-calligraphy">{" "}sogno</span>
         </h2>
+        <p className="paragraph text-left mt-6 max-w-4xl mx-auto">
+                Queste sono alcune delle proposte che possiamo realizzare per voi, pensate per darvi un’idea del nostro stile. Ogni progetto, però, nasce su misura: se avete in mente qualcosa di diverso, lo costruiremo insieme, adattando ogni dettaglio e creando soluzioni alternative in linea con la vostra visione.
+        </p>
       </div>
 
       {/* ELENCO */}

@@ -17,7 +17,7 @@ export const socials = [
   },
   {
     label: "WhatsApp",
-    href: "#",
+    href: "https://wa.me/3896919483",
     path: "M12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.43 1.27 4.88L2 22l5.26-1.38A9.94 9.94 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.54 0-2.97-.45-4.17-1.22l-.3-.18-3.12.82.83-3.04-.2-.31A7.94 7.94 0 014 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.39-5.98c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.18-.71-.63-1.18-1.41-1.32-1.65-.14-.24-.02-.37.1-.49.1-.1.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.48-.4-.42-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.01.4 1.36.51.57.18 1.09.15 1.5.09.46-.07 1.43-.58 1.63-1.13.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28z",
   },
 ];
@@ -55,20 +55,29 @@ export const dove_i_sogni = {
   title: <>Dove i vostri <span className="font-calligraphy">sogni</span> prendono forma</>,
   paragraph: 
     <>
-      <p>
+      {/* <p>
         Credo che ogni storia d’amore sia unica e meriti di essere raccontata con autenticità, armonia ed eleganza. Per questo non mi limito a pianificare, ma disegno insieme a voi un evento che vi rispecchi in ogni dettaglio.
       </p>
       <p>
         Con il supporto del mio team, guido ogni fase dei preparativi per assicurarvi una giornata perfetta, dove l'unica vostra preoccupazione sarà godervi la festa.
+      </p> */}
+      <p>
+        Ogni coppia ha una storia diversa, e ogni matrimonio dovrebbe raccontarla.
+        Per questo il mio primo obiettivo è conoscervi, ascoltare i vostri desideri e comprendere ciò che conta davvero per voi. Creeremo così un evento in cui ogni scelta, dagli allestimenti ai fornitori, dai dettagli all'atmosfera, sia coerente con la vostra personalità e racconti, con autenticità ed eleganza, la vostra storia alle persone che amate.
       </p>
     </>
 }
 
 export const scenografie_d_amore = {
   picture: img.home.danielafull,
-  title: "Scenografie d'amore",
+  title: "Un matrimonio che racconta chi siete",
   subtitle: "La regia del vostro giorno perfetto",
-  paragraph: "Non creo matrimoni in serie, ma eventi che parlano di voi. Insieme al mio team, guido la regia del vostro giorno più bello, curando ogni dettaglio mai lasciato al caso. Trasformiamo mesi di pianificazione in una giornata fluida, elegante e indimenticabile."
+  paragraph: 
+    <>
+      <p>
+        Vi aiuterò a individuare la location che meglio interpreta i vostri desideri e il rito che avete scelto, che sia civile, religioso o simbolico, selezionando i fornitori più adatti a voi. Coordinerò ogni fase del percorso e la regia dell'intero evento.
+      </p>
+    </>
 }
 
 export const wedding_stories = {
@@ -84,14 +93,19 @@ export const wedding_stories = {
 export const wedding_journey = {
   title: "Il viaggio verso il giorno perfetto",
   subtitle: "Il mio metodo, passo dopo passo",
-  paragraph: " Progettare il vostro matrimonio non deve essere fonte di stress, ma un bellissimo viaggio. Attraverso quattro passaggi chiari e coordinati, io e il mio team prendiamo in mano le complessità per consegnarvi solo la gioia della festa.",
+  paragraph: 
+    <>
+      <p>
+        Progettare il vostro matrimonio non deve essere fonte di stress, ma un bellissimo viaggio.
+      </p>
+    </>,
   items: [
     {
         step: "01 - L'ascolto",
         title: "La scintilla",
         text: 
           <>
-            Il viaggio inizia con un incontro dedicato a voi, alla vostra storia e ai vostri desideri. Ascolto i vostri sogni per trasformarli nelle fondamenta di un matrimonio autentico, unico e su misura.
+            Il viaggio inizia con un incontro dedicato a voi e alla vostra storia. Ascolto i vostri desideri per disegnare le fondamenta di un matrimonio autentico, unico e su misura.
           </>,
         image: img.home.fedi,
     },
@@ -109,7 +123,7 @@ export const wedding_journey = {
         title: "La cura dei dettagli",
         text: 
           <>
-            È il momento in cui l'immaginazione si trasforma in realtà. Mi occupo della gestione dei contratti, dei contatti con i fornitori e delle scadenze. Voi dovete solo rilassarvi: io e il mio team coordiniamo l'intera macchina organizzativa dietro le quinte.
+            È il momento in cui l'immaginazione si trasforma in realtà. Mi occupo della gestione dei contratti, dei contatti con i fornitori e delle scadenze. Voi potrete rilassarvi: io e il mio team coordiniamo l'intera macchina organizzativa.
           </>,
         image: img.home.confetti,
     },
@@ -131,8 +145,7 @@ export const wedding_experience = {
   subtitle: "Wedding experience",
   paragraph: 
     <>
-      Non ci limitiamo ad allestire una location: diamo vita a un percorso emozionale unico. 
-      Trasformiamo il vostro giorno più bello in un capolavoro di eleganza che rimarrà impresso per sempre.
+      Vi accompagnerò in un percorso costruito su misura, partendo dall’ascolto della vostra storia fino alla definizione di ogni scelta, con l’obiettivo di creare un evento che vi rappresenti davvero.
     </>,
 }
 
@@ -155,12 +168,12 @@ export const quote_auster = {
 }
 
 export const services = {
-  title: "Cosa possiamo creare per voi",
-  subtitle: "I nostri servizi",
-  paragraph: "Ogni desiderio merita una progettazione dedicata. \
-    Che si tratti del giorno del sì o di una ricorrenza privata, \
-    mettiamo la nostra firma sartoriale, la nostra esperienza e la \
-    nostra regia per dare vita a eventi unici e indimenticabili.",
+  title: "La soluzione più adatta a voi",
+  subtitle: "I servizi",
+  paragraph: 
+    <>
+    Ogni coppia ha esigenze diverse. Che desideriate un supporto completo, una consulenza mirata, un destination wedding o l'organizzazione di un altro evento speciale, mettiamo a vostra disposizione servizi flessibili, pensati per adattarsi alle vostre esigenze e ai vostri desideri.
+    </>,
   list: 
     [
       {
@@ -226,6 +239,18 @@ export const services = {
           masserie o corti secolari, ma progettando un'intera esperienza di viaggio: dai welcome \
           party ai brunch d'addio.",
         services: ["Travel", "Logistics", "Design"]
+      },
+      {
+        title: "Eventi Privati e Aziendali",
+        subtitle: "Ogni occasione merita un progetto capace di lasciare il segno",
+        image: img.home.eventi,
+        description: "Non solo matrimoni. Progettiamo e coordiniamo eventi privati e aziendali curando ogni dettaglio con la stessa attenzione, eleganza e professionalità. Dalle cresime ai compleanni, dalle feste di laurea agli eventi corporate, realizziamo esperienze su misura che rispecchiano la vostra personalità, i vostri obiettivi e lo stile che desiderate trasmettere.",
+        services: [
+          "Compleanni",
+          "Lauree",
+          "Cresime",
+          "Eventi Aziendali"
+        ]
       }
     ]
 }
@@ -295,13 +320,11 @@ export const box_to_form = {
   picture: img.home.fiori2,
   title: 
     <>
-      Pronti a vivere
-      <br />
-      <span className="italic">il giorno più bello?</span>
+      Iniziamo a progettare il vostro giorno insieme!
     </>,
   paragraph: 
     <>
-      Raccontami il tuo desiderio e insieme al mio team lo trasformeremo
+      Raccontatemi le vostre idee. Io ed il mio team le trasformeremo
       in un evento curato in ogni dettaglio, con eleganza e armonia.
     </>,
 };
@@ -325,17 +348,19 @@ export const chi_sono = {
   picture: img.chisono.soave,
   title: 
   <>
-    <span className="font-calligraphy">Ciao, sono Soave</span>
+    Ciao, sono <span className="font-calligraphy">Soave</span>
   </>,
-  subtitle: "Chi sono",
-  paragraph: "Sono Soave Alemanno e aiuto le coppie a trasformare il giorno del \
-    loro \"Sì\" in un’esperienza autentica, fluida e priva di stress. \
-    Non credo nei matrimoni fotocopia. Credo nell’ascolto, nell’eleganza \
-    sartoriale e nella cura di quei piccoli dettagli che parlano davvero di voi. \
-    Che abbiate bisogno di una guida passo dopo passo per l'intera organizzazione, \
-    o semplicemente di una bussola professionale per non perdere la rotta, il mio \
-    obiettivo è uno solo: farvi vivere i preparativi con il sorriso e farvi godere ogni \
-    singolo istante della vostra festa."
+  paragraph: 
+    <>
+      Aiuto le coppie a trasformare il giorno del
+      loro <span className="font-serif-italic">Sì</span> in un’esperienza autentica, fluida e priva di stress.
+      Non credo nei matrimoni fotocopia. Credo nell’ascolto, nell’eleganza
+      sartoriale e nella cura di quei piccoli dettagli che parlano davvero di voi.
+      Che abbiate bisogno di una guida passo dopo passo per l'intera organizzazione,
+      o semplicemente di una bussola professionale per non perdere la rotta, il mio
+      obiettivo è uno solo: farvi vivere i preparativi con il sorriso e farvi godere ogni
+      singolo istante della vostra festa.
+    </>
 }
 
 export const se_dovessi_descrivermi = {
@@ -376,7 +401,7 @@ export const mariella = {
   picture: img.chisono.mariella,
   title: 
   <>
-    <span className="font-calligraphy">Ciao, sono Mariella</span>
+    Ciao, sono <span className="font-calligraphy">Mariella</span>
   </>,
   subtitle: "La mia collaboratrice",
   paragraph: "Sono Soave Alemanno e aiuto le coppie a trasformare il giorno del \
@@ -477,7 +502,7 @@ export const galleries = [
  ************************************/
 
 export const intro_prenota= {
-  title: "Raccontami il vostro giorno",
+  title: "Raccontatemi il vostro giorno",
   subtitle: "Iniziamo insieme",
   paragraph: "Il vostro viaggio inizia da qui. E il primo passo è offerto da me. \
     Avete domande, sogni da realizzare o semplicemente non sapete da dove iniziare? \

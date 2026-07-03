@@ -70,11 +70,11 @@ export default function Hero() {
         </h1>
 
         {/* Sottotitolo */}
-        <p
+        {/* <p
           className="max-w-md text-sm md:text-base font-light leading-relaxed tracking-wide"
         >
           Al resto, penso io.
-        </p>
+        </p> */}
 
         {/* CTA */}
         {/* <button
@@ -112,9 +112,9 @@ export default function Hero() {
         </button> */}
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-0 translate-y-15  flex flex-col items-center gap-2 ">
+        <div className="absolute bottom-0 flex flex-col items-center gap-2">
           <span
-            className="text-[0.65rem] uppercase tracking-[0.4em] font-light"
+            className="subtitle text-secondary-dark"
           >
             Scorri
           </span>
@@ -122,7 +122,7 @@ export default function Hero() {
             className="w-px h-10"
             style={{
               background:
-                "linear-gradient(to bottom, black, transparent)",
+                "linear-gradient(to bottom, var(--color-secondary-dark), transparent)",
             }}
           />
         </div>

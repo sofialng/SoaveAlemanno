@@ -35,7 +35,7 @@ function Footer({ socials, team }) {
                 "P.IVA 05299610757",
                 "Based in Italy",
                 "info@soavealemanno.it",
-                "+39 347 00 00 000",
+                // "+39 347 00 00 000",
               ].map((line) => (
                 <p key={line} className="text-xs font-light tracking-wide" style={{ color: "rgba(255,255,255,0.45)" }}>
                   {line}

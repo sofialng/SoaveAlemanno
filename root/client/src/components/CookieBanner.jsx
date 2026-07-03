@@ -69,7 +69,7 @@ export default function CookieBanner() {
       {/* BISCOTTINO PERSISTENTE */}
       {status === "icon" && (
         <button
-          onClick={openPreferences}
+          onClick={() => setStatus("banner")}
           aria-label="Gestisci preferenze cookie"
           className="
             fixed
@@ -79,7 +79,7 @@ export default function CookieBanner() {
             w-11
             h-11
             rounded-full
-            bg-secondary-light/50
+            bg-secondary-light/60
             backdrop-blur-xl
             border
             border-primary-dark/90
