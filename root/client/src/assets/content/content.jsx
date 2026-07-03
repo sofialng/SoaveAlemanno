@@ -31,7 +31,7 @@ export const team = [
     email: "info@soavealemanno.it",
   },
   {
-    src: img.soave,
+    src: img.mariella,
     alt: "Mariella Longo",
     name: "Mariella Longo",
     role: "Event Coordinator",
@@ -44,15 +44,10 @@ export const team = [
  *****************/
 
 export const intro = {
-  title: "Disegnatrice di sogni, regista del vostro giorno più bello",
-  paragraph: "Come Wedding & Event Planner, prendo per mano i vostri \
-            desideri per trasformarli in una scenografia sartoriale \
-            impeccabile. Dalla scelta della location ideale al light \
-            design più suggestivo, coordino ogni singolo dettaglio con \
-            rigore, eleganza e quel tocco di straordinaria spettacolarità \
-            che lascerà i vostri ospiti senza fiato. \
-            Nessun imprevisto, nessuna ansia. Solo la certezza di un evento \
-            perfetto, cucito addosso alla vostra storia."
+  title: "Disegno i vostri sogni, guido il vostro giorno più bello.",
+  paragraph: "Prendo per mano i vostri desideri per trasformarli in un matrimonio \
+    impeccabile e senza stress. Dalla location ai minimi dettagli, coordino ogni cosa \
+    con eleganza e precisione, lasciando a voi solo la gioia di vivere l'evento."
 };
 
 export const dove_i_sogni = {
@@ -61,17 +56,10 @@ export const dove_i_sogni = {
   paragraph: 
     <>
       <p>
-        Dietro ogni matrimonio memorabile c’è una visione chiara,
-        un ascolto profondo e una regia impeccabile. Insieme al mio 
-        team di professioniste d'élite, guido le coppie più esigenti 
-        nella creazione di eventi unici, trasformando l'immaginazione 
-        in una scenografia reale, vibrante e senza tempo.
+        Credo che ogni storia d’amore sia unica e meriti di essere raccontata con autenticità, armonia ed eleganza. Per questo non mi limito a pianificare, ma disegno insieme a voi un evento che vi rispecchi in ogni dettaglio.
       </p>
       <p>
-        Non mi limito a pianificare; do forma alla vostra storia. 
-        Credo fermamente che ogni amore meriti di essere raccontato 
-        con assoluta autenticità, eleganza e armonia, attraverso un 
-        progetto sartoriale che parli davvero di voi.
+        Con il supporto del mio team, guido ogni fase dei preparativi per assicurarvi una giornata perfetta, dove l'unica vostra preoccupazione sarà godervi la festa.
       </p>
     </>
 }
@@ -80,73 +68,57 @@ export const scenografie_d_amore = {
   picture: img.home.danielafull,
   title: "Scenografie d'amore",
   subtitle: "La regia del vostro giorno perfetto",
-  paragraph: "Non esistono due matrimoni uguali, perché non esistono due storie identiche. \
-    Il vostro giorno perfetto nasce dal disegno dei vostri desideri, svelato attraverso dettagli \
-    mai lasciati al caso e istanti irripetibili. Insieme al mio team, trasformo la complessità \
-    dell'organizzazione nell'eleganza fluida di un ricordo indimenticabile."
+  paragraph: "Non creo matrimoni in serie, ma eventi che parlano di voi. Insieme al mio team, guido la regia del vostro giorno più bello, curando ogni dettaglio mai lasciato al caso. Trasformiamo mesi di pianificazione in una giornata fluida, elegante e indimenticabile."
 }
 
 export const wedding_stories = {
   picture: img.home.albero,
   title: <>Wedding <span className="font-calligraphy ml-4">stories</span></>,
   subtitle: "Frammenti di pura bellezza",
-  paragraph: "Nella galleria non troverete semplici fotografie, \
-            ma la testimonianza di come trasformiamo i desideri \
-            in scenografie vibranti. Ogni dettaglio, ogni scorcio \
-            di luce e ogni emozione autentica sono stati orchestrati \
-            per rimanere impressi, per sempre, nel tempo e nel cuore.",
+  paragraph: <>
+    Esplorate le storie delle nostre coppie: progetti su misura dove l'eleganza incontra l'emozione autentica. Trovate l'ispirazione per il vostro giorno perfetto.
+    </>,
   button: "Esplora la galleria"
 }
 
 export const wedding_journey = {
-  title: "Il viaggio verso il vostro giorno perfetto",
-  subtitle: "Il nostro metodo, passo dopo passo",
-  paragraph: "Pianificare un matrimonio d'alto livello richiede strategia, \
-    sensibilità artistica e un'organizzazione millimetrica. Insieme al mio team, \
-    ho tracciato un percorso chiaro in quattro fasi per sollevarvi da ogni ansia e \
-    garantirvi un’esperienza fluida, piacevole e straordinariamente esclusiva.",
+  title: "Il viaggio verso il giorno perfetto",
+  subtitle: "Il mio metodo, passo dopo passo",
+  paragraph: " Progettare il vostro matrimonio non deve essere fonte di stress, ma un bellissimo viaggio. Attraverso quattro passaggi chiari e coordinati, io e il mio team prendiamo in mano le complessità per consegnarvi solo la gioia della festa.",
   items: [
     {
         step: "01 - L'ascolto",
         title: "La scintilla",
         text: 
           <>
-            <span className="">Il punto di partenza siete voi: la vostra storia, la vostra personalità, i vostri desideri.</span> <br/>
-            Il percorso inizia con un primo incontro privato. Il mio obiettivo in questa fase è comprendere ciò
-            che sognate (anche quello che non riuscite ancora a esprimere a parole) per gettare le basi di un evento autentico.
+            Il viaggio inizia con un incontro dedicato a voi, alla vostra storia e ai vostri desideri. Ascolto i vostri sogni per trasformarli nelle fondamenta di un matrimonio autentico, unico e su misura.
           </>,
         image: img.home.fedi,
     },
     {
-        step: "02 - Il progetto",
+        step: "02 - Il progetto e il budget",
         title: "Il disegno sartoriale",
         text: 
           <>
-            <span className="">Dall’idea alla carta: plasmiamo un concept estetico e organizzativo su misura. </span> <br/>
-            In questa fase strategica,  diamo forma al vostro matrimonio. Ogni budget viene ottimizzato e ogni tempistica pianificata, 
-            presentandovi un progetto sartoriale dettagliato che approveremo insieme.
+            È il momento di dare forma alle idee. Creiamo un piano organizzativo e creativo su misura per voi. In questa fase pianifichiamo i tempi e ottimizziamo ogni investimento, mostrandovi un'anteprima dettagliata di come sarà la vostra giornata.
           </>,
         image: img.home.tavoli,
     },
     {
-        step: "03 - La regia",
+        step: "03 - Il coordinamento e la logistica",
         title: "La cura dei dettagli",
         text: 
           <>
-            <span className="">Il dietro le quinte dove l’immaginazione si trasforma in una splendida realtà.</span> <br/>
-            Mentre voi vi godete l'attesa, noi entriamo in azione. Coordino personalmente ogni aspetto burocratico, 
-            logistico e creativo. 
+            È il momento in cui l'immaginazione si trasforma in realtà. Mi occupo della gestione dei contratti, dei contatti con i fornitori e delle scadenze. Voi dovete solo rilassarvi: io e il mio team coordiniamo l'intera macchina organizzativa dietro le quinte.
           </>,
         image: img.home.confetti,
     },
     {
-        step: "04 - la magia",
-        title: "Il vostro giardino",
+        step: "04 - La regia",
+        title: "Il giorno più bello",
         text:
            <>
-            <span className="">Il sipario si apre: voi siete gli ospiti d’onore, noi i custodi del vostro sogno.</span> <br/>
-            Il grande giorno è arrivato. Io e la mia squadra saremo sul posto per coordinare i fornitori, gestire la timeline 
-            ed assicurarci che tutto scorra con impeccabile eleganza. 
+            Il momento è arrivato. Con il mio team coordiniamo ogni dettaglio sul posto, gestiamo i fornitori e controlliamo i tempi dell'evento dietro le quinte. Ci assicuriamo che tutto sia perfetto, lasciando a voi e ai vostri ospiti solo la gioia della festa.
           </>,
         image: img.home.bacio,
     },
@@ -167,6 +139,12 @@ export const wedding_experience = {
 export const quote_caramagna = {
   quote: "Quando non riesco a dirtelo, cerco chi lo dice per me. E lo trovo in un bouquet di fiori.",
   author: "Fabrizio Caramagna",
+  subtitle: "Scrittore"
+}
+
+export const quote_antoine = {
+  quote: "Amare non è guardarsi l'un l'altro, ma guardare insieme nella stessa direzione",
+  author: "Antoine de Saint-Exupéry",
   subtitle: "Scrittore"
 }
 
@@ -288,12 +266,7 @@ export const wedding_types = [
     descrizione:
       "Sposarsi dove il cielo incontra il mare del Salento. Immagina il rumore della risacca come colonna sonora, i colori caldi del tramonto che dipingono l'orizzonte e una festa a piedi nudi sulla spiaggia, avvolti dalla brezza e da un senso di assoluta libertà. Un \"Sì\" leggero, fresco e indimenticabile.",
     dettagli: ["Vista mare garantita", "Cerimonia in spiaggia", "Aperitivo al tramonto"],
-    images: 
-      [
-        img.cerimonia,
-        img.cerimonia,
-        img.cerimonia
-      ],
+    image: img.matrimoniomare,
     direction: "right",
   },
   {
@@ -303,12 +276,7 @@ export const wedding_types = [
     descrizione:
       "Il fascino autentico della pietra antica, cortili segreti illuminati da una cascata di lucine e l'abbraccio di uliveti senza tempo. La masseria è l'essenza più vera del Salento: un’eleganza rustica e sofisticata al tempo stesso, che profuma di terra, di tradizione e di una grande festa in famiglia sotto le stelle.",
     dettagli: ["Fino a 200 ospiti", "Catering interno", "Alloggi in loco"],
-    images: 
-      [
-        img.cerimonia,
-        img.cerimonia,
-        img.cerimonia
-      ],
+    image: img.matrimoniomasseria,
     direction: "left",
   },
   {
@@ -318,12 +286,7 @@ export const wedding_types = [
     descrizione:
       "Sposarsi nel cuore di un borgo salentino significa immergersi in una favola di pietra dorata che si scalda al sole. Camminare tra le stradine storiche, mentre l'eco di una pizzica sembra risuonare in lontananza, trasformerà il vostro matrimonio in un pezzo di storia di questa terra meravigliosa. Un \"Sì\" pieno di quella magia del Sud che ti resta dentro per sempre.",
     dettagli: ["Palazzo nobiliare", "Chiostro privato", "Illuminazione notturna"],
-    images: 
-      [
-        img.cerimonia,
-        img.cerimonia,
-        img.cerimonia
-      ],
+    image: img.matrimonioborgo,
     direction: "left",
   },
 ];
@@ -410,7 +373,7 @@ export const se_dovessi_descrivermi = {
 };
 
 export const mariella = {
-  picture: img.chisono.soave,
+  picture: img.chisono.mariella,
   title: 
   <>
     <span className="font-calligraphy">Ciao, sono Mariella</span>
@@ -490,7 +453,7 @@ export const galleries = [
     ],
   },
   {
-    title: "Allestimenti",
+    title: "Altri eventi",
     subtitle: "Fiori, luci e scenografie personalizzate",
     images: [
       { src: img.vaso, alt: "Vaso", caption: "Composizione floreale" },
@@ -499,7 +462,7 @@ export const galleries = [
     ],
   },
   {
-    title: "Momenti",
+    title: "Straquenzi",
     subtitle: "Emozioni autentiche da ricordare",
     images: [
       { src: img.daniela, alt: "Daniela", caption: "Primo ballo" },

@@ -42,7 +42,7 @@ export default function Carousel({ tipi }) {
                     className="p-4 shadow-lg -inset-4 border border-black/10 m-4"
                   >
                     <img
-                      src={tipo.images?.[0] ?? tipo.image}
+                      src={tipo.image}
                       alt={tipo.titolo}
                       className="
                         w-full
@@ -57,9 +57,9 @@ export default function Carousel({ tipi }) {
                 {/* TESTO */}
                 <div className="w-full lg:w-3/5">
                   <div className="flex items-center gap-4 mb-4">
-                    <span className="font-calligraphy text-secondary-dark/30 text-4xl">
+                    {/* <span className="font-calligraphy text-secondary-dark/30 text-4xl">
                       {NUMERALI[index]}
-                    </span>
+                    </span> */}
                     {/* <span
                       className="
                         text-[0.65rem]

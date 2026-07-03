@@ -55,7 +55,7 @@ export default function ImgTxt({ picture, title, subtitle, paragraph, reverse = 
 
             <div className="w-16 h-px bg-black/20 mx-auto lg:mx-0" />
 
-            <p className="paragraph text-left">
+            <p className="paragraph text-right">
               {paragraph}
             </p>
 

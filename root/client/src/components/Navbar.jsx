@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../img/logo.png";
+import img from "../img/img";
 
 const links = [
   { to: "/", label: "Home" },
@@ -58,7 +58,7 @@ function Navbar() {
 
           {/* Logo */}
           <NavLink to="/" className="h-full flex items-center">
-            <img src={logo} alt="Soave" className="h-full w-auto p-1 cursor-pointer" draggable={false} onContextMenu={(e) => e.preventDefault()}/>
+            <img src={img.logo2} alt="Soave" className="h-full w-auto p-1 cursor-pointer" draggable={false} onContextMenu={(e) => e.preventDefault()}/>
           </NavLink>
 
           {/* Desktop links */}

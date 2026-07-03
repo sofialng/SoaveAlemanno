@@ -5,7 +5,7 @@ export default function TxtLayout({ title, subtitle, paragraph, cards, quote_blo
 
   return (
     <section className="py-16">
-      <div className="max-w-7xl mx-auto px-16 lg:grid lg:grid-cols-12 gap-16 items-start">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-16 lg:grid lg:grid-cols-12 gap-8 lg:gap-16 items-start">
 
         <div className="lg:col-span-5 lg:sticky lg:top-28 self-start">
           <p className="subtitle">
@@ -28,9 +28,9 @@ export default function TxtLayout({ title, subtitle, paragraph, cards, quote_blo
           {cards.map((card) => (
             <div
               key={card.number}
-              className="group bg-white p-10 border border-secondary-dark/20 hover:-translate-y-1 transition-all duration-500 shadow-sm hover:shadow-xl"
+              className="group bg-white p-6 sm:p-8 lg:p-10 border border-secondary-dark/20 hover:-translate-y-1 transition-all duration-500 shadow-sm hover:shadow-xl"
             >
-              <div className="flex items-start gap-8">
+              <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-8">
 
                 <div className="text-4xl font-calligraphy text-secondary-dark/30 group-hover:text-secondary-dark transition">
                   {card.number}
@@ -64,7 +64,7 @@ export default function TxtLayout({ title, subtitle, paragraph, cards, quote_blo
           {title_2}
         </h3>
 
-        <p className="paragraph mb-16 text-left">
+        <p className="paragraph mb-16 text-left p-6 sm:p-8 lg:p-10">
           {paragraph_2}
         </p>
 

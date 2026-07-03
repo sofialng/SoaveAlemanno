@@ -21,7 +21,7 @@ import {
   wedding_journey,
   wedding_experience,
   quote_auster,
-  quote_caramagna,
+  quote_antoine,
   services,
   salento,
   wedding_types,
@@ -60,9 +60,9 @@ function Home() {
         </div>
 
         <QuoteBlock
-          quote={quote_caramagna.quote}
-          author={quote_caramagna.author}
-          subtitle={quote_caramagna.subtitle}
+          quote={quote_antoine.quote}
+          author={quote_antoine.author}
+          subtitle={quote_antoine.subtitle}
         />
 
         <ImageStripe
@@ -102,7 +102,7 @@ function Home() {
           />
         </div>
 
-        <PatternZigZag
+        <PatternFlowers
           children={
             <SalentoSection 
               image={salento.image}

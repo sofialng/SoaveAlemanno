@@ -2,7 +2,7 @@ import PageIntro from "../components/PageIntro";
 import TxtImg from "../components/TxtImg";
 import ImgTxt from "../components/ImgTxt";
 import Cards from "../components/Cards";
-import PatternZigZag from "../components/PatternZigZag";
+import PatternFlowers from "../components/PatternFlowers";
 import PatternStars from "../components/PatternStars";
 import TxtLayout from "../components/TxtLayout";
 
@@ -27,7 +27,7 @@ function About() {
           />
           </div>
 
-        <PatternZigZag
+        <PatternFlowers
           children={
             <TxtImg 
               picture={chi_sono.picture}
