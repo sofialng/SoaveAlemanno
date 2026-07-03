@@ -1,6 +1,6 @@
 export default function ImgTxt({ picture, title, subtitle, paragraph, reverse = false }) {
   return (
-    <section className="relative py-24 overflow-hidden">
+    <section className="relative py-16 overflow-hidden">
 
       {/* subtle background line */}
       <div className="absolute inset-0 flex justify-center">

@@ -1,4 +1,4 @@
-import InfiniteImageRow from "./InfiniteImageRow";
+import InfiniteImageRow from "../InfiniteImageRow";
 
 export default function Carousel({ tipi }) {
 

@@ -3,7 +3,7 @@ const symbols = ["✦", "❀", "✿", "✧"];
 
 export default function Cards({ title, subtitle, cards }) {
   return (
-    <section className="relative py-28 overflow-hidden bg-secondary-light">
+    <section className="relative py-16 overflow-hidden bg-secondary-light">
 
       <div className="max-w-7xl mx-auto px-6 lg:px-16">
 

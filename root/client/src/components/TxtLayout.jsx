@@ -4,10 +4,10 @@ import { NavLink } from "react-router-dom";
 export default function TxtLayout({ title, subtitle, paragraph, cards, quote_block, title_2, paragraph_2}) {
 
   return (
-    <section className="py-32">
-      <div className="max-w-7xl mx-auto px-6 lg:grid lg:grid-cols-12 gap-16 items-start">
+    <section className="py-16">
+      <div className="max-w-7xl mx-auto px-16 lg:grid lg:grid-cols-12 gap-16 items-start">
 
-        <div className="lg:col-span-4 lg:sticky lg:top-28 self-start">
+        <div className="lg:col-span-5 lg:sticky lg:top-28 self-start">
           <p className="subtitle">
             {subtitle}
           </p>
@@ -23,7 +23,7 @@ export default function TxtLayout({ title, subtitle, paragraph, cards, quote_blo
           </p>
         </div>
 
-        <div className="lg:col-span-8 space-y-8">
+        <div className="lg:col-span-7 space-y-8">
 
           {cards.map((card) => (
             <div
@@ -49,58 +49,56 @@ export default function TxtLayout({ title, subtitle, paragraph, cards, quote_blo
               </div>
             </div>
           ))}
-
-          <div className="text-center">
-
-            <QuoteBlock 
-            quote={quote_block.quote}
-            author={quote_block.author}
-            subtitle={quote_block.subtitle}
-            />
-
-            <h3 className="title text-3xl mb-6">
-              {title_2}
-            </h3>
-
-            <p className="paragraph mb-16 text-left">
-              {paragraph_2}
-            </p>
-
-            <NavLink
-                to="/prenota"
-                className="
-                  px-6 sm:px-10
-                  py-3.5
-                  my-3
-                  text-[0.55rem] sm:text-[0.65rem]
-                  uppercase
-                  tracking-[0.25em] sm:tracking-[0.3em]
-                  font-light
-                  border
-                  transition-all
-                  duration-300
-                  whitespace-nowrap
-                  "
-                style={{
-                  borderColor: "var(--color-secondary-dark)",
-                  color: "var(--color-secondary-dark)",
-                  background: "transparent",
-                  }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "var(--color-secondary-dark)";
-                  e.currentTarget.style.color = "var(--color-secondary-light)";
-                  }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "transparent";
-                  e.currentTarget.style.color = "var(--color-secondary-dark)";
-                  }}
-            >
-                Prenota una consulenza gratuita
-            </NavLink>
-
-          </div>
-
         </div>
+      </div>
+
+      <div className="text-center">
+
+        <QuoteBlock 
+          quote={quote_block.quote}
+          author={quote_block.author}
+          subtitle={quote_block.subtitle}
+          />
+
+        <h3 className="title text-3xl mb-6">
+          {title_2}
+        </h3>
+
+        <p className="paragraph mb-16 text-left">
+          {paragraph_2}
+        </p>
+
+        <NavLink
+            to="/prenota"
+            className="
+              px-6 sm:px-10
+              py-3.5
+              my-3
+              text-[0.55rem] sm:text-[0.65rem]
+              uppercase
+              tracking-[0.25em] sm:tracking-[0.3em]
+              font-light
+              border
+              transition-all
+              duration-300
+              whitespace-nowrap
+              "
+            style={{
+              borderColor: "var(--color-secondary-dark)",
+              color: "var(--color-secondary-dark)",
+              background: "transparent",
+              }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "var(--color-secondary-dark)";
+              e.currentTarget.style.color = "var(--color-secondary-light)";
+              }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "transparent";
+              e.currentTarget.style.color = "var(--color-secondary-dark)";
+              }}
+        >
+            Prenota una consulenza gratuita
+        </NavLink>
 
       </div>
     </section>

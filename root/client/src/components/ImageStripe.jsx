@@ -2,22 +2,14 @@ import { NavLink } from "react-router-dom";
 
 export default function ImageStripe({picture, title, subtitle, paragraph, button }) {
   return (
-    <section className="relative max-h-[80vh] overflow-hidden">
+    <section className="relative min-h-[80vh] overflow-hidden">
       {/* Container */}
-        <div className="
-            relative
-            w-full
-        ">
+        <div className="relative w-full">
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/70 z-10"></div>
 
             {/* Contenuto sopra */}
-            <div className="absolute flex flex-col 
-                w-full h-full
-                items-center
-                gap-4
-                z-20
-                p-8 md:p-16 lg:p-32">
+            <div className="relative z-20 flex min-h-[80vh] flex-col justify-center items-center p-8 md:p-16 lg:p-16 text-center gap-4">
 
                 <h1 className="title text-secondary-light">
                     {title}
@@ -59,14 +51,7 @@ export default function ImageStripe({picture, title, subtitle, paragraph, button
             <img 
                 src={picture}
                 alt="Albero"
-                className="
-                    relative
-                    w-full
-                    h-[80vh]
-                    object-cover
-                    object-[40%_50%]
-                    -z-10
-                "
+                className="absolute inset-0 w-full h-full object-cover object-[40%_50%]"
                 />
         </div>
     </section>

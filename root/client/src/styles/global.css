@@ -71,11 +71,11 @@ body {
   }
 
   .title {
-    @apply font-serif text-4xl md:text-6xl mt-4 font-light tracking-wide text-secondary-dark;
+    @apply font-serif text-4xl md:text-6xl mt-4 tracking-wide text-secondary-dark;
   }
 
   .subtitle {
-    @apply text-xs uppercase tracking-[0.35em] text-black/40 font-light;
+    @apply text-xs uppercase tracking-[0.35em] text-black/40;
   }
 
   .paragraph {

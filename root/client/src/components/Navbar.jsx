@@ -152,7 +152,6 @@ function Navbar() {
                   text-sm
                   uppercase
                   tracking-[0.28em]
-                  font-light
                   border
                   transition-all
                   duration-300

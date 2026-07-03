@@ -1,6 +1,6 @@
 function QuoteBlock({ quote, author, subtitle }) {
   return (
-    <section className="relative py-28 bg-secondary-light overflow-hidden">
+    <section className="relative py-16 bg-secondary-light overflow-hidden">
 
       {/* subtle background line */}
       <div className="absolute inset-0 flex justify-center">

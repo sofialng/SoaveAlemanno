@@ -14,7 +14,7 @@ export default function Privacy() {
             text={
               <>
                 <p className="mb-4 text-secondary-dark">
-                  Ultimo aggiornamento: Giugno 2026
+                  Ultimo aggiornamento: Luglio 2026
                 </p>
 
                 <p className="mb-4">

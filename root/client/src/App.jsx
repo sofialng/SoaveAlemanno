@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CookieBanner from "./components/CookieBanner";
 import PageNotFound from "./pages/PageNotFound";
+import CloudflareAnalytics from "./components/AllowAnalytics";
 
 import {
   socials,
@@ -33,6 +34,8 @@ function App() {
       <ScrollToTopButton />
 
       <CookieBanner />
+
+      <CloudflareAnalytics />
 
       <Footer 
         socials={socials}

@@ -42,7 +42,7 @@ export default function Journey({ title, subtitle, paragraph,items = [] }) {
               <div className="w-full lg:w-1/2 px-4">
                 <div
                   className={`
-                    max-w-md
+                    max-w-sm
                     ${index % 2 === 0 ? "lg:ml-auto lg:text-right" : "lg:mr-auto lg:text-left"}
                   `}
                 >
@@ -55,7 +55,10 @@ export default function Journey({ title, subtitle, paragraph,items = [] }) {
                     {item.title}
                   </h3>
 
-                  <p className="text-sm text-black/70 leading-relaxed">
+                  <p className={`
+                    paragraph
+                    ${index % 2 === 0 ? "lg:ml-auto lg:text-right" : "lg:mr-auto lg:text-left"}
+                  `}>
                     {item.text}
                   </p>
 

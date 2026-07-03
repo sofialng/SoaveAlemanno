@@ -4,7 +4,7 @@ function ServiceExplorer({ title, subtitle, paragraph, data }) {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative py-24">
+    <section className="relative py-16">
 
       <div className="max-w-6xl mx-auto px-6">
 

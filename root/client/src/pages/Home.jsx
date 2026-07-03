@@ -8,7 +8,7 @@ import QuoteBlock from "../components/QuoteBlock";
 import TransparentDescription from "../components/Mosaic";
 import ServiceExplorer from "../components/ServiceExplorer";
 import SalentoSection from "../components/Map";
-import WeddingTypes from "../components/Carousel_v2";
+import WeddingTypes from "../components/Carousel_v3";
 import BoxToForm from "../components/BoxToForm";
 import PatternFlowers from "../components/PatternFlowers"
 import PatternZigZag from "../components/PatternZigZag";

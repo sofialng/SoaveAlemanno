@@ -5,27 +5,6 @@ export default function PrivacyPolicy() {
     >
       <div className="max-w-2xl mx-auto">
 
-        {/* Soprattitolo */}
-        {/* <p
-          className="subtitle"
-        >
-          Informativa
-        </p> */}
-
-        {/* Titolo */}
-        {/* <h1
-          className="title mb-10"
-        >
-          Privacy &amp; Cookie Policy
-        </h1> */}
-
-        {/* Data aggiornamento */}
-        {/* <p
-          className="subtitle mb-2"
-        >
-          Ultimo aggiornamento: giugno 2026
-        </p> */}
-
         {/* Divisore ornamentale */}
         <Divider />
 
@@ -46,39 +25,48 @@ export default function PrivacyPolicy() {
             la richiesta al titolare. Non vengono conservati su server propri né ceduti a terzi per finalità di
             marketing.
           </p>
-          <SubHeading>Navigazione e dati tecnici</SubHeading>
+          <SubHeading>Hosting e infrastruttura (Cloudflare)</SubHeading>
           <p>
-            Come tutti i siti web, questo sito riceve automaticamente dal browser dell'utente alcune
-            informazioni tecniche (indirizzo IP, tipo di browser, pagine visitate, orario di accesso).
-            Questi dati sono utilizzati esclusivamente per garantire il corretto funzionamento del sito
-            e non vengono associati a nessuna identità personale.
-          </p>
-        </Section>
-
-        <Section number="3" title="Cookie">
-          <p>
-            Questo sito <strong>non utilizza cookie di profilazione</strong> né cookie di tracciamento
-            o marketing di alcun tipo. Non sono presenti sistemi di analisi del traffico (es. Google
-            Analytics) né pixel di terze parti.
-          </p>
-          <SubHeading>Cookie tecnici</SubHeading>
-          <p>Il sito non installa cookie di sessione né cookie di funzionalità propri.</p>
-          <SubHeading>Mappe interattive (OpenStreetMap)</SubHeading>
-          <p>
-            La sezione mappa del sito utilizza <strong>Leaflet.js</strong> con tile cartografici
-            forniti da <strong>OpenStreetMap</strong> (openstreetmap.org). La visualizzazione della
-            mappa comporta richieste ai server di OpenStreetMap, che potrebbero raccogliere dati
-            tecnici di navigazione secondo la propria{" "}
-            <a
-              href="https://wiki.osmfoundation.org/wiki/Privacy_Policy"
+            Questo sito è ospitato tramite <strong>Cloudflare Pages</strong>, servizio fornito da
+            Cloudflare, Inc. Per erogare il sito ed proteggerlo da traffico dannoso, Cloudflare
+            elabora automaticamente alcuni dati tecnici di ogni richiesta (indirizzo IP, tipo di
+            browser, pagine richieste, orario di accesso). Questi dati sono trattati da Cloudflare in
+            qualità di fornitore di infrastruttura e non vengono utilizzati da questo sito per
+            identificare gli utenti. Per maggiori informazioni si rimanda alla{" "}
+            
+            <a  href="https://www.cloudflare.com/privacypolicy/"
               target="_blank"
               rel="noopener noreferrer"
               className="underline underline-offset-4"
               style={{ color: "var(--color-primary-dark)" }}
             >
-              privacy policy
+              privacy policy di Cloudflare
             </a>
-            . Questo sito non ha accesso né controllo su tali dati.
+            .
+          </p>
+        </Section>
+
+        <Section number="3" title="Cookie">
+          <SubHeading>Cookie tecnici</SubHeading>
+          <p>
+            Questo sito non installa cookie propri di sessione o di funzionalità. Cloudflare, in
+            qualità di fornitore dell'infrastruttura, può impostare alcuni cookie tecnici (ad
+            esempio per la protezione da traffico automatizzato dannoso), strettamente necessari al
+            funzionamento e alla sicurezza del sito. Questi cookie non richiedono consenso in quanto
+            esenti ai sensi della normativa sulla cookie law.
+          </p>
+          <SubHeading>Cloudflare Analytics</SubHeading>
+          <p>
+            Con il tuo consenso, il sito può utilizzare <strong>Cloudflare Web Analytics</strong> per
+            raccogliere statistiche di visita aggregate (pagine visitate, provenienza del traffico,
+            tempi di caricamento). Questo strumento non utilizza cookie né tecnologie di
+            memorizzazione lato browser per raccogliere i dati, e non effettua alcuna profilazione
+            individuale degli utenti. Lo script viene caricato solo se scegli "Accetta" o attivi
+            l'opzione corrispondente dal pannello preferenze, ed è disattivato di default.
+          </p>
+          <p>
+            Puoi rivedere o modificare la tua scelta in qualsiasi momento tramite l'icona 🍪 sempre
+            presente in basso sul sito, che riapre il pannello delle preferenze cookie.
           </p>
         </Section>
 
@@ -189,7 +177,7 @@ function Section({ number, title, children, last = false }) {
 
       {/* Contenuto */}
       <div
-        className="paragraph"
+        className="paragraph text-left"
       >
         {children}
       </div>
