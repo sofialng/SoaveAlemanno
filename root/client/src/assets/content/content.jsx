@@ -123,7 +123,7 @@ export const wedding_journey = {
         title: "La cura dei dettagli",
         text: 
           <>
-            È il momento in cui l'immaginazione si trasforma in realtà. Mi occupo della gestione dei contratti, dei contatti con i fornitori e delle scadenze. Voi potrete rilassarvi: io e il mio team coordiniamo l'intera macchina organizzativa.
+            È il momento in cui l'immaginazione si trasforma in realtà. Mi occupo della gestione dei contratti, dei contatti con i fornitori e delle scadenze. A voi resta un coinvolgimento sereno e piacevole nelle scelte di stile, liberi di concentrarvi solo su ciò che vi rappresenta davvero, senza il peso della gestione.
           </>,
         image: img.home.confetti,
     },
@@ -502,11 +502,22 @@ export const galleries = [
  ************************************/
 
 export const intro_prenota= {
-  title: "Raccontatemi il vostro giorno",
-  subtitle: "Iniziamo insieme",
-  paragraph: "Il vostro viaggio inizia da qui. E il primo passo è offerto da me. \
-    Avete domande, sogni da realizzare o semplicemente non sapete da dove iniziare? \
-    Compilate il form qui sotto: faremo una prima consulenza gratuita per conoscerci, \
-    analizzare le vostre idee e capire insieme come trasformarle in realtà. Nessun impegno, \
-    solo una chiacchierata dedicata a voi. Raccontatemi la vostra storia e cliccate invia!"
+  wedding: {
+    title: "Raccontatemi il vostro giorno",
+    subtitle: "Iniziamo insieme",
+    paragraph: "Il vostro viaggio inizia da qui. E il primo passo è offerto da me. \
+      Avete domande, sogni da realizzare o semplicemente non sapete da dove iniziare? \
+      Compilate il form qui sotto: faremo una prima consulenza gratuita per conoscerci, \
+      analizzare le vostre idee e capire insieme come trasformarle in realtà. Nessun impegno, \
+      solo una chiacchierata dedicata a voi. Raccontatemi la vostra storia e cliccate invia!"
+  },
+  other: {
+    title: "Raccontami l'evento che hai in mente",
+    subtitle: "Iniziamo insieme",
+    paragraph: "Il vostro viaggio inizia da qui. E il primo passo è offerto da me. \
+      Avete domande, sogni da realizzare o semplicemente non sapete da dove iniziare? \
+      Compilate il form qui sotto: faremo una prima consulenza gratuita per conoscerci, \
+      analizzare le vostre idee e capire insieme come trasformarle in realtà. Nessun impegno, \
+      solo una chiacchierata dedicata a voi. Raccontatemi la vostra storia e cliccate invia!"
+  }
 };

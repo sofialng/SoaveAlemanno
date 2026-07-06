@@ -8,9 +8,7 @@ function Prenota() {
     <>
       <main>
         <ContactForm 
-          title={intro_prenota.title}
-          subtitle={intro_prenota.subtitle}
-          paragraph={intro_prenota.paragraph}
+          intro={intro_prenota}
           />
       </main>
     </>

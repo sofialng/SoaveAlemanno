@@ -91,8 +91,58 @@ body {
   }
 
   @media (min-width: 768px) {
-  .hero-bg {
-    background-attachment: fixed;
+    .hero-bg {
+      background-attachment: fixed;
+    }
   }
-}
+
+    .react-datepicker {
+    border: 1px solid var(--color-primary-dark);
+    border-radius: 16px;
+    font-family: inherit;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    padding: 10px;
+  }
+
+  /* header elegante */
+  .react-datepicker__header {
+    background: white;
+    border-bottom: 1px solid #eee;
+    border-radius: 16px 16px 0 0;
+  }
+
+  /* mese */
+  .react-datepicker__current-month {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  /* giorni */
+  .react-datepicker__day {
+    border-radius: 999px;
+    transition: all 0.2s ease;
+  }
+
+  /* hover soft */
+  .react-datepicker__day:hover {
+    background-color: var(--color-secondary-light);
+    border-radius: 999px;
+  }
+
+  /* giorno selezionato (colore wedding) */
+  .react-datepicker__day--selected {
+    background-color: var(--color-primary-dark) !important;
+    color: white !important;
+  }
+
+  /* weekend subtle highlight */
+  .wedding-weekend-day {
+    color: var(--color-secondary-dark);
+    font-weight: 800;
+  }
+
+  /* giorno fuori mese */
+  .react-datepicker__day--outside-month {
+    opacity: 0.3;
+  }
 }

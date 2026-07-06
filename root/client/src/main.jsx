@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "./styles/global.css";
 import ScrollToTop from "./components/ScrollToTop";
+import "react-datepicker/dist/react-datepicker.css";
 
 console.log("loaded");
 

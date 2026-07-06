@@ -68,6 +68,30 @@ export default function CookieBanner() {
     <>
       {/* BISCOTTINO PERSISTENTE */}
       {status === "icon" && (
+        // <button
+        //   onClick={() => setStatus("banner")}
+        //   aria-label="Gestisci preferenze cookie"
+        //   className="
+        //     fixed
+        //     bottom-5
+        //     left-5
+        //     z-50
+        //     w-11
+        //     h-11
+        //     rounded-full
+        //     bg-secondary-light/60
+        //     backdrop-blur-xl
+        //     border
+        //     border-primary-dark/90
+        //     text-lg
+        //     shadow-xl
+        //     flex
+        //     items-center
+        //     justify-center
+        //     hover:bg-primary-dark/85
+        //     transition
+        //   "
+        // >
         <button
           onClick={() => setStatus("banner")}
           aria-label="Gestisci preferenze cookie"
@@ -79,17 +103,10 @@ export default function CookieBanner() {
             w-11
             h-11
             rounded-full
-            bg-secondary-light/60
-            backdrop-blur-xl
-            border
-            border-primary-dark/90
             text-lg
-            shadow-xl
             flex
             items-center
             justify-center
-            hover:bg-primary-dark/85
-            transition
           "
         >
           🍪

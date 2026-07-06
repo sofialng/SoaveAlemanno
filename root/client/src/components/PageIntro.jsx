@@ -1,7 +1,7 @@
 export default function PageIntro({ header, title, text }) {
   return (
     <>
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
             <p className="subtitle">
                 {header}
             </p>
