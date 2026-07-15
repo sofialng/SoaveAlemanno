@@ -1,11 +1,44 @@
 import { useState, useEffect, useRef } from "react";
 import PageIntro from "./PageIntro";
+import PhotoCredit from "./PhotoCredit";
 
 function ImgGrid({ galleries }) {
   const allImages = galleries.flatMap((s) => s.images);
   const [activeSection, setActiveSection] = useState(0);
   const [selected, setSelected] = useState(null);
   const sectionRefs = useRef([]);
+  const touchStartX = useRef(null);
+  const touchEndX = useRef(null);
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    touchEndX.current = null;
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const onTouchMove = (e) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const onTouchEnd = () => {
+    if (
+      touchStartX.current === null ||
+      touchEndX.current === null
+    )
+      return;
+
+    const distance = touchStartX.current - touchEndX.current;
+
+    if (distance > minSwipeDistance) {
+      // swipe verso sinistra → foto successiva
+      setSelected((p) => (p + 1) % allImages.length);
+    } else if (distance < -minSwipeDistance) {
+      // swipe verso destra → foto precedente
+      setSelected((p) =>
+        p === 0 ? allImages.length - 1 : p - 1
+      );
+    }
+  };
 
   // Indice globale
   function globalIndexFor(sIdx, iIdx) {
@@ -216,49 +249,58 @@ function ImgGrid({ galleries }) {
           >
             ‹
           </button>
+          
+          <div className="flex flex-col items-center gap-4">
+            {/* Immagine */}
+            <div
+              className="flex flex-col items-center gap-4"
+              onClick={(e) => e.stopPropagation()}
+              onTouchStart={onTouchStart}
+              onTouchMove={onTouchMove}
+              onTouchEnd={onTouchEnd}
+            >
+              <img
+                src={allImages[selected].src}
+                alt={allImages[selected].alt}
+                onContextMenu={(e) => e.preventDefault()}
+                draggable={false}
+                className="max-w-[88vw] max-h-[78vh] object-contain"
+              />
+              {/* Caption nel lightbox */}
+              <div className="text-center flex flex-col items-center">
+                <p
+                  className="text-xs uppercase tracking-[0.3em] font-light"
+                  style={{ color: "#b89b6e" }}
+                >
+                  {sectionLabelFor(selected)}
+                </p>
+                <p className="text-white/60 text-sm tracking-wider mt-1 font-light">
+                  {allImages[selected].alt}
+                </p>
+                {allImages[selected].credit && (
+                  <p className="mt-3 text-[7px] uppercase tracking-[0.3em] text-white/35 font-light">
+                    Photography by {allImages[selected].credit}
+                  </p>
+                )}
+              </div>
 
-          {/* Immagine */}
-          <div
-            className="flex flex-col items-center gap-4"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src={allImages[selected].src}
-              alt={allImages[selected].alt}
-              onContextMenu={(e) => e.preventDefault()}
-              draggable={false}
-              className="max-w-[88vw] max-h-[78vh] object-contain"
-            />
-            {/* Caption nel lightbox */}
-            <div className="text-center">
-              <p
-                className="text-xs uppercase tracking-[0.3em] font-light"
-                style={{ color: "#b89b6e" }}
+              <div
+                className="text-[0.62rem] tracking-[0.4em] uppercase font-light"
+                style={{ color: "rgba(255,255,255,0.3)" }}
               >
-                {sectionLabelFor(selected)}
-              </p>
-              <p className="text-white/60 text-sm tracking-wider mt-1 font-light">
-                {allImages[selected].alt}
-              </p>
+                {selected + 1} &nbsp;/&nbsp; {allImages.length}
             </div>
-          </div>
+            </div>
 
-          {/* Next */}
-          <button
-            className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 text-white/40 hover:text-white/80 text-6xl transition-all duration-200"
-            style={{ background: "none", border: "none", cursor: "pointer" }}
-            onClick={(e) => { e.stopPropagation(); setSelected((p) => (p + 1) % allImages.length); }}
-            aria-label="Successiva"
-          >
-            ›
-          </button>
-
-          {/* Contatore */}
-          <div
-            className="absolute bottom-7 left-1/2 -translate-x-1/2 text-[0.62rem] tracking-[0.4em] uppercase font-light"
-            style={{ color: "rgba(255,255,255,0.3)" }}
-          >
-            {selected + 1} &nbsp;/&nbsp; {allImages.length}
+            {/* Next */}
+            <button
+              className="absolute right-4 md:right-10 top-1/2 -translate-y-1/2 text-white/40 hover:text-white/80 text-6xl transition-all duration-200"
+              style={{ background: "none", border: "none", cursor: "pointer" }}
+              onClick={(e) => { e.stopPropagation(); setSelected((p) => (p + 1) % allImages.length); }}
+              aria-label="Successiva"
+            >
+              ›
+            </button>
           </div>
         </div>
       )}

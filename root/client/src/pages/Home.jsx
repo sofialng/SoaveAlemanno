@@ -14,6 +14,7 @@ import PatternFlowers from "../components/PatternFlowers"
 import PatternZigZag from "../components/PatternZigZag";
 
 import { 
+  fotografo_enrico,
   intro, 
   dove_i_sogni,
   scenografie_d_amore,
@@ -85,6 +86,7 @@ function Home() {
           title={wedding_experience.title}
           subtitle={wedding_experience.subtitle}
           paragraph={wedding_experience.paragraph}
+          credit={fotografo_enrico}
         />
 
         <QuoteBlock

@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
+import PhotoCredit from "./PhotoCredit";
 
-export default function ImageStripe({picture, title, subtitle, paragraph, button }) {
+export default function ImageStripe({picture, title, subtitle, paragraph, button, credit }) {
   return (
     <section className="relative min-h-[80vh] overflow-hidden">
       {/* Container */}
@@ -45,6 +46,7 @@ export default function ImageStripe({picture, title, subtitle, paragraph, button
                         {button}
                     </NavLink>
                 }
+            {credit && <PhotoCredit className="text-secondary-light/40 z-30" credit={credit} />}
             </div>
 
             {/* Sfondo */}
@@ -53,7 +55,8 @@ export default function ImageStripe({picture, title, subtitle, paragraph, button
                 alt="Albero"
                 className="absolute inset-0 w-full h-full object-cover object-[40%_50%]"
                 />
-        </div>
+
+        </div>        
     </section>
   );
 }

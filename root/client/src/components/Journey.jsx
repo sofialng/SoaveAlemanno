@@ -1,3 +1,5 @@
+import PhotoCredit from "./PhotoCredit";
+
 export default function Journey({ title, subtitle, paragraph,items = [] }) {
   return (
     <section className="relative bg-secondary-light py-24 overflow-hidden">
@@ -67,13 +69,16 @@ export default function Journey({ title, subtitle, paragraph,items = [] }) {
 
               {/* optional image */}
               {item.image && (
-                <div className="w-full lg:w-1/2 px-4">
+                <div className="relative w-full lg:w-1/2 px-4">
                   <img
                     src={item.image}
                     alt={item.title}
                     draggable={false} onContextMenu={(e) => e.preventDefault()}
                     className="w-full h-64 object-cover shadow-md"
                   />
+                  {item.credit && (
+                    <PhotoCredit credit={item.credit} />
+                  )}
                 </div>
               )}
 

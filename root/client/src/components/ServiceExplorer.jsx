@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PhotoCredit from "./PhotoCredit";
 
 function ServiceExplorer({ title, subtitle, paragraph, data }) {
   const [active, setActive] = useState(0);
@@ -69,8 +70,6 @@ function ServiceExplorer({ title, subtitle, paragraph, data }) {
           {/* RIGHT - content */}
           <div className="relative">
 
-            
-
             <div className="mt-6">
               <h3 className="title text-2xl">
                 {data[active].title}
@@ -102,6 +101,7 @@ function ServiceExplorer({ title, subtitle, paragraph, data }) {
               draggable={false} onContextMenu={(e) => e.preventDefault()}
               className="w-full h-[280px] object-cover shadow-lg mt-4"
             />
+            {data[active].credit && <PhotoCredit credit={data[active].credit} />}
           </div>
         </div>
       </div>

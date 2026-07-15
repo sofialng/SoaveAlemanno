@@ -1,5 +1,8 @@
 import img from "../../img/img";
 
+// GLOBALS
+export const fotografo_enrico = "Enrico Mazzotta"; 
+
 /* ******************
  *     FOOTER       * 
  *******************/
@@ -103,6 +106,7 @@ export const wedding_journey = {
     {
         step: "01 - L'ascolto",
         title: "La scintilla",
+        credit: fotografo_enrico,
         text: 
           <>
             Il viaggio inizia con un incontro dedicato a voi e alla vostra storia. Ascolto i vostri desideri per disegnare le fondamenta di un matrimonio autentico, unico e su misura.
@@ -111,7 +115,7 @@ export const wedding_journey = {
     },
     {
         step: "02 - Il progetto e il budget",
-        title: "Il disegno sartoriale",
+        title: "Il disegno sartoriale", 
         text: 
           <>
             È il momento di dare forma alle idee. Creiamo un piano organizzativo e creativo su misura per voi. In questa fase pianifichiamo i tempi e ottimizziamo ogni investimento, mostrandovi un'anteprima dettagliata di come sarà la vostra giornata.
@@ -121,6 +125,7 @@ export const wedding_journey = {
     {
         step: "03 - Il coordinamento e la logistica",
         title: "La cura dei dettagli",
+        credit: fotografo_enrico,
         text: 
           <>
             È il momento in cui l'immaginazione si trasforma in realtà. Mi occupo della gestione dei contratti, dei contatti con i fornitori e delle scadenze. A voi resta un coinvolgimento sereno e piacevole nelle scelte di stile, liberi di concentrarvi solo su ciò che vi rappresenta davvero, senza il peso della gestione.
@@ -130,6 +135,7 @@ export const wedding_journey = {
     {
         step: "04 - La regia",
         title: "Il giorno più bello",
+        credit: fotografo_enrico,
         text:
            <>
             Il momento è arrivato. Con il mio team coordiniamo ogni dettaglio sul posto, gestiamo i fornitori e controlliamo i tempi dell'evento dietro le quinte. Ci assicuriamo che tutto sia perfetto, lasciando a voi e ai vostri ospiti solo la gioia della festa.
@@ -180,6 +186,7 @@ export const services = {
         title: "Matrimonio Completo",
         subtitle: "Dall'ideazione al grande giorno: la gestione totale del vostro sogno",
         image: img.home.ombre,
+        credit: fotografo_enrico,
         description: "Un servizio esclusivo chiavi in mano pensato per le coppie che \
           desiderano un percorso sereno e impeccabile. Insieme al mio team, mi occuperò \
           di ogni singolo aspetto: ricerca dei fornitori d'élite, budget management, design \
@@ -191,6 +198,7 @@ export const services = {
         title: "Consulenza Wedding su Misura",
         subtitle: "Hai già in mente come organizzare il tuo matrimonio, ma ti manca quella sicurezza in più per fare le scelte giuste?",
         image: img.home.vestito,
+        credit: fotografo_enrico,
         description: 
           <>
             <p>
@@ -244,6 +252,7 @@ export const services = {
         title: "Eventi Privati e Aziendali",
         subtitle: "Ogni occasione merita un progetto capace di lasciare il segno",
         image: img.home.eventi,
+        credit: fotografo_enrico,
         description: "Non solo matrimoni. Progettiamo e coordiniamo eventi privati e aziendali curando ogni dettaglio con la stessa attenzione, eleganza e professionalità. Dalle cresime ai compleanni, dalle feste di laurea agli eventi corporate, realizziamo esperienze su misura che rispecchiano la vostra personalità, i vostri obiettivi e lo stile che desiderate trasmettere.",
         services: [
           "Compleanni",
@@ -404,14 +413,11 @@ export const mariella = {
     Ciao, sono <span className="font-calligraphy">Mariella</span>
   </>,
   subtitle: "La mia collaboratrice",
-  paragraph: "Sono Soave Alemanno e aiuto le coppie a trasformare il giorno del \
-    loro \"Sì\" in un’esperienza autentica, fluida e priva di stress. \
-    Non credo nei matrimoni fotocopia. Credo nell’ascolto, nell’eleganza \
-    sartoriale e nella cura di quei piccoli dettagli che parlano davvero di voi. \
-    Che abbiate bisogno di una guida passo dopo passo per l'intera organizzazione, \
-    o semplicemente di una bussola professionale per non perdere la rotta, il mio \
-    obiettivo è uno solo: farvi vivere i preparativi con il sorriso e farvi godere ogni \
-    singolo istante della vostra festa."
+  paragraph: 
+  <>
+    La creatività ha sempre fatto parte del mio modo di vedere il mondo. Mi è sempre piaciuto immaginare nuovi progetti e trasformare le idee in qualcosa di concreto, con cura e attenzione ai dettagli.
+    In Soave Alemanno porto questo approccio, insieme al desiderio di rendere ogni matrimonio unico e autentico. Il mio obiettivo è dare forma alle vostre idee, creando un evento che vi rappresenti davvero e permettendovi di vivere ogni momento con serenità.
+  </>
 }
 
 export const perche_noi = {
@@ -439,8 +445,8 @@ export const perche_noi = {
     quote_block: {
       quote: "Il matrimonio perfetto non è quello da copertina, \
               ma quello in cui vi riconoscete in ogni istante.",
-      author: "Bo",
-      subtitle: "Bo"
+      // author: "Bo",
+      // subtitle: "Bo"
     },
     title_2: "Iniziamo a progettare insieme",
     paragraph_2: "Non lasciate che l'ansia dei preparativi tolga la magia \
@@ -470,16 +476,22 @@ export const certificazione = {
 export const galleries = [
   {
     title: "Matrimoni",
-    subtitle: "Atmosfere romantiche e dettagli senza tempo",
+    subtitle: 
+      <>
+        Ogni matrimonio ha la sua storia: noi la raccontiamo attraverso dettagli, emozioni e momenti indimenticabili.
+      </>,
     images: [
-      { src: img.daniela, alt: "Daniela", caption: "La sposa" },
-      { src: img.vaso, alt: "Vaso", caption: "Centrotavola" },
-      { src: img.daniela, alt: "Daniela", caption: "Ritratto" },
+      { src: img.daniela, alt: "Daniela", caption: "La sposa", credit: fotografo_enrico },
+      { src: img.vaso, alt: "Vaso", caption: "Centrotavola", credit: fotografo_enrico },
+      { src: img.daniela, alt: "Daniela", caption: "Ritratto", credit: fotografo_enrico },
     ],
   },
   {
     title: "Altri eventi",
-    subtitle: "Fiori, luci e scenografie personalizzate",
+    subtitle: 
+      <>
+        Dalle feste private agli eventi speciali, ogni occasione merita un’atmosfera unica e curata in ogni dettaglio.
+      </>,
     images: [
       { src: img.vaso, alt: "Vaso", caption: "Composizione floreale" },
       { src: img.daniela, alt: "Daniela", caption: "Dettaglio" },
@@ -487,8 +499,11 @@ export const galleries = [
     ],
   },
   {
-    title: "Straquenzi",
-    subtitle: "Emozioni autentiche da ricordare",
+    title: "Stracuenzi",
+    subtitle: 
+      <>
+        Nel dialetto neretino <span className="font-serif-italic">stracuènzi</span> indica cianfrusaglie, oggetti sparsi o poco utili. Noi abbiamo deciso di rubargli questo nome per mostrarvi tutti quei piccoli dettagli che, in realtà, fanno la differenza.
+      </>,
     images: [
       { src: img.daniela, alt: "Daniela", caption: "Primo ballo" },
       { src: img.vaso, alt: "Vaso", caption: "Bouquet" },

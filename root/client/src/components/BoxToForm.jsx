@@ -1,5 +1,7 @@
 import heroImage from "../img/soave-alemanno-bg-2.svg";
 import { NavLink } from "react-router-dom";
+import PhotoCredit from "./PhotoCredit";
+import { fotografo_enrico } from "../assets/content/content";
 
 export default function BoxToForm({ title, subtitle, img, paragraph }) {
   return (
@@ -23,13 +25,16 @@ export default function BoxToForm({ title, subtitle, img, paragraph }) {
           <div
             className="absolute -bottom-2 -right-2 w-full h-full pointer-events-none"
           />
-          <img
-            src={img}
-            alt="Soave Alemanno"
-            draggable={false} onContextMenu={(e) => e.preventDefault()}
-            className="relative w-auto h-52 object-cover"f89
-            style={{ display: "block" }}
-          />
+          <div className="relative">
+            <img
+              src={img}
+              alt="Soave Alemanno"
+              draggable={false} onContextMenu={(e) => e.preventDefault()}
+              className="relative w-auto h-52 object-cover"f89
+              style={{ display: "block" }}
+            />
+            <PhotoCredit className="right-10" credit={fotografo_enrico} />
+          </div>
         </div>
 
         {/* Ornament */}

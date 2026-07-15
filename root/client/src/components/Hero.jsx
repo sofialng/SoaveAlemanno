@@ -1,4 +1,6 @@
 import img from "../img/img";
+import PhotoCredit from "./PhotoCredit";
+import { fotografo_enrico } from "../assets/content/content";
 
 export default function Hero() {
 
@@ -128,6 +130,8 @@ export default function Hero() {
         </div>
 
       </div>
+
+      <PhotoCredit credit={fotografo_enrico} />
     </section>
   );
 }
