@@ -279,7 +279,7 @@ function ImgGrid({ galleries }) {
                 </p>
                 {allImages[selected].credit && (
                   <p className="mt-3 text-[7px] uppercase tracking-[0.3em] text-white/35 font-light">
-                    Photography by {allImages[selected].credit}
+                    Foto di {allImages[selected].credit}
                   </p>
                 )}
               </div>

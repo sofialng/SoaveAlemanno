@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-function Footer({ socials, team }) {
+export default function Footer({ socials, team }) {
   return (
     <footer
       className="pt-20 pb-8 px-6 bg-secondary-dark text-secondary-light"
@@ -137,5 +137,3 @@ function Footer({ socials, team }) {
     </footer>
   );
 }
-
-export default Footer;
