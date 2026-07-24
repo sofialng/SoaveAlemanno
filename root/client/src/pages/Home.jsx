@@ -116,7 +116,10 @@ function Home() {
           />
 
         <WeddingTypes 
-          tipi={wedding_types}
+          title={wedding_types.title}
+          subtitle={wedding_types.subtitle}
+          paragraph={wedding_types.paragraph}
+          tipi={wedding_types.types}
         />
    
         <div className="bg-secondary-light">

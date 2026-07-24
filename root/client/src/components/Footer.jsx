@@ -33,7 +33,7 @@ export default function Footer({ socials, team }) {
             <div className="space-y-2">
               {[
                 "P.IVA 05299610757",
-                "Based in Italy",
+                "Based in Salento, Italy",
                 "info@soavealemanno.it",
                 // "+39 347 00 00 000",
               ].map((line) => (
@@ -94,7 +94,7 @@ export default function Footer({ socials, team }) {
             style={{ color: "rgba(255,255,255,0.3)" }}
           >
             È vietata la copia, la riproduzione e la pubblicazione dei contenuti di questo sito,
-            in qualsiasi modo o forma, non autorizzata espressamente dall'autore. © Copyright 2024
+            in qualsiasi modo o forma, non autorizzata espressamente dall'autore. © Copyright 2026
           </p>
 
           <NavLink

@@ -1,7 +1,7 @@
 import img from "../../img/img";
 
 // GLOBALS
-export const fotografo_enrico = "Enrico Mazzotta"; 
+export const fotografo_enrico = "Enrico Mazzotta";
 
 /* ******************
  *     FOOTER       * 
@@ -94,8 +94,8 @@ export const wedding_stories = {
 }
 
 export const wedding_journey = {
-  title: "Il viaggio verso il giorno perfetto",
-  subtitle: "Il mio metodo, passo dopo passo",
+  title: "Il mio metodo, passo dopo passo",
+  subtitle: "Il viaggio verso il giorno perfetto",
   paragraph: 
     <>
       <p>
@@ -104,8 +104,8 @@ export const wedding_journey = {
     </>,
   items: [
     {
-        step: "01 - L'ascolto",
-        title: "La scintilla",
+        step: "La scintilla",
+        title: "01 - L'ascolto",
         credit: fotografo_enrico,
         text: 
           <>
@@ -114,8 +114,8 @@ export const wedding_journey = {
         image: img.home.fedi,
     },
     {
-        step: "02 - Il progetto e il budget",
-        title: "Il disegno sartoriale", 
+        step: "Il disegno sartoriale",
+        title:  "02 - Il progetto e il budget",
         text: 
           <>
             È il momento di dare forma alle idee. Creiamo un piano organizzativo e creativo su misura per voi. In questa fase pianifichiamo i tempi e ottimizziamo ogni investimento, mostrandovi un'anteprima dettagliata di come sarà la vostra giornata.
@@ -123,8 +123,8 @@ export const wedding_journey = {
         image: img.home.tavoli,
     },
     {
-        step: "03 - Il coordinamento e la logistica",
-        title: "La cura dei dettagli",
+        step: "La cura dei dettagli",
+        title: "03 - Il coordinamento e la logistica",
         credit: fotografo_enrico,
         text: 
           <>
@@ -133,8 +133,8 @@ export const wedding_journey = {
         image: img.home.confetti,
     },
     {
-        step: "04 - La regia",
-        title: "Il giorno più bello",
+        step: "Il giorno più bello",
+        title: "04 - La regia",
         credit: fotografo_enrico,
         text:
            <>
@@ -174,8 +174,8 @@ export const quote_auster = {
 }
 
 export const services = {
-  title: "La soluzione più adatta a voi",
-  subtitle: "I servizi",
+  title: "I servizi proposti",
+  subtitle: "La soluzione più adatta a voi",
   paragraph: 
     <>
     Ogni coppia ha esigenze diverse. Che desideriate un supporto completo, una consulenza mirata, un destination wedding o l'organizzazione di un altro evento speciale, mettiamo a vostra disposizione servizi flessibili, pensati per adattarsi alle vostre esigenze e ai vostri desideri.
@@ -197,7 +197,7 @@ export const services = {
       {
         title: "Consulenza Wedding su Misura",
         subtitle: "Hai già in mente come organizzare il tuo matrimonio, ma ti manca quella sicurezza in più per fare le scelte giuste?",
-        image: img.home.vestito2,
+        image: img.home.profumo,
         description: 
           <>
             <p>
@@ -239,7 +239,7 @@ export const services = {
       {
         title: "Destination Wedding in Salento",
         subtitle: "Il vostro Sì nella terra del sole, del mare e delle corti storiche",
-        image: img.home.tamburelli,
+        image: img.home.simone_daniela_17,
         description: "Specializzate nel trasformare il fascino autentico della Puglia in \
           un palcoscenico luxury per coppie straniere o fuori regione. Guidiamo voi e i vostri \
           ospiti alla scoperta del Salento, coordinando non solo il giorno del matrimonio in \
@@ -250,8 +250,8 @@ export const services = {
       {
         title: "Eventi Privati e Aziendali",
         subtitle: "Ogni occasione merita un progetto capace di lasciare il segno",
-        image: img.home.cresima,
-        credit: fotografo_enrico,
+        image: img.home.allestimento,
+        credit: "",
         description: "Non solo matrimoni. Progettiamo e coordiniamo eventi privati e aziendali curando ogni dettaglio con la stessa attenzione, eleganza e professionalità. Dalle cresime ai compleanni, dalle feste di laurea agli eventi corporate, realizziamo esperienze su misura che rispecchiano la vostra personalità, i vostri obiettivi e lo stile che desiderate trasmettere.",
         services: [
           "Compleanni",
@@ -291,38 +291,47 @@ export const salento = {
     </>
 }
 
-export const wedding_types = [
-  {
-    numero: "01",
-    titolo: "Matrimonio al Mare",
-    sottotitolo: "Il profumo del Mediterraneo, i piedi nella sabbia e l'infinito come testimone.",
-    descrizione:
-      "Sposarsi dove il cielo incontra il mare del Salento. Immagina il rumore della risacca come colonna sonora, i colori caldi del tramonto che dipingono l'orizzonte e una festa a piedi nudi sulla spiaggia, avvolti dalla brezza e da un senso di assoluta libertà. Un \"Sì\" leggero, fresco e indimenticabile.",
-    dettagli: ["Vista mare garantita", "Cerimonia in spiaggia", "Aperitivo al tramonto"],
-    image: img.matrimoniomare,
-    direction: "right",
-  },
-  {
-    numero: "02",
-    titolo: "Matrimonio in Masseria",
-    sottotitolo: "Tra ulivi secolari e mura bianche, dove il tempo si ferma e si accende la magia.",
-    descrizione:
-      "Il fascino autentico della pietra antica, cortili segreti illuminati da una cascata di lucine e l'abbraccio di uliveti senza tempo. La masseria è l'essenza più vera del Salento: un’eleganza rustica e sofisticata al tempo stesso, che profuma di terra, di tradizione e di una grande festa in famiglia sotto le stelle.",
-    dettagli: ["Fino a 200 ospiti", "Catering interno", "Alloggi in loco"],
-    image: img.matrimoniomasseria,
-    direction: "left",
-  },
-  {
-    numero: "03",
-    titolo: "Matrimonio nel Borgo Antico",
-    sottotitolo: "Il calore della pietra leccese, la poesia dei vicoli e il battito autentico del Salento.",
-    descrizione:
-      "Sposarsi nel cuore di un borgo salentino significa immergersi in una favola di pietra dorata che si scalda al sole. Camminare tra le stradine storiche, mentre l'eco di una pizzica sembra risuonare in lontananza, trasformerà il vostro matrimonio in un pezzo di storia di questa terra meravigliosa. Un \"Sì\" pieno di quella magia del Sud che ti resta dentro per sempre.",
-    dettagli: ["Palazzo nobiliare", "Chiostro privato", "Illuminazione notturna"],
-    image: img.matrimonioborgo,
-    direction: "left",
-  },
-];
+export const wedding_types = {
+    subtitle: 
+      <>
+        Un matrimonio per ogni
+        <span className="">{" "}sogno</span>
+      </>,
+    title: "Le nostre proposte",
+    paragraph: "Queste sono alcune delle proposte che possiamo realizzare per voi, pensate per darvi un’idea del nostro stile. Ogni progetto, però, nasce su misura: se avete in mente qualcosa di diverso, lo costruiremo insieme, adattando ogni dettaglio e creando soluzioni alternative in linea con la vostra visione.",
+    types: [
+      {
+        numero: "01",
+        titolo: "Matrimonio al Mare",
+        sottotitolo: "Il profumo del Mediterraneo, i piedi nella sabbia e l'infinito come testimone.",
+        descrizione:
+          "Sposarsi dove il cielo incontra il mare del Salento. Immagina il rumore della risacca come colonna sonora, i colori caldi del tramonto che dipingono l'orizzonte e una festa a piedi nudi sulla spiaggia, avvolti dalla brezza e da un senso di assoluta libertà. Un \"Sì\" leggero, fresco e indimenticabile.",
+        dettagli: ["Vista mare garantita", "Cerimonia in spiaggia", "Aperitivo al tramonto"],
+        image: img.matrimoniomare,
+        direction: "right",
+      },
+      {
+        numero: "02",
+        titolo: "Matrimonio in Masseria",
+        sottotitolo: "Tra ulivi secolari e mura bianche, dove il tempo si ferma e si accende la magia.",
+        descrizione:
+          "Il fascino autentico della pietra antica, cortili segreti illuminati da una cascata di lucine e l'abbraccio di uliveti senza tempo. La masseria è l'essenza più vera del Salento: un’eleganza rustica e sofisticata al tempo stesso, che profuma di terra, di tradizione e di una grande festa in famiglia sotto le stelle.",
+        dettagli: ["Fino a 200 ospiti", "Catering interno", "Alloggi in loco"],
+        image: img.matrimoniomasseria,
+        direction: "left",
+      },
+      {
+        numero: "03",
+        titolo: "Matrimonio nel Borgo Antico",
+        sottotitolo: "Il calore della pietra leccese, la poesia dei vicoli e il battito autentico del Salento.",
+        descrizione:
+          "Sposarsi nel cuore di un borgo salentino significa immergersi in una favola di pietra dorata che si scalda al sole. Camminare tra le stradine storiche, mentre l'eco di una pizzica sembra risuonare in lontananza, trasformerà il vostro matrimonio in un pezzo di storia di questa terra meravigliosa. Un \"Sì\" pieno di quella magia del Sud che ti resta dentro per sempre.",
+        dettagli: ["Palazzo nobiliare", "Chiostro privato", "Illuminazione notturna"],
+        image: img.matrimonioborgo,
+        direction: "left",
+      },
+    ]
+};
 
 export const box_to_form = {
   picture: img.home.fiori2,
@@ -480,49 +489,88 @@ export const galleries = [
         Ogni matrimonio ha la sua storia: noi la raccontiamo attraverso dettagli, emozioni e momenti indimenticabili.
       </>,
     images: [
-      { src: img.gallery.matrimoni.carmen_1, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
-      { src: img.gallery.matrimoni.carmen_2, alt: "Matrimonio di Carmen e Stefano", caption: "Il giorno del matrimonio", credit: "" },
-      { src: img.gallery.matrimoni.carmen_3, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
-      { src: img.gallery.matrimoni.carmen_4, alt: "Matrimonio di Carmen e Stefano", caption: "La cerimonia", credit: "" },
-      { src: img.gallery.matrimoni.carmen_5, alt: "Matrimonio di Carmen e Stefano", caption: "La cerimonia", credit: "" },
-      { src: img.gallery.matrimoni.carmen_6, alt: "Matrimonio di Carmen e Stefano", caption: "NON CARMEN E STEFANO", credit: "" },
-      { src: img.gallery.matrimoni.carmen_7, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
-      { src: img.gallery.matrimoni.carmen_8, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
-      { src: img.gallery.matrimoni.carmen_9, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
-      { src: img.gallery.matrimoni.carmen_10, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
-      { src: img.gallery.matrimoni.carmen_11, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
-      { src: img.gallery.matrimoni.carmen_12, alt: "Matrimonio di Carmen e Stefano", caption: "La cerimonia", credit: "" },
-      { src: img.gallery.matrimoni.carmen_13, alt: "Matrimonio di Carmen e Stefano", caption: "Il giorno del matrimonio", credit: "" },
-      { src: img.gallery.matrimoni.carmen_14, alt: "Matrimonio di Carmen e Stefano", caption: "Il giorno del matrimonio", credit: "" },
-      { src: img.gallery.matrimoni.carmen_15, alt: "Matrimonio di Carmen e Stefano", caption: "Il giorno del matrimonio", credit: "" },
-      { src: img.gallery.matrimoni.carmen_16, alt: "Matrimonio di Carmen e Stefano", caption: "Il giorno del matrimonio", credit: "" },
-      { src: img.gallery.matrimoni.carmen_17, alt: "Matrimonio di Carmen e Stefano", caption: "Il giorno del matrimonio", credit: "" },
-      { src: img.gallery.matrimoni.carmen_18, alt: "Matrimonio di Carmen e Stefano", caption: "Il giorno del matrimonio", credit: "" },
-      { src: img.gallery.matrimoni.carmen_19, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
-      { src: img.gallery.matrimoni.carmen_20, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
-      { src: img.gallery.matrimoni.carmen_21, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_1, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_2, alt: "Matrimonio di Carmen e Stefano", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_3, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_4, alt: "Matrimonio di Carmen e Stefano", caption: "La cerimonia", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_5, alt: "Matrimonio di Carmen e Stefano", caption: "La cerimonia", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_6, alt: "Matrimonio di Carmen e Stefano", caption: "NON CARMEN E STEFANO", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_7, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_8, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_9, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_10, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_11, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_12, alt: "Matrimonio di Carmen e Stefano", caption: "La cerimonia", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_13, alt: "Matrimonio di Carmen e Stefano", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_14, alt: "Matrimonio di Carmen e Stefano", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_15, alt: "Matrimonio di Carmen e Stefano", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_16, alt: "Matrimonio di Carmen e Stefano", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_17, alt: "Matrimonio di Carmen e Stefano", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_18, alt: "Matrimonio di Carmen e Stefano", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_19, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_20, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
+      { src: img.gallery.matrimoni.carmen_stefano_21, alt: "Matrimonio di Carmen e Stefano", caption: "La preparazione", credit: "" },
+      
       { src: img.gallery.matrimoni.caterina_luigi_1, alt: "Matrimonio di Caterina e Luigi", caption: "Il giorno del matrimonio", credit: "" },
       { src: img.gallery.matrimoni.caterina_luigi_2, alt: "Matrimonio di Caterina e Luigi", caption: "Il giorno del matrimonio", credit: "" },
       { src: img.gallery.matrimoni.caterina_luigi_3, alt: "Matrimonio di Caterina e Luigi", caption: "L'uscita della sposa", credit: "" },
+      { src: img.gallery.matrimoni.caterina_luigi_4, alt: "Matrimonio di Caterina e Luigi", caption: "L'uscita della sposa", credit: "" },
+      
       { src: img.gallery.matrimoni.chiesa, alt: "Matrimonio di Carmen e Stefano", caption: "La chiesa", credit: "" },
+      
       { src: img.gallery.matrimoni.errico_valentina_1, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
       { src: img.gallery.matrimoni.errico_valentina_2, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico},
       { src: img.gallery.matrimoni.errico_valentina_3, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: "" },
       { src: img.gallery.matrimoni.errico_valentina_4, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico},
       { src: img.gallery.matrimoni.errico_valentina_5, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
-      { src: img.gallery.matrimoni.errico_e_valentina_6, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
-      { src: img.gallery.matrimoni.errico_e_valentina_7, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
-      { src: img.gallery.matrimoni.errico_e_valentina_8, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
-      { src: img.gallery.matrimoni.errico_e_valentina_9, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
-      { src: img.gallery.matrimoni.errico_e_valentina_10, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
-      { src: img.gallery.matrimoni.errico_e_valentina_11, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
-      { src: img.gallery.matrimoni.errico_e_valentina_12, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
-      { src: img.gallery.matrimoni.errico_e_valentina_13, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
-      { src: img.gallery.matrimoni.errico_e_valentina_14, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
-      { src: img.gallery.matrimoni.errico_e_valentina_15, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
-      { src: img.gallery.matrimoni.matrimonio, alt: "Matrimonio di ????????", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.errico_valentina_6, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
+      { src: img.gallery.matrimoni.errico_valentina_7, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
+      { src: img.gallery.matrimoni.errico_valentina_8, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
+      { src: img.gallery.matrimoni.errico_valentina_9, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
+      { src: img.gallery.matrimoni.errico_valentina_10, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
+      { src: img.gallery.matrimoni.errico_valentina_11, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
+      { src: img.gallery.matrimoni.errico_valentina_12, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
+      { src: img.gallery.matrimoni.errico_valentina_13, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
+      { src: img.gallery.matrimoni.errico_valentina_14, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
+      { src: img.gallery.matrimoni.errico_valentina_15, alt: "Matrimonio di Errico e Valentina", caption: "Il giorno del matrimonio", credit: fotografo_enrico },
+      
+      // { src: img.gallery.matrimoni.matrimonio, alt: "Matrimonio di ????????", caption: "Il giorno del matrimonio", credit: "" },
+      
       { src: img.gallery.matrimoni.simone_daniela_1, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
       { src: img.gallery.matrimoni.simone_daniela_2, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_3, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_4, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_5, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_6, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_7, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_8, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_9, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_10, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_11, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_12, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_13, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_14, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_15, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_16, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_17, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_18, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_19, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_20, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_21, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_22, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_23, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_24, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_25, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_26, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_27, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_28, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_29, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_30, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_31, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_32, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_33, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_34, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
+      { src: img.gallery.matrimoni.simone_daniela_35, alt: "Matrimonio di Simone e Daniela", caption: "Il giorno del matrimonio", credit: "" },
     ],
   },
   {
@@ -546,28 +594,28 @@ export const galleries = [
     ],
   },
   {
-    title: "Stracuènzi",
+    title: "Dettagli",
     subtitle: 
       <>
-        Nel dialetto neretino <span className="font-serif-italic">stracuènzi</span> indica cianfrusaglie, oggetti sparsi o poco utili. Noi abbiamo deciso di rubargli questo nome per mostrarvi tutti quei piccoli dettagli che, in realtà, fanno la differenza.
+        Questa sezione raccoglie tutti quei piccoli dettagli che completano il vostro evento, rendendolo unico e inimitabile.
       </>,
     images: [
-      { src: img.gallery.stracuenzi.angelo_1, alt: "Battesimo di Angelo", caption: "Biscottini", credit: "" },
-      { src: img.gallery.stracuenzi.errico_valentina_1, alt: "Matrimonio di Errico e Valentina", caption: "Tag valigie", credit: "" },
-      { src: img.gallery.stracuenzi.errico_valentina_2, alt: "Matrimonio di Errico e Valentina", caption: "Tamburelli", credit: "" },
-      { src: img.gallery.stracuenzi.errico_valentina_3, alt: "Matrimonio di Errico e Valentina", caption: "Stelline", credit: "" },
-      { src: img.gallery.stracuenzi.francesco_1, alt: "Cresima di Francesco", caption: "Biscottini", credit: "" },
-      { src: img.gallery.stracuenzi.gregorio_1, alt: "Compleanno di Gregorio", caption: "Biscottini", credit: "" },
-      { src: img.gallery.stracuenzi.halloween_1, alt: "Halloween", caption: "Decorazioni", credit: "" },
-      { src: img.gallery.stracuenzi.halloween_2, alt: "Halloween", caption: "Decorazioni", credit: "" },
-      { src: img.gallery.stracuenzi.mariella_1, alt: "Compleanno di Mariella", caption: "Tavolo dei pensierini", credit: "" },
-      { src: img.gallery.stracuenzi.matteo_1, alt: "Nascita di Matteo", caption: "Card", credit: "" },
-      { src: img.gallery.stracuenzi.matteo_2, alt: "Nascita di Matteo", caption: "Fiocco nascita", credit: "" },
-      { src: img.gallery.stracuenzi.matteo_3, alt: "Nascita di Matteo", caption: "Card", credit: "" },
-      { src: img.gallery.stracuenzi.natale_1, alt: "Natale", caption: "Decorazioni", credit: "" },
-      { src: img.gallery.stracuenzi.sofia_1, alt: "Compleanno di Sofia", caption: "Allestimento", credit: "" },
-      { src: img.gallery.stracuenzi.stefano_carmen_1, alt: "Matrimonio di Stefano e Carmen", caption: "Bomboniere", credit: "" },
-      { src: img.gallery.stracuenzi.stefano_carmen_2, alt: "Matrimonio di Stefano e Carmen", caption: "Fazzolettini", credit: "" },
+      { src: img.gallery.dettagli.angelo_1, alt: "Battesimo di Angelo", caption: "Biscottini", credit: "" },
+      { src: img.gallery.dettagli.errico_valentina_1, alt: "Matrimonio di Errico e Valentina", caption: "Tag valigie", credit: "" },
+      { src: img.gallery.dettagli.errico_valentina_2, alt: "Matrimonio di Errico e Valentina", caption: "Tamburelli", credit: "" },
+      { src: img.gallery.dettagli.errico_valentina_3, alt: "Matrimonio di Errico e Valentina", caption: "Stelline", credit: "" },
+      { src: img.gallery.dettagli.francesco_1, alt: "Cresima di Francesco", caption: "Biscottini", credit: "" },
+      { src: img.gallery.dettagli.gregorio_1, alt: "Compleanno di Gregorio", caption: "Biscottini", credit: "" },
+      { src: img.gallery.dettagli.halloween_1, alt: "Halloween", caption: "Decorazioni", credit: "" },
+      { src: img.gallery.dettagli.halloween_2, alt: "Halloween", caption: "Decorazioni", credit: "" },
+      { src: img.gallery.dettagli.mariella_1, alt: "Compleanno di Mariella", caption: "Tavolo dei pensierini", credit: "" },
+      { src: img.gallery.dettagli.matteo_1, alt: "Nascita di Matteo", caption: "Card", credit: "" },
+      { src: img.gallery.dettagli.matteo_2, alt: "Nascita di Matteo", caption: "Fiocco nascita", credit: "" },
+      { src: img.gallery.dettagli.matteo_3, alt: "Nascita di Matteo", caption: "Card", credit: "" },
+      { src: img.gallery.dettagli.natale_1, alt: "Natale", caption: "Decorazioni", credit: "" },
+      { src: img.gallery.dettagli.sofia_1, alt: "Compleanno di Sofia", caption: "Allestimento", credit: "" },
+      { src: img.gallery.dettagli.stefano_carmen_1, alt: "Matrimonio di Stefano e Carmen", caption: "Bomboniere", credit: "" },
+      { src: img.gallery.dettagli.stefano_carmen_2, alt: "Matrimonio di Stefano e Carmen", caption: "Fazzolettini", credit: "" },
     ],
   },
 ];

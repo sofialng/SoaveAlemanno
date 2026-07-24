@@ -1,6 +1,6 @@
 const NUMERALI = ["I", "II", "III", "IV", "V"];
 
-export default function Carousel({ tipi }) {
+export default function Carousel({ tipi, title, subtitle, paragraph}) {
   return (
     <section
       className="relative py-16 bg-secondary-light overflow-hidden"
@@ -8,14 +8,15 @@ export default function Carousel({ tipi }) {
       {/* HEADER */}
       <div className="max-w-5xl mx-auto px-6 lg:px-20 mb-16">
         <div className="flex items-center gap-3 mb-4">
-          <span className="subtitle">Le nostre proposte</span>
+          <span className="subtitle">
+            {subtitle}
+          </span>
         </div>
         <h2 className="title">
-          Un matrimonio per ogni
-          <span className="font-calligraphy">{" "}sogno</span>
+          {title}
         </h2>
         <p className="paragraph text-left mt-6 max-w-4xl mx-auto">
-                Queste sono alcune delle proposte che possiamo realizzare per voi, pensate per darvi un’idea del nostro stile. Ogni progetto, però, nasce su misura: se avete in mente qualcosa di diverso, lo costruiremo insieme, adattando ogni dettaglio e creando soluzioni alternative in linea con la vostra visione.
+          {paragraph}
         </p>
       </div>
 

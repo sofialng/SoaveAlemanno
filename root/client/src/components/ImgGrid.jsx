@@ -207,12 +207,12 @@ function ImgGrid({ galleries }) {
                       </div>
 
                       {/* Caption sotto la foto */}
-                      <div className="mt-3 flex items-center justify-between px-1">
+                      {/* <div className="mt-3 flex items-center justify-between px-1">
                         <p className="text-[0.7rem] uppercase tracking-[0.22em] text-[#9a9085] font-light">
                           {image.caption}
                         </p>
                         <span className="text-[#c8b898] text-xs">→</span>
-                      </div>
+                      </div> */}
                     </div>
                   );
                 })}
